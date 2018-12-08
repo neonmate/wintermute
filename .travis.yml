@@ -1,0 +1,32 @@
+sudo: required
+language: ruby
+rvm:
+  - 2.5.3
+
+addons:
+  chrome: stable
+before_install:
+  - wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE
+  - wget https://chromedriver.storage.googleapis.com/$(cat LATEST_RELEASE)/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - chmod +x chromedriver
+  - sudo mv chromedriver /usr/bin/
+install:
+  - bundle install
+  - nvm install 8.9.1
+  - node -v
+  - npm i -g yarn
+  - yarn
+before_script:
+  - bundle exec rake db:create --all
+  - bundle exec rake db:migrate
+script:
+  - bundle exec rspec
+  - bundle exec cucumber
+services:
+  - postgresql
+cache:
+  bundler: true
+  directories:
+    - node_modules
+  yarn: true

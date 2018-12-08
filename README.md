@@ -1,24 +1,32 @@
-# README
+[![Build Status](https://travis-ci.org/neonmate/wintermute.svg?branch=master)](https://travis-ci.org/neonmate/wintermute)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Wintermute
+Wintermute is a plattform to find motivation and collaborators for your new open source project.
 
-Things you may want to cover:
+# Development
 
-* Ruby version
+## Setup
 
-* System dependencies
+- Install ruby 2.5.3 [https://github.com/rbenv/rbenv#installation](https://github.com/rbenv/rbenv#installation)
+- Install yarn [https://yarnpkg.com/lang/en/docs/install/](https://yarnpkg.com/lang/en/docs/install/)
+- Install bundler `gem install bundler`
+---
+- Install dependencies with `bundle install` and `yarn install`
+- Configure the `database.yml` file after `cp config/database.yml.sample config/database.yml`
+- Migrate database `rake db:create db:migrate`
+- Run server `rails s` and go to [http://localhost:3000](http://localhost:3000)
 
-* Configuration
+## Deployment
 
-* Database creation
+```
+git push heroku
+heroku run rails db:migrate
+```
 
-* Database initialization
+## Tests
 
-* How to run the test suite
+- Install `chromedriver` and add it to path variables
+- Run unit tests with `bundle exec rspec`
+- Run integration tests with `bundle exec cucumber`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Debugging hint: You can disable headless mode for javascript tests with `CHROME_HEADLESS=false bundle exec cucumber`.

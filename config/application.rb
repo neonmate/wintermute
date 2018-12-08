@@ -19,12 +19,44 @@ Bundler.require(*Rails.groups)
 
 module Wintermute
   class Application < Rails::Application
+    config.autoload_paths << "#{Rails.root}/app/controllers/shared"
+    config.autoload_paths << "#{Rails.root}/app/models/shared"
+    config.autoload_paths << "#{Rails.root}/app/util"
+    config.autoload_paths << "#{Rails.root}/app/util/shared"
+
+    config.system_email = 'neonmate@users.noreply.github.com'
+
+    config.time_zone = 'Berlin'
+    config.active_record.default_timezone = :local
+    config.active_record.time_zone_aware_attributes = false
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
+    # Allow subfolders for i18n (We use a folder for each locale)
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
     # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+    # Application configuration should go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded.
+
+    # Adjust generator like described in http://guides.rubyonrails.org/generators.html
+    config.generators do |g|
+      g.test_framework :rspec
+      g.controller_specs false
+      g.request_specs false
+      g.helper_specs false
+      g.feature_specs false
+      g.mailer_specs false
+      g.model_specs false
+      g.observer_specs false
+      g.routing_specs false
+      g.view_specs false
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
+      g.assets false
+      g.fixture_replacement :factory_bot
+    end
   end
 end

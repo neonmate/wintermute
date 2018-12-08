@@ -1,57 +1,58 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |repo_path| "https://github.com/#{repo_path}.git" }
 
+# https://devcenter.heroku.com/articles/getting-started-with-rails5#specify-ruby-version-in-app
 ruby '2.5.3'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.2'
-# Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
-# Use Puma as the app server
-gem 'puma', '~> 3.11'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'active_type'
+gem 'acts_as_paranoid'
+gem 'assignable_values'
+gem 'bootsnap', require: false
+gem 'devise'
+gem 'edge_rider'
+gem 'exception_notification'
+gem 'haml-rails'
+gem 'has_defaults'
+gem 'modularity'
+gem 'omniauth-github'
+gem 'pg'
+gem 'puma'
+gem 'rails'
+gem 'simple_form'
 gem 'webpacker'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
-
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
-
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
+gem 'whenever'
+gem 'will_paginate'
 
 group :development do
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'listen'
+  gem 'parallel_tests'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-commands-cucumber'
+  gem 'spring-commands-rspec'
+  gem 'spring-watcher-listen'
+  gem 'thin'
+  gem 'web-console'
+end
+
+group :development, :test do
+  gem 'pry-byebug'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'cucumber', '< 2.2' # Incompatible with Cucumber Factory
+  gem 'cucumber-rails', require: false
+  gem 'cucumber_factory'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'rspec'
   gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'shoulda-matchers', require: false
+  gem 'spreewald'
+  gem 'timecop'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+running_in_parallel = ENV.has_key?('TEST_ENV_NUMBER') || ARGV.any? { |arg| arg =~ /^parallel:/ }
+
+begin
+  load File.expand_path('../spring', __FILE__) unless running_in_parallel
+rescue LoadError => e
+  raise unless e.message.include?('spring')
+end
+require 'bundler/setup'
+load Gem.bin_path('cucumber', 'cucumber')

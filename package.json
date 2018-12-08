@@ -1,8 +1,15 @@
 {
-  "name": "wintermute",
+  "name": "wintermute-kat",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5"
+    "@rails/webpacker": "3.5",
+    "autoprefixer": "^9.4.2",
+    "autosize": "^4.0.2",
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.3.1",
+    "jquery-ujs": "^1.2.2",
+    "resolve-url-loader": "^3.0.0",
+    "unpoly": "^0.57.0"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"

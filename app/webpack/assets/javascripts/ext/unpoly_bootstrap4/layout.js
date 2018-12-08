@@ -1,0 +1,5 @@
+up.layout.config.fixedTop.push('.navbar-fixed-top')
+up.layout.config.fixedBottom.push('.navbar-fixed-bottom')
+up.layout.config.anchoredRight.push('.navbar-fixed-top')
+up.layout.config.anchoredRight.push('.navbar-fixed-bottom')
+up.layout.config.anchoredRight.push('.footer')

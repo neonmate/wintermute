@@ -1,4 +1,3 @@
-/* eslint no-console:0 */
 import 'babel-polyfill' // ES6 for browsers like IE
 
 import 'unpoly/dist/unpoly'

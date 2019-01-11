@@ -1,0 +1,17 @@
+= simple_form_for(@project) do |form|
+  .card
+    .card-header
+      = title
+    .card-body
+      = form.input :title
+      = form.input :subtitle
+      = form.input :description
+      = form.input :repository_url
+      = form.input :application_url
+    .card-footer
+      .d-flex
+        .mr-auto
+          = form.submit 'Save', class: 'btn btn-primary'
+          = link_to 'Cancel', cancel_path(@project), class: 'btn btn-light'
+        - if @project.persisted?
+          = link_to 'Delete', project_path(@project), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-danger'

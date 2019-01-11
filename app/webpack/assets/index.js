@@ -8,8 +8,8 @@ for(let key of webpackContext.keys()) { webpackContext(key) }
 require.context('./images', true, /\.(?:png|jpg|gif|ico|svg)$/)
 
 // Styles
-import './stylesheets/custom_bootstrap'
-import './stylesheets/theme'
+import './stylesheets/application'
+import './stylesheets/bootstrap'
 import './stylesheets/unpoly'
 
 require.context('./stylesheets/blocks', true, /\.sass$/)

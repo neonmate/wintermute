@@ -1,13 +1,14 @@
-chrome_args = %w[--mute-audio --disable-infobars]
-no_password_bubble = {
-  'credentials_enable_service' => false,
-  'profile.password_manager_enabled' => false
-}
+Capybara.register_driver :selenium_chrome_headless do |app|
+  options = Selenium::WebDriver::Chrome::Options.new
 
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app,
-    browser: :chrome,
-    args: chrome_args,
-    prefs: no_password_bubble
-  )
+  options.add_argument('--mute-audio')
+  options.add_argument('--disable-infobars')
+  options.add_argument('--headless') unless ENV['CHROME_HEADLESS']
+  options.add_argument('--disable-gpu')
+  options.add_preference('credentials_enable_service', false)
+  options.add_preference('profile.password_manager_enabled', false)
+
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
+
+Capybara.javascript_driver = :selenium_chrome_headless

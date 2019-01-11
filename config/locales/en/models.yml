@@ -1,30 +1,26 @@
-# https://makandracards.com/makandra/15887-use-the-same-translations-for-activerecord-and-activemodel
+# https://makandracards.com/makandra/15887
 
 en:
-  assignable_values:
-
   models: &models
-    concept:
-      one: Concept
-      other: Concepts
+    project:
+      one: Project
+      other: Projects
 
   attributes: &attributes
-    concept:
-      title: Title
-      description: Description
-      github_url: Github URL
+    created_at: Created at
+    updated_at: Updated at
 
-  errors: &errors
-    # Only add errors which are not included in rails
-    messages:
-      example: is an example message
+    project:
+      title: Title
+      subtitle: Subtitle
+      description: Description
+      repository_url: Repository URL
+      application_url: Application URL
 
   activerecord:
-    errors: *errors
     models: *models
     attributes: *attributes
 
   activemodel:
-    errors: *errors
     models: *models
     attributes: *attributes

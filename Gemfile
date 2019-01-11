@@ -8,13 +8,11 @@ gem 'active_type'
 gem 'acts_as_paranoid'
 gem 'assignable_values'
 gem 'bootsnap', require: false
-gem 'devise'
 gem 'edge_rider'
 gem 'exception_notification'
 gem 'haml-rails'
 gem 'has_defaults'
 gem 'modularity'
-gem 'omniauth-github'
 gem 'pg'
 gem 'puma'
 gem 'rails'
@@ -27,12 +25,10 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'listen'
-  gem 'parallel_tests'
   gem 'spring'
   gem 'spring-commands-cucumber'
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen'
-  gem 'thin'
   gem 'web-console'
 end
 
@@ -45,7 +41,7 @@ end
 group :test do
   gem 'capybara'
   gem 'capybara-screenshot'
-  gem 'cucumber', '< 2.2' # Incompatible with Cucumber Factory
+  gem 'cucumber'
   gem 'cucumber-rails', require: false
   gem 'cucumber_factory'
   gem 'database_cleaner'

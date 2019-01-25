@@ -1,0 +1,14 @@
+inherit_gem:
+  makandra-rubocop: config/default.yml
+
+Bundler/OrderedGems:
+  Enabled: true
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false

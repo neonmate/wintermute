@@ -1,7 +1,7 @@
 require 'capybara-screenshot/cucumber'
 
 # Keep up to the number of screenshots specified in the hash
-Capybara::Screenshot.prune_strategy = { keep: 10 }
+Capybara::Screenshot.prune_strategy = {keep: 10}
 
 # This asset host will become a `<base>` tag in the HTML's `<head>` and allow
 # resolving test assets via the development Rails server. This makes HTML

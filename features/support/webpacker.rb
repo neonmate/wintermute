@@ -1,6 +1,8 @@
 module WebpackerHelper
 
-  module_function def compile_once
+  module_function
+
+  def compile_once
     digest_file = Rails.root.join("tmp/webpacker_#{Rails.env}_digest")
 
     packable_contents = Dir[Webpacker.config.source_path.join('**/*')]
@@ -17,7 +19,7 @@ module WebpackerHelper
       FileUtils.rm_r(output_path) if File.exist?(output_path)
       puts "Removed Webpack output directory #{output_path}"
 
-      Webpacker.compile or raise 'Compilation failed'
+      Webpacker.compile || raise('Compilation failed')
 
       digest_file.write(digest)
 

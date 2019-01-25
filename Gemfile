@@ -12,6 +12,7 @@ gem 'edge_rider'
 gem 'exception_notification'
 gem 'haml-rails'
 gem 'has_defaults'
+gem 'makandra-rubocop'
 gem 'modularity'
 gem 'pg'
 gem 'puma'
@@ -33,8 +34,8 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry-byebug'
   gem 'factory_bot_rails'
+  gem 'pry-byebug'
   gem 'rspec-rails'
 end
 

@@ -4,10 +4,9 @@ RSpec.configure do |config|
   end
 
   config.around do |example|
-    DatabaseCleaner.strategy = case
-    when example.metadata[:transaction] == false
+    DatabaseCleaner.strategy = if example.metadata[:transaction] == false
       :deletion
-    when example.metadata[:js] == true
+    elsif example.metadata[:js] == true
       :deletion
     else
       :transaction

@@ -12,7 +12,7 @@ if defined?(BetterErrors) && Rails.env.development?
       CGI.escapeHTML(inspected)
     rescue NoMethodError
       "<span class='unsupported'>(object doesn't support inspect)</span>"
-    rescue Exception
+    rescue StandardError, ScriptError
       "<span class='unsupported'>(exception was raised in inspect)</span>"
     end
 

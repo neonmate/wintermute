@@ -11,7 +11,7 @@ module HtmlSelectorsHelpers
     # Usage example:
     #   the "Tables" section -> 'section[aria-label="Tables"]'
     when /^the "(.*?)" section$/
-      %Q(section[aria-label="#{$1}"])
+      %(section[aria-label="#{Regexp.last_match(1)}"])
 
     # Auto-mapper for BEM classes
     #
@@ -21,9 +21,9 @@ module HtmlSelectorsHelpers
     #   the slider's item (current) -> '.slider--item.-current'
     when /^the (.+?)(?:'s (.+?))?(?: \((.+)\))?$/
       selector = '.'
-      selector << selectorify($1)
-      selector << '--' << selectorify($2) if $2
-      selector << '.-' << selectorify($3) if $3
+      selector << selectorify(Regexp.last_match(1))
+      selector << '--' << selectorify(Regexp.last_match(2)) if Regexp.last_match(2)
+      selector << '.-' << selectorify(Regexp.last_match(3)) if Regexp.last_match(3)
       selector
 
     # Add more mappings here.
@@ -42,11 +42,13 @@ module HtmlSelectorsHelpers
     # for "within" steps as was previously the default for the
     # web steps:
     when /^"(.+)"$/
-      $1
+      Regexp.last_match(1)
 
     else
-      raise "Can't find mapping from \"#{locator}\" to a selector.\n" +
-          "Now, go and add a mapping in #{__FILE__}"
+      raise(<<~TEXT)
+        Can't find mapping from "#{locator}" to a selector.
+        Now, go and add a mapping in #{__FILE__}
+      TEXT
     end
   end
 

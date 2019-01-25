@@ -12,7 +12,7 @@ ActionView::Helpers::FormBuilder.class_eval do
 
   def parse_element(html, tag)
     doc = Nokogiri::XML(html)
-    doc.css(tag).first or raise "Could not find CSS #{tag.inspect} in HTML #{html.inspect}"
+    doc.css(tag).first || raise("Could not find CSS #{tag.inspect} in HTML #{html.inspect}")
   end
 
 end
@@ -21,8 +21,8 @@ ActionView::Helpers::FormTagHelper.class_eval do
 
   def spec_label_tag(id, text = nil, options = {})
     count = SpecLabelCounter.next(controller, text)
-    label = count == 1 ? text : "#{text} (#{count})"
-    options.merge!(:class => 'hidden') unless Rails.env.test?
+    label = (count == 1) ? text : "#{text} (#{count})"
+    options.merge!(class: 'hidden') unless Rails.env.test?
     html = label_tag(id, label, options)
     html
   end

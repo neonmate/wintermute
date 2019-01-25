@@ -14,13 +14,21 @@ Wintermute is a platform to pitch and find open-source web applications.
 - Install dependencies with `bundle install` and `yarn install`
 - Configure the `database.yml` file after `cp config/database.yml.sample config/database.yml`
 - Migrate database `rake db:create db:migrate`
-- Run server `rails s` and go to [http://localhost:3000](http://localhost:3000)
+- Add the `master.key`
+- Edit the secrets with `EDITOR="vim" bin/rails credentials:edit`
+- Run server `rails s` and go to [http://wintermute.vcap.me:3000/](http://wintermute.vcap.me:3000/)
 
 ## Deployment
 
 ```
 git push heroku
 heroku run rails db:migrate
+```
+
+You need to set the master encryption key before the first deployment:
+
+```
+heroku config:set RAILS_MASTER_KEY=very-secret-and-secure
 ```
 
 ## Tests

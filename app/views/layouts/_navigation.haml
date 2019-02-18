@@ -1,9 +1,10 @@
-.d-flex.mb-3
-  .mr-auto
-    %h1
+.navbar.fixed-top.navbar-light.bg-light
+  .container.d-flex.justify-content-between
+    = content_link_to root_path, class: 'navbar-brand' do
+      = image_pack_tag 'assets/images/wintermute-transparent.png', alt: 'Wintermute Logo', height: 30, class: 'mr-1'
       Wintermute
-      %small.text-muted Pitch and find open-source web applications
-  - if signed_in?
-    = link_to 'Sign out', sign_out_path, method: :delete, class: 'btn btn-outline-secondary'
-  - else
-    = link_to 'Sign in', sign_in_path, class: 'btn btn-outline-secondary'
+    %span.text-muted Pitch and find open-source web applications
+    - if signed_in?
+      = link_to 'Sign out', sign_out_path, method: :delete, class: 'btn btn-light'
+    - else
+      = link_to 'Sign in', sign_in_path, class: 'btn btn-light'

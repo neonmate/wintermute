@@ -1,8 +1,8 @@
 module ApplicationHelper
 
-  def no_records_available
-    content_tag(:div, class: 'card mt-3') do
-      content_tag(:div, 'No records found.', class: 'card-body text-center')
+  def no_records_available(&block)
+    content_tag(:div, class: 'card mt-5') do
+      content_tag(:div, class: 'card-body', &block)
     end
   end
 

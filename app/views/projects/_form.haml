@@ -12,6 +12,6 @@
       .d-flex
         .mr-auto
           = form.submit 'Save', class: 'btn btn-primary'
-          = link_to 'Cancel', cancel_path(@project), class: 'btn btn-light'
+          = content_link_to 'Cancel', cancel_path(@project), class: 'btn btn-light'
         - if @project.persisted?
-          = link_to 'Delete', project_path(@project), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-danger'
+          = content_link_to 'Delete', project_path(@project), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-danger'

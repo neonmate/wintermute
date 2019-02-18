@@ -1,0 +1,7 @@
+.footer.mt-auto.py-3.bg-light
+  .container
+    .nav.justify-content-end
+      %li.nav-item
+        = content_link_to 'Privacy', privacy_path, class: 'nav-link'
+      %li.nav-item
+        = mail_to('dev@denzel.email', 'Support', class: 'btn btn-outline-success nav-link')

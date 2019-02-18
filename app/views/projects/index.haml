@@ -1,12 +1,15 @@
-= link_to "New #{Project.model_name.human}", new_project_path, class: 'btn btn-primary'
+= modal_link_to "New #{Project.model_name.human}", new_project_path, class: 'btn btn-primary'
 
 - if @projects.present?
   - @projects.each do |project|
     .card.mt-3
       .card-header
-        = link_to(project.title, project)
+        = content_link_to(project.title, project)
         %small= l(project.created_at, format: :short)
       .card-body
         = project.subtitle
 - else
-  = no_records_available
+  = no_records_available do
+    %span.text-muted We do not have any projects yet. You can
+    %span.font-weight-bold= modal_link_to 'help us', new_project_path
+    %span.text-muted to fill this gap.

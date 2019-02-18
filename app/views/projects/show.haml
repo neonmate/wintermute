@@ -1,11 +1,11 @@
-= link_to '← Back to list', projects_path, class: 'btn btn-outline-primary'
+= content_link_to '← Back to list', projects_path, class: 'btn btn-outline-primary'
 
 .card.mt-3
   .card-header
     .d-flex
       .mr-auto
         %h3= @project.title
-      = link_to "Edit #{Project.model_name.human}", edit_project_path(@project), class: 'btn btn-primary'
+      = modal_link_to "Edit #{Project.model_name.human}", edit_project_path(@project), class: 'btn btn-primary'
     = @project.subtitle
   .card-body
     %dl

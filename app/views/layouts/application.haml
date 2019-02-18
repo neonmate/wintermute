@@ -1,5 +1,5 @@
 !!!
-%html{lang: I18n.locale}
+%html{lang: I18n.locale, class: 'h-100'}
 
   %head
     %meta(charset='utf-8')
@@ -17,11 +17,12 @@
     = javascript_pack_tag 'application'
     = stylesheet_pack_tag 'application'
 
-  %body{data: {env: Rails.env}}
+  %body{data: {env: Rails.env}, class: 'd-flex flex-column h-100'}
+    .main{class: 'flex-shrink-0'}
+      .container.mb-5
+        = render 'layouts/navigation'
+        = render 'layouts/flashes'
 
-    .container
-      = render 'layouts/navigation'
-      = render 'layouts/flashes'
-
-      .content
-        = yield
+        .content
+          = yield
+    = render 'layouts/footer'

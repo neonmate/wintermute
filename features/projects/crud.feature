@@ -3,7 +3,7 @@ Feature: Projects CRUD
 
   Scenario: CRUD a project
     When I go to the list of projects
-    Then I should see "No records found."
+    Then I should see "We do not have any projects yet."
 
     When I follow "New Project"
     Then I should be on the project form
@@ -60,4 +60,4 @@ Feature: Projects CRUD
       And I follow "Delete"
     Then I should see a success flash "Project deleted"
       And I should be on the list of projects
-      And I should see "No records found."
+      And I should see "We do not have any projects yet."

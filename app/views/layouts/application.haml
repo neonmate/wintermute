@@ -18,11 +18,10 @@
     = stylesheet_pack_tag 'application'
 
   %body{data: {env: Rails.env}, class: 'd-flex flex-column h-100'}
-    .main{class: 'flex-shrink-0'}
+    .flex-shrink-0
       .container.mb-5
         = render 'layouts/navigation'
         = render 'layouts/flashes'
 
-        .content
-          = yield
+        .content= yield
     = render 'layouts/footer'

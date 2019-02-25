@@ -1,3 +1,4 @@
+- flash_mapping = {'success' => 'success', 'error' => 'danger'}
 - flash.each do |level, message|
-  %div{class: "alert alert-#{level}"}
+  %div{class: "alert alert-#{flash_mapping.fetch(level)}"}
     = message

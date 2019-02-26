@@ -361,7 +361,6 @@ DEPENDENCIES
   listen
   makandra-rubocop
   modularity
-  omniauth
   omniauth-github
   pg
   pry-byebug

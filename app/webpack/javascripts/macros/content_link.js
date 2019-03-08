@@ -1,4 +1,4 @@
-const DEFAULT_TARGET = '.content'
+const DEFAULT_TARGET = '.page-target'
 
 up.macro('[content-link]', (link) => {
   let target = link.getAttribute('content-link') || DEFAULT_TARGET

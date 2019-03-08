@@ -1,4 +1,4 @@
-const DEFAULT_TARGET = '.content'
+const DEFAULT_TARGET = '.modal-target'
 
 up.macro('[modal-link]', function(link) {
   let target = link.getAttribute('modal-link') || DEFAULT_TARGET

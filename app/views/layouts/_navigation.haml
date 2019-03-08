@@ -1,7 +1,7 @@
 .navbar.fixed-top.navbar-light.bg-light
   .container.d-flex.justify-content-between
     = content_link_to root_path, class: 'navbar-brand' do
-      = image_pack_tag 'assets/images/wintermute-transparent.png', alt: 'Wintermute Logo', height: 30, class: 'mr-1'
+      = image_pack_tag 'media/images/wintermute-transparent.png', alt: 'Wintermute Logo', height: 30, class: 'mr-1'
       Wintermute
     %span.text-muted Collaborative open-source web applications
     - if signed_in?

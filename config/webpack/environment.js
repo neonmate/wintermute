@@ -1,11 +1,6 @@
 const { environment } = require('@rails/webpacker')
 
-// resolve-url-loader must be used before sass-loader
-environment.loaders.get('sass').use.splice(-1, 0, {
-  loader: 'resolve-url-loader',
-  options: {
-    attempts: 1
-  }
-})
-
 module.exports = environment
+
+// https://github.com/rails/webpacker/blob/b685da4daabb1e064e93591ddcd1c40f88abd4a9/docs/v4-upgrade.md#excluding-node_modules-from-being-transpiled-by-babel-loader
+environment.loaders.delete('nodeModules')

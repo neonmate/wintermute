@@ -19,6 +19,8 @@ db/structure.sql
 capybara-*.html
 rerun.txt
 yarn-error.log
+yarn-debug.log*
+.yarn-integrity
 
 *~
 *#*

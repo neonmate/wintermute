@@ -11,6 +11,8 @@ before_install:
   - unzip chromedriver_linux64.zip
   - chmod +x chromedriver
   - sudo mv chromedriver /usr/bin/
+  - gem update --system
+  - gem install bundler
 install:
   - bundle install
   - nvm install 8.9.1

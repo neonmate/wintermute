@@ -60,7 +60,7 @@ class ProjectsController < ApplicationController
       redirect_to(@project)
     else
       error_flash(@project)
-      render(action)
+      render(action, status: :unprocessable_entity)
     end
   end
 

@@ -23,5 +23,6 @@
         = render 'layouts/navigation'
         = render 'layouts/flashes'
 
-        .content= yield
+        .page-target
+          .modal-target= yield
     = render 'layouts/footer'

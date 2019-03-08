@@ -44,9 +44,6 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    acts_as_paranoid (0.6.0)
-      activerecord (>= 4.2, < 6.0)
-      activesupport (>= 4.2, < 6.0)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
@@ -81,6 +78,10 @@ GEM
     chronic (0.10.2)
     coderay (1.1.2)
     concurrent-ruby (1.1.4)
+    consul (1.0.1)
+      edge_rider (>= 0.3.0)
+      memoized
+      rails (>= 3.2)
     crass (1.0.4)
     cucumber (3.1.2)
       builder (>= 2.1.2)
@@ -168,6 +169,7 @@ GEM
       rubocop (~> 0.62.0)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
+    memoized (1.0.1)
     method_source (0.9.2)
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
@@ -341,13 +343,13 @@ PLATFORMS
 
 DEPENDENCIES
   active_type
-  acts_as_paranoid
   assignable_values
   better_errors
   binding_of_caller
   bootsnap
   capybara
   capybara-screenshot
+  consul
   cucumber
   cucumber-rails
   cucumber_factory

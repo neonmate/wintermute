@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
 
+  power crud: :projects, as: :project_scope
+
   def index
     load_projects
   end
@@ -37,15 +39,16 @@ class ProjectsController < ApplicationController
   private
 
   def load_projects
-    @projects = Project.all.to_a
+    @projects = project_scope.to_a
   end
 
   def load_project
-    @project ||= Project.find(params[:id])
+    @project ||= project_scope.find(params[:id])
   end
 
   def build_project
-    @project ||= Project.new
+    @project ||= project_scope.new
+    @project = ActiveType.cast(@project, Project::Form)
     @project.attributes = project_params
   end
 

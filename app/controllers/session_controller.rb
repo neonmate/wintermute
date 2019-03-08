@@ -1,5 +1,7 @@
 class SessionController < ApplicationController
 
+  skip_power_check
+
   def new
     # This route is catched by the Omniauth Middleware and is invisible to rake routes
     redirect_to '/auth/github'

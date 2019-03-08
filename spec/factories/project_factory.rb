@@ -5,6 +5,8 @@ FactoryBot.define do
     subtitle { 'Some subtitle' }
     description { 'Some description' }
     repository_url { 'https://github.com/github/example' }
+
+    user
   end
 
 end

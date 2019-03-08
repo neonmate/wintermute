@@ -11,11 +11,6 @@ describe Project do
     it { is_expected.not_to allow_value('example.com').for(:application_url) }
   end
 
-  it 'does soft delete the records' do
-    project = create(:project)
-
-    expect { project.destroy! }.to change { Project.count }.from(1).to(0)
-    expect(described_class.with_deleted).to contain_exactly(project)
-  end
+  it { is_expected.to belong_to(:user) }
 
 end

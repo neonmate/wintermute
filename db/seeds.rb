@@ -1,4 +1,11 @@
+user = User.create!(
+  nickname: 'github',
+  uid: '12345',
+  email: 'github@example.com'
+)
+
 Project.create!(
+  user: user,
   title: 'Some title',
   subtitle: 'Some subtitle',
   description: 'Some description',

@@ -5,7 +5,8 @@
     .d-flex
       .mr-auto
         %h3= @project.title
-      = modal_link_to "Edit #{Project.model_name.human}", edit_project_path(@project), class: 'btn btn-primary'
+      - if current_power.include_record?(:updatable, @project)
+        = modal_link_to "Edit #{Project.model_name.human}", edit_project_path(@project), class: 'btn btn-primary'
     = @project.subtitle
   .card-body
     %dl
@@ -17,3 +18,6 @@
 
       %dt= Project.human_attribute_name(:application_url)
       %dd= format_string(@project.application_url)
+
+      %dt= Project.human_attribute_name(:user)
+      %dd= link_to @project.user.nickname, "https://github.com/#{@project.user.nickname}", target: '_blank'

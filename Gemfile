@@ -5,9 +5,9 @@ git_source(:github) { |repo_path| "https://github.com/#{repo_path}.git" }
 ruby '2.5.3'
 
 gem 'active_type'
-gem 'acts_as_paranoid'
 gem 'assignable_values'
 gem 'bootsnap', require: false
+gem 'consul'
 gem 'edge_rider'
 gem 'exception_notification'
 gem 'haml-rails'

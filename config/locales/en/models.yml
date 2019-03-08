@@ -11,6 +11,7 @@ en:
     updated_at: Updated at
 
     project:
+      user: Hunter
       title: Title
       subtitle: Subtitle
       description: Description

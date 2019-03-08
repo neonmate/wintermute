@@ -4,8 +4,10 @@ Feature: Projects CRUD
   Scenario: CRUD a project
     When I go to the list of projects
     Then I should see "We do not have any projects yet."
+      And I should not see a button with the label "New Project"
 
-    When I follow "New Project"
+    When I am signed in as "github"
+      And I follow "New Project"
     Then I should be on the project form
 
     When I press "Save"
@@ -36,6 +38,9 @@ Feature: Projects CRUD
 
         Application URL
         https://example.com
+
+        Hunter
+        github
         """
 
     When I follow "Edit"

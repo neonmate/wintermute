@@ -1,7 +1,7 @@
 const DEFAULT_TARGET = '.content'
 
-up.macro('[content-link]', ($link) => {
-  let target = $link.attr('content-link') || DEFAULT_TARGET
+up.macro('[content-link]', (link) => {
+  let target = link.getAttribute('content-link') || DEFAULT_TARGET
   let attrs = {
     'up-target': target,
     'up-preload': '',
@@ -9,9 +9,11 @@ up.macro('[content-link]', ($link) => {
   }
 
   // It feels wrong for a button
-  if ($link.is('.btn:not(.btn-link)')) {
+  if (link.matches('.btn:not(.btn-link)')) {
     delete attrs['up-instant']
   }
 
-  $link.attr(attrs)
+  for (let [key, value] of Object.entries(attrs)) {
+    link.setAttribute(key, value)
+  }
 })

@@ -1,5 +1,3 @@
-// This file will be processed when the directory gets imported
-
 // Javascript
 let webpackContext = require.context('./javascripts', true, /\.js$/)
 for(let key of webpackContext.keys()) { webpackContext(key) }

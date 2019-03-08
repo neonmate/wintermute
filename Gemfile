@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_path| "https://github.com/#{repo_path}.git" }
 
 # https://devcenter.heroku.com/articles/getting-started-with-rails5#specify-ruby-version-in-app
-ruby '2.5.3'
+ruby '2.6.1'
 
 gem 'active_type'
 gem 'assignable_values'

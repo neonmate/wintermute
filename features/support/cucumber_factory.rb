@@ -1,1 +1,1 @@
-Cucumber::Factory.add_steps(self)
+require 'cucumber_factory/add_steps'

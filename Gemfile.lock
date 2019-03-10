@@ -165,8 +165,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    makandra-rubocop (1.0.0)
-      rubocop (~> 0.62.0)
+    makandra-rubocop (3.0.0)
+      rubocop (~> 0.65.0)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     memoized (1.0.1)
@@ -217,6 +217,7 @@ GEM
     pry-byebug (3.7.0)
       byebug (~> 11.0)
       pry (~> 0.10)
+    psych (3.1.0)
     public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.6)
@@ -275,11 +276,12 @@ GEM
       rspec-mocks (~> 3.8.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
-    rubocop (0.62.0)
+    rubocop (0.65.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
       powerpack (~> 0.1)
+      psych (>= 3.1.0)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.4.0)
@@ -367,7 +369,7 @@ DEPENDENCIES
   has_defaults
   launchy
   listen
-  makandra-rubocop (= 1.0.0)
+  makandra-rubocop
   minidusen
   modularity
   omniauth-github

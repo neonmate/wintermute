@@ -39,7 +39,9 @@ class ProjectsController < ApplicationController
   private
 
   def load_projects
-    @projects = project_scope.to_a
+    @projects = project_scope
+      .filtered(params[:query])
+      .to_a
   end
 
   def load_project

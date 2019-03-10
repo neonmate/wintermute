@@ -22,7 +22,7 @@ ActionView::Helpers::FormTagHelper.class_eval do
   def spec_label_tag(id, text = nil, options = {})
     count = SpecLabelCounter.next(controller, text)
     label = (count == 1) ? text : "#{text} (#{count})"
-    options.merge!(class: 'hidden') unless Rails.env.test?
+    options.merge!(class: 'd-none') unless Rails.env.test?
     html = label_tag(id, label, options)
     html
   end

@@ -1,5 +1,7 @@
 class Project < ApplicationRecord
 
+  include DoesTextFilter[TextFilter]
+
   REPOSITORY_URL_PATTERN = %r(https://github.com/\S+).freeze
   APPLICATION_URL_PATTERN = %r(https?:\/\/\S+).freeze
 

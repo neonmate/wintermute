@@ -1,16 +1,21 @@
-- if current_user.present?
-  = modal_link_to "New #{Project.model_name.human}", new_project_path, class: 'btn btn-primary'
+.row
+  .col-md-8
+    = render 'shared/filter'
+  .col-md-4.d-flex.flex-row-reverse
+    - if current_user.present?
+      = modal_link_to "New #{Project.model_name.human}", new_project_path, class: 'btn btn-primary'
 
-- if @projects.present?
-  - @projects.each do |project|
-    .card.mt-3
-      .card-header
-        = content_link_to(project.title, project)
-        %small= l(project.created_at, format: :short)
-      .card-body
-        = project.subtitle
-- else
-  = no_records_available do
-    %span.text-muted We do not have any projects yet. You can
-    %span.font-weight-bold= modal_link_to 'help us', new_project_path
-    %span.text-muted to fill this gap.
+.results
+  - if @projects.present?
+    - @projects.each do |project|
+      .card.mt-3
+        .card-header
+          = content_link_to(project.title, project)
+          %small= l(project.created_at, format: :short)
+        .card-body
+          = project.subtitle
+  - else
+    = no_records_available do
+      %span.text-muted We do not have any projects yet. You can
+      %span.font-weight-bold= modal_link_to 'help us', new_project_path
+      %span.text-muted to fill this gap.

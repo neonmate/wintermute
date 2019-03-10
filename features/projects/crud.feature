@@ -54,6 +54,7 @@ Feature: Projects CRUD
 
     When I follow "Back to list"
     Then I should be on the list of projects
+      And I should see "Showing page 1 of 1"
       And I should see in this order:
           """
           Some other title

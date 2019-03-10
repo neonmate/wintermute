@@ -1,0 +1,3 @@
+.mt-3
+  .sr-only Showing page #{@projects.current_page.to_i} of #{@projects.total_pages.to_i}
+  = will_paginate(@projects)

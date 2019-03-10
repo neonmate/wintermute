@@ -40,6 +40,7 @@ class ProjectsController < ApplicationController
 
   def load_projects
     @projects = project_scope
+      .paginate(page: params[:page])
       .filtered(params[:query])
       .to_a
   end

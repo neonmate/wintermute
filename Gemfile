@@ -23,6 +23,7 @@ gem 'simple_form'
 gem 'webpacker'
 gem 'whenever'
 gem 'will_paginate'
+gem 'will_paginate-bootstrap4'
 
 group :development do
   gem 'better_errors'

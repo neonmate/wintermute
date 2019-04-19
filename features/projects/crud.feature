@@ -28,7 +28,6 @@ Feature: Projects CRUD
       And I should see in this order:
         """
         Some title
-        Some subtitle
 
         Description
         Some description

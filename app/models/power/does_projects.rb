@@ -6,15 +6,15 @@ module Power::DoesProjects
     end
 
     power :updatable_projects do
-      Project.where(user: user)
+      Project.where(user: user) if user
     end
 
     power :creatable_projects do
-      Project.where(user: user)
+      Project.where(user: user) if user
     end
 
     power :destroyable_projects do
-      Project.where(user: user)
+      Project.where(user: user) if user
     end
 
   end

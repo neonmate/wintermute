@@ -7,14 +7,13 @@ Wintermute is a platform to pitch and find open-source web applications.
 
 ## Setup
 
-- Install ruby 2.5.3 [https://github.com/rbenv/rbenv#installation](https://github.com/rbenv/rbenv#installation)
-- Install yarn [https://yarnpkg.com/lang/en/docs/install/](https://yarnpkg.com/lang/en/docs/install/)
+- Install [ruby 2.5.3](https://github.com/rbenv/rbenv#installation)
+- Install [yarn](https://yarnpkg.com/lang/en/docs/install/)
 - Install bundler `gem install bundler`
----
-- Install dependencies with `bundle install` and `yarn install`
+- Install all dependencies with `bundle install` and `yarn install`
 - Configure the `database.yml` file after `cp config/database.yml.sample config/database.yml`
-- Migrate database `rake db:create db:migrate`
-- Add the `master.key`
+- Migrate the database `rake db:create db:migrate`
+- Create or reuse an existing `config/master.key`
 - Edit the secrets with `EDITOR="vim" bin/rails credentials:edit`
 - Run server `rails s` and go to [http://wintermute.vcap.me:3000/](http://wintermute.vcap.me:3000/)
 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  up.viewport.config.duration.fixedTop.push('.fixed-top')
+  up.viewport.config.fixedTop.push('.fixed-top')
 
   if (document.body.getAttribute('environment') === 'test') {
     // Disable animations in tests

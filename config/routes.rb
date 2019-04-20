@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   get 'privacy', action: :privacy, controller: 'page'
 
   resources :projects
+
+  if Rails.env.test? || Rails.env.development?
+    get :test_flash, controller: 'tests'
+  end
 end

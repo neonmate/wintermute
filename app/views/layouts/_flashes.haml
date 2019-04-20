@@ -2,3 +2,5 @@
 - flash.each do |level, message|
   %div{class: "alert alert-#{flash_mapping.fetch(level)}"}
     = message
+    %button(type='button' class='close' aria-label='Close')
+      %span(aria-hidden) ×

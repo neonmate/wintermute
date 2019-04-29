@@ -4,7 +4,7 @@ FactoryBot.define do
     title { 'Some title' }
     subtitle { 'Some subtitle' }
     description { 'Some description' }
-    repository_url { 'https://github.com/github/example' }
+    sequence(:repository_url) { |n| "https://github.com/github/example_#{n}" }
 
     user
   end

@@ -26,6 +26,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
 
 group :development do
+  gem 'awesome_print'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'listen'

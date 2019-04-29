@@ -50,6 +50,7 @@ GEM
     assignable_values (0.16.0)
       activerecord (>= 2.3)
     ast (2.4.0)
+    awesome_print (1.8.0)
     backports (3.12.0)
     better_errors (2.5.1)
       coderay (>= 1.0.0)
@@ -352,6 +353,7 @@ PLATFORMS
 DEPENDENCIES
   active_type
   assignable_values
+  awesome_print
   better_errors
   binding_of_caller
   bootsnap

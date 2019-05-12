@@ -83,6 +83,8 @@ GEM
       edge_rider (>= 0.3.0)
       memoized
       rails (>= 3.2)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     crass (1.0.4)
     cucumber (3.1.2)
       builder (>= 2.1.2)
@@ -134,6 +136,10 @@ GEM
     gherkin (5.1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    graphql (1.9.4)
+    graphql-client (0.14.0)
+      activesupport (>= 3.0, < 6.0)
+      graphql (~> 1.6)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -145,6 +151,7 @@ GEM
       railties (>= 5.1)
     has_defaults (0.4.4)
       activerecord
+    hashdiff (0.3.9)
     hashie (3.6.0)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
@@ -154,6 +161,8 @@ GEM
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.2)
+    json-schema (2.8.1)
+      addressable (>= 2.4)
     jwt (2.1.0)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -291,6 +300,7 @@ GEM
     ruby_parser (3.12.0)
       sexp_processor (~> 4.9)
     rubyzip (1.2.2)
+    safe_yaml (1.0.5)
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -327,11 +337,16 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.4.1)
+    vcr (4.0.0)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
+    webmock (3.5.1)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
     webpacker (4.0.2)
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
@@ -367,8 +382,10 @@ DEPENDENCIES
   edge_rider
   exception_notification
   factory_bot_rails
+  graphql-client
   haml-rails
   has_defaults
+  json-schema
   launchy
   listen
   makandra-rubocop
@@ -390,7 +407,9 @@ DEPENDENCIES
   spring-commands-rspec
   spring-watcher-listen
   timecop
+  vcr
   web-console
+  webmock
   webpacker
   whenever
   will_paginate

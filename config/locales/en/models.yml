@@ -16,7 +16,6 @@ en:
       subtitle: Subtitle
       description: Description
       repository_url: Repository URL
-      application_url: Application URL
 
   activerecord:
     models: *models

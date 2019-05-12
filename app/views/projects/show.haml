@@ -15,12 +15,5 @@
       %dt= Project.human_attribute_name(:repository_url)
       %dd= link_to @project.repository_url, @project.repository_url, target: '_blank', rel: 'noopener'
 
-      %dt= Project.human_attribute_name(:application_url)
-      %dd
-        - if @project.application_url.present?
-          = link_to @project.application_url, @project.application_url, target: '_blank', 'data-confirm' => 'By following this link, you will be redirected to an unknown external site. This might be a security risk. Do you want to continue?'
-        - else
-          = ndash
-
       %dt= Project.human_attribute_name(:user)
       %dd= link_to @project.user.nickname, "https://github.com/#{@project.user.nickname}", target: '_blank', rel: 'noopener'

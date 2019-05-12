@@ -481,15 +481,6 @@ ActiveRecord::Base.transaction do
   )
 
   Project.create!(
-    title: 'Statamic',
-    subtitle: 'Flat File CMS',
-    description: 'Flat File CMS',
-    repository_url: 'https://github.com/statamic',
-    application_url: 'https://statamic.com',
-    user: user,
-  )
-
-  Project.create!(
     title: 'Larasocial',
     subtitle: 'A Social Network Application',
     description: 'A Social Network Application',

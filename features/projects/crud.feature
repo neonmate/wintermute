@@ -21,7 +21,6 @@ Feature: Projects CRUD
       And I fill in "Subtitle" with "Some subtitle"
       And I fill in "Description" with "Some description"
       And I fill in "Repository URL" with "https://github.com/github/example"
-      And I fill in "Application URL" with "https://example.com"
       And I press "Save"
     Then I should see a success flash "Project successfully saved"
       And I should be on the page for the project above
@@ -34,9 +33,6 @@ Feature: Projects CRUD
 
         Repository URL
         https://github.com/github/example
-
-        Application URL
-        https://example.com
 
         Hunter
         github

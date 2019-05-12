@@ -75,8 +75,7 @@ class ProjectsController < ApplicationController
       :title,
       :subtitle,
       :description,
-      :repository_url,
-      :application_url
+      :repository_url
     )
   end
 

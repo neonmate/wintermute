@@ -1,0 +1,161 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.github.com/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query Project__Synchronizer__REPOSITORY_META_QUERY($owner:
+        String!, $name: String!) {\n  repository(owner: $owner, name: $name) {\n    description\n    createdAt\n    homepageUrl\n    stargazers
+        {\n      totalCount\n    }\n    watchers {\n      totalCount\n    }\n    issues
+        {\n      totalCount\n    }\n    languages(first: 50) {\n      nodes {\n        name\n      }\n    }\n    ref(qualifiedName:
+        \"master\") {\n      target {\n        __typename\n        ... on Commit {\n          history(first:
+        25) {\n            edges {\n              node {\n                committedDate\n              }\n            }\n          }\n        }\n      }\n    }\n    licenseInfo
+        {\n      name\n    }\n  }\n}","variables":{"owner":"github","name":"graphql-client"},"operationName":"Project__Synchronizer__REPOSITORY_META_QUERY"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <GITHUB_PERSONAL_ACCESS_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sun, 12 May 2019 14:18:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      Cache-Control:
+      - no-cache
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.v4
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4993'
+      X-Ratelimit-Reset:
+      - '1557674331'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - F5EA:2BFB:16210D3:30A70C0:5CD82B4B
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"repository":{"description":"A Ruby library for declaring,
+        composing and executing GraphQL queries","createdAt":"2016-08-03T18:51:26Z","homepageUrl":"","stargazers":{"totalCount":728},"watchers":{"totalCount":50},"issues":{"totalCount":96},"languages":{"nodes":[{"name":"Ruby"},{"name":"HTML"}]},"ref":{"target":{"__typename":"Commit","history":{"edges":[{"node":{"committedDate":"2019-02-28T15:35:03Z"}},{"node":{"committedDate":"2019-02-13T00:55:11Z"}},{"node":{"committedDate":"2019-02-13T00:50:22Z"}},{"node":{"committedDate":"2019-02-13T00:48:41Z"}},{"node":{"committedDate":"2019-02-13T00:47:33Z"}},{"node":{"committedDate":"2018-12-14T13:50:41Z"}},{"node":{"committedDate":"2018-12-13T22:02:06Z"}},{"node":{"committedDate":"2018-12-13T21:11:27Z"}},{"node":{"committedDate":"2018-12-13T20:33:04Z"}},{"node":{"committedDate":"2018-12-13T15:35:09Z"}},{"node":{"committedDate":"2018-12-13T14:55:39Z"}},{"node":{"committedDate":"2018-10-25T18:50:38Z"}},{"node":{"committedDate":"2018-10-25T18:45:32Z"}},{"node":{"committedDate":"2018-10-15T20:47:59Z"}},{"node":{"committedDate":"2018-10-15T19:49:10Z"}},{"node":{"committedDate":"2018-10-15T19:36:53Z"}},{"node":{"committedDate":"2018-10-15T19:01:52Z"}},{"node":{"committedDate":"2018-08-20T20:02:42Z"}},{"node":{"committedDate":"2018-08-13T17:20:02Z"}},{"node":{"committedDate":"2018-08-12T01:19:53Z"}},{"node":{"committedDate":"2018-08-12T00:17:04Z"}},{"node":{"committedDate":"2018-07-16T21:18:13Z"}},{"node":{"committedDate":"2018-07-16T21:17:54Z"}},{"node":{"committedDate":"2018-07-16T21:16:35Z"}},{"node":{"committedDate":"2018-07-16T21:13:05Z"}}]}}},"licenseInfo":{"name":"MIT
+        License"}}}}'
+    http_version: 
+  recorded_at: Sun, 12 May 2019 14:18:51 GMT
+- request:
+    method: post
+    uri: https://api.github.com/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query Project__Synchronizer__REPOSITORY_META_QUERY($owner:
+        String!, $name: String!) {\n  repository(owner: $owner, name: $name) {\n    description\n    createdAt\n    homepageUrl\n    stargazers
+        {\n      totalCount\n    }\n    watchers {\n      totalCount\n    }\n    issues
+        {\n      totalCount\n    }\n    languages(first: 50) {\n      nodes {\n        name\n      }\n    }\n    ref(qualifiedName:
+        \"master\") {\n      target {\n        __typename\n        ... on Commit {\n          history(first:
+        25) {\n            edges {\n              node {\n                committedDate\n              }\n            }\n          }\n        }\n      }\n    }\n    licenseInfo
+        {\n      name\n    }\n  }\n}","variables":{"owner":"github","name":"rubocop-github"},"operationName":"Project__Synchronizer__REPOSITORY_META_QUERY"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <GITHUB_PERSONAL_ACCESS_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sun, 12 May 2019 14:18:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      Cache-Control:
+      - no-cache
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.v4
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4992'
+      X-Ratelimit-Reset:
+      - '1557674332'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - F5EB:58C5:1671EE7:3007357:5CD82B4C
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"repository":{"description":"Code style checking for GitHub
+        Ruby repositories","createdAt":"2016-12-10T06:11:29Z","homepageUrl":"","stargazers":{"totalCount":430},"watchers":{"totalCount":56},"issues":{"totalCount":9},"languages":{"nodes":[{"name":"Ruby"}]},"ref":{"target":{"__typename":"Commit","history":{"edges":[{"node":{"committedDate":"2019-04-15T18:24:08Z"}},{"node":{"committedDate":"2019-04-15T18:16:25Z"}},{"node":{"committedDate":"2019-04-15T17:15:12Z"}},{"node":{"committedDate":"2019-04-15T16:52:34Z"}},{"node":{"committedDate":"2019-04-15T16:47:34Z"}},{"node":{"committedDate":"2019-04-15T16:26:18Z"}},{"node":{"committedDate":"2019-04-15T16:19:48Z"}},{"node":{"committedDate":"2019-04-15T16:11:57Z"}},{"node":{"committedDate":"2019-04-10T17:45:03Z"}},{"node":{"committedDate":"2019-03-25T16:22:49Z"}},{"node":{"committedDate":"2019-03-13T16:31:26Z"}},{"node":{"committedDate":"2018-09-18T16:23:35Z"}},{"node":{"committedDate":"2018-09-18T16:23:08Z"}},{"node":{"committedDate":"2018-09-18T16:20:38Z"}},{"node":{"committedDate":"2018-09-13T20:37:29Z"}},{"node":{"committedDate":"2018-09-13T20:33:56Z"}},{"node":{"committedDate":"2018-09-13T20:11:56Z"}},{"node":{"committedDate":"2018-09-13T20:10:15Z"}},{"node":{"committedDate":"2018-09-13T20:04:44Z"}},{"node":{"committedDate":"2018-09-13T20:04:44Z"}},{"node":{"committedDate":"2018-09-13T20:04:44Z"}},{"node":{"committedDate":"2018-09-13T20:04:44Z"}},{"node":{"committedDate":"2018-09-13T14:01:33Z"}},{"node":{"committedDate":"2018-09-13T13:58:59Z"}},{"node":{"committedDate":"2018-09-13T13:58:23Z"}}]}}},"licenseInfo":{"name":"MIT
+        License"}}}}'
+    http_version: 
+  recorded_at: Sun, 12 May 2019 14:18:52 GMT
+recorded_with: VCR 4.0.0

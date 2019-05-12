@@ -5,6 +5,15 @@ rvm:
 
 addons:
   chrome: stable
+  postgresql: "10"
+  apt:
+    packages:
+      - postgresql-10
+      - postgresql-client-10
+env:
+  global:
+    - PGPORT=5433
+
 before_install:
   - wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE
   - wget https://chromedriver.storage.googleapis.com/$(cat LATEST_RELEASE)/chromedriver_linux64.zip
@@ -13,6 +22,8 @@ before_install:
   - sudo mv chromedriver /usr/bin/
   - gem update --system
   - gem install bundler
+  - sudo cp /etc/postgresql/{9.6,10}/main/pg_hba.conf
+  - sudo /etc/init.d/postgresql restart
 install:
   - bundle install
   - nvm install 8.9.1

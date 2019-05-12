@@ -16,7 +16,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A platform for recording, mapping, and sharing health and environmental data using your smartphone.',
     description: 'A platform for recording, mapping, and sharing health and environmental data using your smartphone.',
     repository_url: 'https://github.com/HabitatMap/AirCasting',
-    application_url: 'http://aircasting.org',
     user: user,
   )
 
@@ -25,7 +24,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Provide a Freedom of Information request system for your jurisdiction.',
     description: 'Provide a Freedom of Information request system for your jurisdiction.',
     repository_url: 'https://github.com/mysociety/alaveteli',
-    application_url: 'http://alaveteli.org',
     user: user,
   )
 
@@ -34,7 +32,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'An independent music platform, allowing musicians to host and distribute their music in a non-commercial, easy-to-use environment.',
     description: 'An independent music platform, allowing musicians to host and distribute their music in a non-commercial, easy-to-use environment.',
     repository_url: 'https://github.com/sudara/alonetone',
-    application_url: 'https://alonetone.com',
     user: user,
   )
 
@@ -43,7 +40,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A realtime chat application for developers.',
     description: 'A realtime chat application for developers.',
     repository_url: 'https://github.com/codefirst/AsakusaSatellite',
-    application_url: 'https://www.codefirst.org/AsakusaSatellite',
     user: user,
   )
 
@@ -68,7 +64,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'An online bike registry.',
     description: 'An online bike registry.',
     repository_url: 'https://github.com/bikeindex/bike_index',
-    application_url: 'https://bikeindex.org',
     user: user,
   )
 
@@ -93,7 +88,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'An online portal that provides a unified and personalized one-stop way to access email, calendars, shared documents and class collaboration spaces.',
     description: 'An online portal that provides a unified and personalized one-stop way to access email, calendars, shared documents and class collaboration spaces.',
     repository_url: 'https://github.com/ets-berkeley-edu/calcentral',
-    application_url: 'https://calcentral.berkeley.edu',
     user: user,
   )
 
@@ -102,7 +96,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A lightweight forum application, base on Ruby on Rails.',
     description: 'A lightweight forum application, base on Ruby on Rails.',
     repository_url: 'https://github.com/chloerei/campo',
-    application_url: 'http://codecampo.com',
     user: user,
   )
 
@@ -119,7 +112,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'The first open source crowdfunding platform for creative projects in the world.',
     description: 'The first open source crowdfunding platform for creative projects in the world.',
     repository_url: 'https://github.com/catarse/catarse',
-    application_url: 'https://catarse.me/',
     user: user,
   )
 
@@ -128,7 +120,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Professional network for software engineers.',
     description: 'Professional network for software engineers.',
     repository_url: 'https://github.com/assemblymade/coderwall',
-    application_url: 'https://coderwall.com',
     user: user,
   )
 
@@ -137,7 +128,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Help out your favorite open source projects and become a better developer while doing it.',
     description: 'Help out your favorite open source projects and become a better developer while doing it.',
     repository_url: 'https://github.com/codetriage/codetriage',
-    application_url: 'https://www.codetriage.com/',
     user: user,
   )
 
@@ -146,7 +136,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Easier than a CRM.',
     description: 'Easier than a CRM.',
     repository_url: 'https://github.com/SIGIRE/CoRM',
-    application_url: 'http://www.corm.fr',
     user: user,
   )
 
@@ -179,7 +168,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Fighting for Open Science with Open Data, a machine learning challenges platform.',
     description: 'Fighting for Open Science with Open Data, a machine learning challenges platform.',
     repository_url: 'https://github.com/crowdAI/crowdai',
-    application_url: 'https://www.crowdai.org/',
     user: user,
   )
 
@@ -188,7 +176,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Open source crowdfunding platform.',
     description: 'Open source crowdfunding platform.',
     repository_url: 'https://github.com/Crowdtilt/CrowdtiltOpen',
-    application_url: 'https://www.tilt.com/index.html',
     user: user,
   )
 
@@ -197,7 +184,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Free in-browser coding-dojo.',
     description: 'Free in-browser coding-dojo.',
     repository_url: 'https://github.com/JonJagger/cyber-dojo',
-    application_url: 'http://cyber-dojo.org',
     user: user,
   )
 
@@ -206,7 +192,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A taggable image board written in Rails 3.',
     description: 'A taggable image board written in Rails 3.',
     repository_url: 'https://github.com/r888888888/danbooru',
-    application_url: 'http://testbooru.donmai.us',
     user: user,
   )
 
@@ -223,7 +208,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Distributed and contextual social networking.',
     description: 'Distributed and contextual social networking.',
     repository_url: 'https://github.com/diaspora/diaspora',
-    application_url: 'https://diasporafoundation.org',
     user: user,
   )
 
@@ -232,7 +216,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A platform for community discussion.',
     description: 'A platform for community discussion.',
     repository_url: 'https://github.com/discourse/discourse',
-    application_url: 'https://try.discourse.org/',
     user: user,
   )
 
@@ -241,7 +224,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Simple agricultural ERP.',
     description: 'Simple agricultural ERP.',
     repository_url: 'https://github.com/ekylibre/ekylibre',
-    application_url: 'http://ekylibre.org',
     user: user,
   )
 
@@ -250,7 +232,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Send encrypted messages by one click.',
     description: 'Send encrypted messages by one click.',
     repository_url: 'https://github.com/encrypt-to/encrypt.to',
-    application_url: 'https://encrypt.to',
     user: user,
   )
 
@@ -259,7 +240,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Encyclopedia of Life.',
     description: 'Encyclopedia of Life.',
     repository_url: 'https://github.com/EOL/eol',
-    application_url: 'http://eol.org',
     user: user,
   )
 
@@ -276,7 +256,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A free market place in the hand of the users.',
     description: 'A free market place in the hand of the users.',
     repository_url: 'https://github.com/fairmondo/fairmondo',
-    application_url: 'https://www.fairmondo.de',
     user: user,
   )
 
@@ -285,7 +264,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A simple, fast and nice looking RSS reader.',
     description: 'A simple, fast and nice looking RSS reader.',
     repository_url: 'https://github.com/feedbin/feedbin',
-    application_url: 'https://feedbin.com',
     user: user,
   )
 
@@ -302,7 +280,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A wiki-like application for crowdsourcing transcription of handwritten documents.',
     description: 'A wiki-like application for crowdsourcing transcription of handwritten documents.',
     repository_url: 'https://github.com/benwbrum/fromthepage',
-    application_url: 'https://www.fromthepage.com/',
     user: user,
   )
 
@@ -311,7 +288,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Open source software to collaborate on code.',
     description: 'Open source software to collaborate on code.',
     repository_url: 'https://github.com/gitlabhq/gitlabhq',
-    application_url: 'https://gitlab.com/gitlab-org/gitlab-ce',
     user: user,
   )
 
@@ -320,7 +296,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Upload and display collection of 2000+ graffiti magazines.',
     description: 'Upload and display collection of 2000+ graffiti magazines.',
     repository_url: 'https://github.com/dankleiman/graff_mags',
-    application_url: 'http://graffmags.herokuapp.com',
     user: user,
   )
 
@@ -329,7 +304,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'An open source/open data project to create a website for food gardeners.',
     description: 'An open source/open data project to create a website for food gardeners.',
     repository_url: 'https://github.com/Growstuff/growstuff',
-    application_url: 'http://www.growstuff.org/',
     user: user,
   )
 
@@ -338,7 +312,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A social media assistant.',
     description: 'A social media assistant.',
     repository_url: 'https://github.com/rysmith/hashrobot',
-    application_url: 'http://www.hashrobot.com',
     user: user,
   )
 
@@ -347,7 +320,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Rails 4 Helpdesk. Includes Multilingual Knowledgebase, Email Tickets, Community.',
     description: 'Rails 4 Helpdesk. Includes Multilingual Knowledgebase, Email Tickets, Community.',
     repository_url: 'https://github.com/scott/helpy',
-    application_url: 'https://helpy.io/',
     user: user,
   )
 
@@ -356,7 +328,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A web application to manage complex group hierarchies with members, events and a lot more -.',
     description: 'A web application to manage complex group hierarchies with members, events and a lot more -.',
     repository_url: 'https://github.com/hitobito/hitobito',
-    application_url: 'http://hitobito.com/en',
     user: user,
   )
 
@@ -365,7 +336,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A complete time registration app for teams.',
     description: 'A complete time registration app for teams.',
     repository_url: 'https://github.com/defactosoftware/hours',
-    application_url: 'https://happyhours.io',
     user: user,
   )
 
@@ -390,7 +360,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Open source Rails app behind iNaturalist.org.',
     description: 'Open source Rails app behind iNaturalist.org.',
     repository_url: 'https://github.com/inaturalist/inaturalist',
-    application_url: 'http://www.inaturalist.org',
     user: user,
   )
 
@@ -407,7 +376,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A Trello clone in Rails and Backbone.js.',
     description: 'A Trello clone in Rails and Backbone.js.',
     repository_url: 'https://github.com/somlor/kanban',
-    application_url: 'http://kanban.seanomlor.com',
     user: user,
   )
 
@@ -431,7 +399,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'An application that allows users to search for songs and add them to friends playlist.',
     description: 'An application that allows users to search for songs and add them to friends playlist.',
     repository_url: 'https://github.com/ooofinooo/listenup',
-    application_url: 'http://listenup-songshare.herokuapp.com',
     user: user,
   )
 
@@ -448,7 +415,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A collaborative decision-making tool that makes it easy for anyone.',
     description: 'A collaborative decision-making tool that makes it easy for anyone.',
     repository_url: 'https://github.com/loomio/loomio',
-    application_url: 'https://www.loomio.org',
     user: user,
   )
 
@@ -457,7 +423,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'GNU Social-compatible microblogging server.',
     description: 'GNU Social-compatible microblogging server.',
     repository_url: 'https://github.com/tootsuite/mastodon',
-    application_url: 'https://mastodon.social',
     user: user,
   )
 
@@ -466,7 +431,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Where students practice and receive automated and human feedback.',
     description: 'Where students practice and receive automated and human feedback.',
     repository_url: 'https://github.com/mumuki/mumuki-laboratory',
-    application_url: 'http://mumuki.io',
     user: user,
   )
 
@@ -483,7 +447,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A private member portal for churches built with Ruby on Rails.',
     description: 'A private member portal for churches built with Ruby on Rails.',
     repository_url: 'https://github.com/churchio/onebody',
-    application_url: 'https://church.io',
     user: user,
   )
 
@@ -508,7 +471,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A web based project management system built on Ruby on Rails.',
     description: 'A web based project management system built on Ruby on Rails.',
     repository_url: 'https://github.com/opf/openproject',
-    application_url: 'https://www.openproject.org',
     user: user,
   )
 
@@ -517,7 +479,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'An open source meditation community.',
     description: 'An open source meditation community.',
     repository_url: 'https://github.com/danbartlett/opensit',
-    application_url: 'http://opensit.com',
     user: user,
   )
 
@@ -526,7 +487,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Mirror of the Rails application powering.',
     description: 'Mirror of the Rails application powering.',
     repository_url: 'https://github.com/openstreetmap/openstreetmap-website',
-    application_url: 'http://www.openstreetmap.org',
     user: user,
   )
 
@@ -543,7 +503,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'An open-source web application intended for hosting archives of fanworks, including fanfic, fanart, and fan vids.',
     description: 'An open-source web application intended for hosting archives of fanworks, including fanfic, fanart, and fan vids.',
     repository_url: 'https://github.com/otwcode/otwarchive',
-    application_url: 'http://archiveofourown.org',
     user: user,
   )
 
@@ -552,7 +511,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A Ruby on Rails application to communicate passwords over the web.',
     description: 'A Ruby on Rails application to communicate passwords over the web.',
     repository_url: 'https://github.com/pglombardo/PasswordPusher',
-    application_url: 'https://pwpush.com',
     user: user,
   )
 
@@ -561,7 +519,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'An open-source crypto currency exchange.',
     description: 'An open-source crypto currency exchange.',
     repository_url: 'https://github.com/peatio/peatio',
-    application_url: 'http://www.peatio.com',
     user: user,
   )
 
@@ -610,7 +567,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Manage a bike racing association: riders, teams, calendars, competitions, and results.',
     description: 'Manage a bike racing association: riders, teams, calendars, competitions, and results.',
     repository_url: 'https://github.com/scottwillson/racing_on_rails',
-    application_url: 'http://racingonrails.rocketsurgeryllc.com',
     user: user,
   )
 
@@ -627,7 +583,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A flexible project management web application written using Ruby on Rails.',
     description: 'A flexible project management web application written using Ruby on Rails.',
     repository_url: 'https://github.com/edavis10/redmine',
-    application_url: 'http://demo.redmine.org',
     user: user,
   )
 
@@ -644,7 +599,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Manages reservations for equipment (allows student reservations).',
     description: 'Manages reservations for equipment (allows student reservations).',
     repository_url: 'https://github.com/YaleSTC/reservations',
-    application_url: 'http://yalestc.github.io/reservations',
     user: user,
   )
 
@@ -653,7 +607,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Web application designed to perform digital humanities research tasks on a database of journal articles.',
     description: 'Web application designed to perform digital humanities research tasks on a database of journal articles.',
     repository_url: 'https://github.com/rletters/rletters',
-    application_url: 'http://www.rletters.net',
     user: user,
   )
 
@@ -662,7 +615,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Link aggregation web app similar with Reddit in Ruby on Rails.',
     description: 'Link aggregation web app similar with Reddit in Ruby on Rails.',
     repository_url: 'https://github.com/mertbulan/RoRdit',
-    application_url: 'https://rordit.herokuapp.com',
     user: user,
   )
 
@@ -671,7 +623,6 @@ ActiveRecord::Base.transaction do
     subtitle: "The Ruby community's gem hosting service",
     description: "The Ruby community's gem hosting service",
     repository_url: 'https://github.com/rubygems/rubygems.org',
-    application_url: 'https://rubygems.org',
     user: user,
   )
 
@@ -680,7 +631,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Simple Web Household Account Book. built with Ruby on Rails.',
     description: 'Simple Web Household Account Book. built with Ruby on Rails.',
     repository_url: 'https://github.com/kaznum/sanataro',
-    application_url: 'http://sanataro.herokuapp.com',
     user: user,
   )
 
@@ -705,7 +655,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A platform for setting up your own peer-to-peer marketplace online.',
     description: 'A platform for setting up your own peer-to-peer marketplace online.',
     repository_url: 'https://github.com/sharetribe/sharetribe',
-    application_url: 'https://www.sharetribe.com',
     user: user,
   )
 
@@ -722,7 +671,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A social voting app for reaching consensus in a group of any size.',
     description: 'A social voting app for reaching consensus in a group of any size.',
     repository_url: 'https://github.com/Spokenvote/spokenvote',
-    application_url: 'http://www.spokenvote.org',
     user: user,
   )
 
@@ -731,7 +679,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'Spree is a complete open source e-commerce solution for Ruby on Rails.',
     description: 'Spree is a complete open source e-commerce solution for Ruby on Rails.',
     repository_url: 'https://github.com/spree/spree',
-    application_url: 'https://spreecommerce.com/',
     user: user,
   )
 
@@ -748,7 +695,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'The award-winning collaboration solution, inspired by Basecamp, Yammer and Twitter.',
     description: 'The award-winning collaboration solution, inspired by Basecamp, Yammer and Twitter.',
     repository_url: 'https://github.com/teambox/teambox',
-    application_url: 'https://redbooth.com',
     user: user,
   )
 
@@ -757,7 +703,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A project that aims to teach web development for free.',
     description: 'A project that aims to teach web development for free.',
     repository_url: 'https://github.com/TheOdinProject/theodinproject',
-    application_url: 'https://www.theodinproject.com/',
     user: user,
   )
 
@@ -766,7 +711,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A "Getting Things Done" application.',
     description: 'A "Getting Things Done" application.',
     repository_url: 'https://github.com/TracksApp/tracks',
-    application_url: 'http://www.getontracks.org',
     user: user,
   )
 
@@ -783,7 +727,6 @@ ActiveRecord::Base.transaction do
     subtitle: 'A platform for online collaboration and crowdsourced project development.',
     description: 'A platform for online collaboration and crowdsourced project development.',
     repository_url: 'https://github.com/AgileVentures/WebsiteOne',
-    application_url: 'https://www.agileventures.org/',
     user: user,
   )
 

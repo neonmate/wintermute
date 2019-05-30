@@ -1,0 +1,23 @@
+.d-flex
+  .flex-grow-1
+    = render 'shared/filter'
+  - if current_user.present?
+    = modal_link_to "New #{Repository.model_name.human}", new_repository_path, class: 'btn btn-primary ml-2'
+
+.results
+  - if @repositories.present?
+    - @repositories.each do |repository|
+      .card.mt-3
+        .card-header
+          = content_link_to(repository.name, repository)
+          - if repository.first_commit_at.present? && repository.last_commit_at.present?
+            %small #{format_date(repository.first_commit_at)} - #{format_date(repository.last_commit_at)}
+        .card-body
+          = format_string(repository.description)
+
+    = render 'shared/pagination', record: @repositories
+  - else
+    = no_records_available do
+      %span.text-muted We do not have any repositories yet. You can
+      %span.font-weight-bold= help_link(new_repository_path)
+      %span.text-muted to fill this gap.

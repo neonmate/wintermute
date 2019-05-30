@@ -1,0 +1,42 @@
+= content_link_to '← Back to list', repositories_path, class: 'btn btn-outline-primary'
+
+.card.mt-3
+  .card-header
+    .d-flex
+      .mr-auto
+        %h3= @repository.name
+      - if current_power.include_record?(:updatable, @repository)
+        = modal_link_to "Edit #{Repository.model_name.human}", edit_repository_path(@repository), class: 'btn btn-primary'
+  .card-body
+    %dl
+      %dt= Repository.human_attribute_name(:description)
+      %dd= format_text(@repository.description)
+
+      %dt= Repository.human_attribute_name(:repository_url)
+      %dd= link_to @repository.repository_url_preview, @repository.repository_url_preview, target: '_blank', rel: 'noopener'
+
+      %dt Popularity
+      %dd
+        .row
+          .col
+            #{Repository.human_attribute_name(:total_stars)}: #{format_string(@repository.total_stars)}
+          .col
+            #{Repository.human_attribute_name(:total_watchers)}: #{format_string(@repository.total_watchers)}
+          .col
+            #{Repository.human_attribute_name(:total_issues)}: #{format_string(@repository.total_issues)}
+
+      %dt= Repository.human_attribute_name(:languages)
+      %dd= @repository.languages.join(', ').presence || ndash
+
+      %dt= Repository.human_attribute_name(:homepage_url)
+      %dd
+        - if @repository.homepage_url.present?
+          = link_to @repository.homepage_url, @repository.homepage_url, target: '_blank', 'data-confirm' => 'By following this link, you will be redirected to an unknown external site. This might be a security risk. Do you want to continue?'
+        - else
+          = ndash
+
+      %dt= Repository.human_attribute_name(:licence)
+      %dd= format_string(@repository.licence)
+
+      %dt= Repository.human_attribute_name(:user)
+      %dd= link_to @repository.user.nickname, "https://github.com/#{@repository.user.nickname}", target: '_blank', rel: 'noopener'

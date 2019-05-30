@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'projects#index'
+  root 'repositories#index'
 
   get 'session/new', as: :sign_in
   delete 'session', action: :destroy, controller: 'session', as: :sign_out
@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'privacy', action: :privacy, controller: 'page'
 
-  resources :projects
+  resources :repositories
 
   if Rails.env.test? || Rails.env.development?
     get :test_flash, controller: 'tests'

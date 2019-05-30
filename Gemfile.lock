@@ -108,7 +108,7 @@ GEM
       railties (>= 4, < 6)
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
-    cucumber_factory (1.15.0)
+    cucumber_factory (1.15.1)
       activerecord
       activesupport
       cucumber
@@ -337,6 +337,8 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.4.1)
+    unpoly-rails (0.60.0)
+      rails (>= 3)
     vcr (4.0.0)
     web-console (3.7.0)
       actionview (>= 5.0)
@@ -407,6 +409,7 @@ DEPENDENCIES
   spring-commands-rspec
   spring-watcher-listen
   timecop
+  unpoly-rails
   vcr
   web-console
   webmock

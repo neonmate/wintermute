@@ -3,1131 +3,849 @@
 user = User.find_by(nickname: 'neonmate')
 
 ActiveRecord::Base.transaction do
-  Project.create!(
-    title: 'AbuseIO',
-    subtitle: 'Abuse Management for network operators',
-    description: 'Abuse Management for network operators',
-    repository_url: 'https://github.com/AbuseIO/AbuseIO',
+  Repository.create!(
+    owner: 'AbuseIO',
+    name: 'AbuseIO',
     user: user,
   )
 
-  Project.create!(
-    title: 'Admin Architect',
-    subtitle: 'Administration Framework. Active Admin for Laravel',
-    description: 'Administration Framework. Active Admin for Laravel',
-    repository_url: 'https://github.com/adminarchitect/core',
+  Repository.create!(
+    owner: 'adminarchitect',
+    name: 'core',
     user: user,
   )
 
-  Project.create!(
-    title: 'Akaunting',
-    subtitle: 'Free and Online Accounting Software',
-    description: 'Free and Online Accounting Software',
-    repository_url: 'https://github.com/akaunting/akaunting',
+  Repository.create!(
+    owner: 'akaunting',
+    name: 'akaunting',
     user: user,
   )
 
-  Project.create!(
-    title: 'Laracom',
-    subtitle: 'FREE E-Commerce Software',
-    description: 'FREE E-Commerce Software',
-    repository_url: 'https://github.com/jsdecena/laracom',
+  Repository.create!(
+    owner: 'jsdecena',
+    name: 'laracom',
     user: user,
   )
 
-  Project.create!(
-    title: 'Invoice Ninja',
-    subtitle: 'Invoice Generation System',
-    description: 'Invoice Generation System',
-    repository_url: 'https://github.com/invoiceninja/invoiceninja',
+  Repository.create!(
+    owner: 'invoiceninja',
+    name: 'invoiceninja',
     user: user,
   )
 
-  Project.create!(
-    title: 'Koel',
-    subtitle: 'A personal music streaming server that works',
-    description: 'A personal music streaming server that works',
-    repository_url: 'https://github.com/phanan/koel',
+  Repository.create!(
+    owner: 'phanan',
+    name: 'koel',
     user: user,
   )
 
-  Project.create!(
-    title: 'Faveo',
-    subtitle: 'Helpdesk Ticketing System',
-    description: 'Helpdesk Ticketing System',
-    repository_url: 'https://github.com/ladybirdweb/faveo-helpdesk',
+  Repository.create!(
+    owner: 'ladybirdweb',
+    name: 'faveo-helpdesk',
     user: user,
   )
 
-  Project.create!(
-    title: 'Timegrid',
-    subtitle: 'Online Reservation Platform',
-    description: 'Online Reservation Platform',
-    repository_url: 'https://github.com/timegridio/timegrid',
+  Repository.create!(
+    owner: 'timegridio',
+    name: 'timegrid',
     user: user,
   )
 
-  Project.create!(
-    title: 'Laravel.io',
-    subtitle: 'Laravel Community Portal',
-    description: 'Laravel Community Portal',
-    repository_url: 'https://github.com/laravelio/laravel.io',
+  Repository.create!(
+    owner: 'laravelio',
+    name: 'laravel.io',
     user: user,
   )
 
-  Project.create!(
-    title: 'Laravel Tricks',
-    subtitle: 'Laravel Tips and Tricks',
-    description: 'Laravel Tips and Tricks',
-    repository_url: 'https://github.com/CodepadME/laravel-tricks',
+  Repository.create!(
+    owner: 'CodepadME',
+    name: 'laravel-tricks',
     user: user,
   )
 
-  Project.create!(
-    title: 'Attendize',
-    subtitle: 'Ticket selling and event management platform',
-    description: 'Ticket selling and event management platform',
-    repository_url: 'https://github.com/Attendize/Attendize',
+  Repository.create!(
+    owner: 'Attendize',
+    name: 'Attendize',
     user: user,
   )
 
-  Project.create!(
-    title: 'Laraadmin',
-    subtitle: 'CRM for quickstart Admin based applications',
-    description: 'CRM for quickstart Admin based applications',
-    repository_url: 'https://github.com/dwijitsolutions/laraadmin',
+  Repository.create!(
+    owner: 'dwijitsolutions',
+    name: 'laraadmin',
     user: user,
   )
 
-  Project.create!(
-    title: 'Larasites',
-    subtitle: 'Showcasing the best websites made with Laravel & Lumen',
-    description: 'Showcasing the best websites made with Laravel & Lumen',
-    repository_url: 'https://github.com/we-are-next/larasites.com',
+  Repository.create!(
+    owner: 'we-are-next',
+    name: 'larasites.com',
     user: user,
   )
 
-  Project.create!(
-    title: 'Openlaravel',
-    subtitle: 'A collection of open source projects built using Laravel',
-    description: 'A collection of open source projects built using Laravel',
-    repository_url: 'https://github.com/ammezie/openlaravel',
+  Repository.create!(
+    owner: 'ammezie',
+    name: 'openlaravel',
     user: user,
   )
 
-  Project.create!(
-    title: 'Flarum',
-    subtitle: 'Delightfully simple forum software',
-    description: 'Delightfully simple forum software',
-    repository_url: 'https://github.com/flarum/flarum',
+  Repository.create!(
+    owner: 'flarum',
+    name: 'flarum',
     user: user,
   )
 
-  Project.create!(
-    title: 'OctoberCMS',
-    subtitle: 'CMS platform built on Laravel',
-    description: 'CMS platform built on Laravel',
-    repository_url: 'https://github.com/octobercms/october',
+  Repository.create!(
+    owner: 'octobercms',
+    name: 'october',
     user: user,
   )
 
-  Project.create!(
-    title: 'PyroCMS',
-    subtitle: 'PHP CMS',
-    description: 'PHP CMS',
-    repository_url: 'https://github.com/pyrocms/pyrocms',
+  Repository.create!(
+    owner: 'pyrocms',
+    name: 'pyrocms',
     user: user,
   )
 
-  Project.create!(
-    title: 'LavaliteCMS',
-    subtitle: 'CMS built on Laravel 5.2',
-    description: 'CMS built on Laravel 5.2',
-    repository_url: 'https://github.com/LavaLite/cms',
+  Repository.create!(
+    owner: 'LavaLite',
+    name: 'cms',
     user: user,
   )
 
-  Project.create!(
-    title: 'AsgardCMS',
-    subtitle: 'A modular multilingual CMS built with Laravel 5',
-    description: 'A modular multilingual CMS built with Laravel 5',
-    repository_url: 'https://github.com/AsgardCms/Platform',
+  Repository.create!(
+    owner: 'AsgardCms',
+    name: 'Platform',
     user: user,
   )
 
-  Project.create!(
-    title: 'WardRobeCMS',
-    subtitle: 'A minimal blogging application',
-    description: 'A minimal blogging application',
-    repository_url: 'https://github.com/wardrobecms/wardrobe',
+  Repository.create!(
+    owner: 'wardrobecms',
+    name: 'wardrobe',
     user: user,
   )
 
-  Project.create!(
-    title: 'KodiCMS',
-    subtitle: 'The CMS built on Laravel 5.2',
-    description: 'The CMS built on Laravel 5.2',
-    repository_url: 'https://github.com/KodiCMS/kodicms-laravel',
+  Repository.create!(
+    owner: 'KodiCMS',
+    name: 'kodicms-laravel',
     user: user,
   )
 
-  Project.create!(
-    title: 'MicroweberCMS',
-    subtitle: 'Drag and Drop CMS and online shop',
-    description: 'Drag and Drop CMS and online shop',
-    repository_url: 'https://github.com/microweber/microweber',
+  Repository.create!(
+    owner: 'microweber',
+    name: 'microweber',
     user: user,
   )
 
-  Project.create!(
-    title: 'BoostrapCMS',
-    subtitle: 'A PHP CMS powered by Laravel 5 and Sentry',
-    description: 'A PHP CMS powered by Laravel 5 and Sentry',
-    repository_url: 'https://github.com/BootstrapCMS/CMS',
+  Repository.create!(
+    owner: 'BootstrapCMS',
+    name: 'CMS',
     user: user,
   )
 
-  Project.create!(
-    title: 'TypiCMS',
-    subtitle: 'Multilingual and modular CMS built with Laravel 5.2',
-    description: 'Multilingual and modular CMS built with Laravel 5.2',
-    repository_url: 'https://github.com/TypiCMS/Base',
+  Repository.create!(
+    owner: 'TypiCMS',
+    name: 'Base',
     user: user,
   )
 
-  Project.create!(
-    title: 'FullyCMS',
-    subtitle: 'Multi Language Content Management System',
-    description: 'Multi Language Content Management System',
-    repository_url: 'https://github.com/sseffa/fullycms',
+  Repository.create!(
+    owner: 'sseffa',
+    name: 'fullycms',
     user: user,
   )
 
-  Project.create!(
-    title: 'FlarepointCRM',
-    subtitle: 'Self-hosted CRM platform built with Laravel 5',
-    description: 'Self-hosted CRM platform built with Laravel 5',
-    repository_url: 'https://github.com/Bottelet/Flarepoint-crm',
+  Repository.create!(
+    owner: 'Bottelet',
+    name: 'Flarepoint-crm',
     user: user,
   )
 
-  Project.create!(
-    title: 'Quarx',
-    subtitle: 'A CMS for Laravel Apps',
-    description: 'A CMS for Laravel Apps',
-    repository_url: 'https://github.com/YABhq/Quarx',
+  Repository.create!(
+    owner: 'YABhq',
+    name: 'Quarx',
     user: user,
   )
 
-  Project.create!(
-    title: 'Oez',
-    subtitle: 'Lightweight Blogging CMS',
-    description: 'Lightweight Blogging CMS',
-    repository_url: 'https://github.com/gaaarfild/0ez',
+  Repository.create!(
+    owner: 'gaaarfild',
+    name: '0ez',
     user: user,
   )
 
-  Project.create!(
-    title: 'Airflix',
-    subtitle: 'A near-netflix Clone',
-    description: 'A near-netflix Clone',
-    repository_url: 'https://github.com/wells/airflix',
+  Repository.create!(
+    owner: 'wells',
+    name: 'airflix',
     user: user,
   )
 
-  Project.create!(
-    title: 'Antvel',
-    subtitle: 'Laravel eCommerce',
-    description: 'Laravel eCommerce',
-    repository_url: 'https://github.com/ant-vel/App',
+  Repository.create!(
+    owner: 'ant-vel',
+    name: 'App',
     user: user,
   )
 
-  Project.create!(
-    title: 'LaraShop',
-    subtitle: 'A Simple PHP Shop CMS',
-    description: 'A Simple PHP Shop CMS',
-    repository_url: 'https://github.com/ZENLIX/LaraShop',
+  Repository.create!(
+    owner: 'ZENLIX',
+    name: 'LaraShop',
     user: user,
   )
 
-  Project.create!(
-    title: '92five',
-    subtitle: 'Self-hosted Project Management App',
-    description: 'Self-hosted Project Management App',
-    repository_url: 'https://github.com/chintanbanugaria/92five',
+  Repository.create!(
+    owner: 'chintanbanugaria',
+    name: '92five',
     user: user,
   )
 
-  Project.create!(
-    title: 'Deployer',
-    subtitle: 'A free and open source deployment tool',
-    description: 'A free and open source deployment tool',
-    repository_url: 'https://github.com/REBELinBLUE/deployer',
+  Repository.create!(
+    owner: 'REBELinBLUE',
+    name: 'deployer',
     user: user,
   )
 
-  Project.create!(
-    title: 'Paperwork',
-    subtitle: 'OpenSource note-taking & archiving alternative to Evernote, Microsoft OneNote & Google Keep',
-    description: 'OpenSource note-taking & archiving alternative to Evernote, Microsoft OneNote & Google Keep',
-    repository_url: 'https://github.com/twostairs/paperwork',
+  Repository.create!(
+    owner: 'twostairs',
+    name: 'paperwork',
     user: user,
   )
 
-  Project.create!(
-    title: 'Podcastwala',
-    subtitle: 'Podcast System',
-    description: 'Podcast System',
-    repository_url: 'https://github.com/modestkdr/Podcastwala',
+  Repository.create!(
+    owner: 'modestkdr',
+    name: 'Podcastwala',
     user: user,
   )
 
-  Project.create!(
-    title: 'Laravel Snippets',
-    subtitle: 'A repository of useful code snippets for Laravel PHP framework',
-    description: 'A repository of useful code snippets for Laravel PHP framework',
-    repository_url: 'https://github.com/basco-johnkevin/laravelsnippets',
+  Repository.create!(
+    owner: 'basco-johnkevin',
+    name: 'laravelsnippets',
     user: user,
   )
 
-  Project.create!(
-    title: 'Freelancer Notes',
-    subtitle: 'Freelancer Notes',
-    description: 'Freelancer Notes',
-    repository_url: 'https://github.com/porimol/freelancer-notes',
+  Repository.create!(
+    owner: 'porimol',
+    name: 'freelancer-notes',
     user: user,
   )
 
-  Project.create!(
-    title: 'Critter',
-    subtitle: 'Mini-twitter-like app',
-    description: 'Mini-twitter-like app',
-    repository_url: 'https://github.com/msurguy/critterapp',
+  Repository.create!(
+    owner: 'msurguy',
+    name: 'critterapp',
     user: user,
   )
 
-  Project.create!(
-    title: 'PHPhub',
-    subtitle: 'Chinese PHP Community',
-    description: 'Chinese PHP Community',
-    repository_url: 'https://github.com/summerblue/phphub',
+  Repository.create!(
+    owner: 'summerblue',
+    name: 'phphub',
     user: user,
   )
 
-  Project.create!(
-    title: 'Cachet',
-    subtitle: 'Open Source Status Page System',
-    description: 'Open Source Status Page System',
-    repository_url: 'https://github.com/CachetHQ/Cachet',
+  Repository.create!(
+    owner: 'CachetHQ',
+    name: 'Cachet',
     user: user,
   )
 
-  Project.create!(
-    title: 'Ribbbon',
-    subtitle: 'A project management system for Artisans',
-    description: 'A project management system for Artisans',
-    repository_url: 'https://github.com/canvasowl/ribbbon',
+  Repository.create!(
+    owner: 'canvasowl',
+    name: 'ribbbon',
     user: user,
   )
 
-  Project.create!(
-    title: 'Scrumwala',
-    subtitle: 'Your very own Scrum/Agile web app for personal use',
-    description: 'Your very own Scrum/Agile web app for personal use',
-    repository_url: 'https://github.com/modestkdr/Scrumwala',
+  Repository.create!(
+    owner: 'modestkdr',
+    name: 'Scrumwala',
     user: user,
   )
 
-  Project.create!(
-    title: 'SnipeIT',
-    subtitle: 'IT Asset/license Management System',
-    description: 'IT Asset/license Management System',
-    repository_url: 'https://github.com/snipe/snipe-it',
+  Repository.create!(
+    owner: 'snipe',
+    name: 'snipe-it',
     user: user,
   )
 
-  Project.create!(
-    title: 'Neontsunami',
-    subtitle: 'Personal Website and blog',
-    description: 'Personal Website and blog',
-    repository_url: 'https://github.com/dwightwatson/neontsunami',
+  Repository.create!(
+    owner: 'dwightwatson',
+    name: 'neontsunami',
     user: user,
   )
 
-  Project.create!(
-    title: 'Nahid.co',
-    subtitle: 'Personal Portfolio and blog project',
-    description: 'Personal Portfolio and blog project',
-    repository_url: 'https://github.com/nahid/nahid.co',
+  Repository.create!(
+    owner: 'nahid',
+    name: 'nahid.co',
     user: user,
   )
 
-  Project.create!(
-    title: 'Laramap',
-    subtitle: 'A Map of Laravel Developers',
-    description: 'A Map of Laravel Developers',
-    repository_url: 'https://github.com/laramap/laramap.com',
+  Repository.create!(
+    owner: 'laramap',
+    name: 'laramap.com',
     user: user,
   )
 
-  Project.create!(
-    title: 'Learn Party',
-    subtitle: 'A Dead Simple Learning Management System',
-    description: 'A Dead Simple Learning Management System',
-    repository_url: 'https://github.com/andela-jkariuki/checkpoint-four-learn-party',
+  Repository.create!(
+    owner: 'andela-jkariuki',
+    name: 'checkpoint-four-learn-party',
     user: user,
   )
 
-  Project.create!(
-    title: 'Techademia',
-    subtitle: 'Organize Your Youtube Videos to Learn',
-    description: 'Organize Your Youtube Videos to Learn',
-    repository_url: 'https://github.com/andela-fokosun/Checkpoint4',
+  Repository.create!(
+    owner: 'andela-fokosun',
+    name: 'Checkpoint4',
     user: user,
   )
 
-  Project.create!(
-    title: 'BookStack',
-    subtitle: 'A platform to create documentation/wiki content',
-    description: 'A platform to create documentation/wiki content',
-    repository_url: 'https://github.com/ssddanbrown/BookStack',
+  Repository.create!(
+    owner: 'ssddanbrown',
+    name: 'BookStack',
     user: user,
   )
 
-  Project.create!(
-    title: 'Gruik',
-    subtitle: 'An open-source markdown note-taking web app',
-    description: 'An open-source markdown note-taking web app',
-    repository_url: 'https://github.com/grena/gruik',
+  Repository.create!(
+    owner: 'grena',
+    name: 'gruik',
     user: user,
   )
 
-  Project.create!(
-    title: 'Laravel.com',
-    subtitle: 'Official Website and Documentation of Laravel',
-    description: 'Official Website and Documentation of Laravel',
-    repository_url: 'https://github.com/laravel/laravel.com',
+  Repository.create!(
+    owner: 'laravel',
+    name: 'laravel.com',
     user: user,
   )
 
-  Project.create!(
-    title: 'Katana',
-    subtitle: 'Laravel static site/blog generator with markdown support',
-    description: 'Laravel static site/blog generator with markdown support',
-    repository_url: 'https://github.com/themsaid/katana',
+  Repository.create!(
+    owner: 'themsaid',
+    name: 'katana',
     user: user,
   )
 
-  Project.create!(
-    title: 'CoasterCMS',
-    subtitle: 'Coaster CMS Project',
-    description: 'Coaster CMS Project',
-    repository_url: 'https://github.com/web-feet/coastercms',
+  Repository.create!(
+    owner: 'web-feet',
+    name: 'coastercms',
     user: user,
   )
 
-  Project.create!(
-    title: 'Larasocial',
-    subtitle: 'A Social Network Application',
-    description: 'A Social Network Application',
-    repository_url: 'https://github.com/msalom28/Larasocial',
+  Repository.create!(
+    owner: 'msalom28',
+    name: 'Larasocial',
     user: user,
   )
 
-  Project.create!(
-    title: 'Aimeos',
-    subtitle: 'Ecommerce package for high performance online shops',
-    description: 'Ecommerce package for high performance online shops',
-    repository_url: 'https://github.com/aimeos/aimeos-laravel',
+  Repository.create!(
+    owner: 'aimeos',
+    name: 'aimeos-laravel',
     user: user,
   )
 
-  Project.create!(
-    title: 'Gitamin',
-    subtitle: 'A self-hosted git repository management software',
-    description: 'A self-hosted git repository management software',
-    repository_url: 'https://github.com/GitaminHQ/Gitamin',
+  Repository.create!(
+    owner: 'GitaminHQ',
+    name: 'Gitamin',
     user: user,
   )
 
-  Project.create!(
-    title: 'Vuedo',
-    subtitle: 'Vuedo is blog platform, built with Laravel and Vue.js.',
-    description: 'Vuedo is blog platform, built with Laravel and Vue.js.',
-    repository_url: 'https://github.com/vuedo/vuedo',
+  Repository.create!(
+    owner: 'vuedo',
+    name: 'vuedo',
     user: user,
   )
 
-  Project.create!(
-    title: 'Condor',
-    subtitle: 'Service monitor that watches diverse statuses, and elegantly reports every drift',
-    description: 'Service monitor that watches diverse statuses, and elegantly reports every drift',
-    repository_url: 'https://github.com/condorrocks/condor',
+  Repository.create!(
+    owner: 'condorrocks',
+    name: 'condor',
     user: user,
   )
 
-  Project.create!(
-    title: 'DevTv',
-    subtitle: 'DevTv is your online Video Subscription Platform',
-    description: 'DevTv is your online Video Subscription Platform',
-    repository_url: 'https://github.com/iamraphson/DEV-TV',
+  Repository.create!(
+    owner: 'iamraphson',
+    name: 'DEV-TV',
     user: user,
   )
 
-  Project.create!(
-    title: 'SЁCU',
-    subtitle: 'SЁCU is a service to create password protected self-destructing data packages and anonymous chat-rooms.',
-    description: 'SЁCU is a service to create password protected self-destructing data packages and anonymous chat-rooms.',
-    repository_url: 'https://github.com/secusu/secusu',
+  Repository.create!(
+    owner: 'secusu',
+    name: 'secusu',
     user: user,
   )
 
-  Project.create!(
-    title: 'Confomo',
-    subtitle: 'A service that facilitates meeting Twitter friends at conferences',
-    description: 'A service that facilitates meeting Twitter friends at conferences',
-    repository_url: 'https://github.com/mattstauffer/confomo',
+  Repository.create!(
+    owner: 'mattstauffer',
+    name: 'confomo',
     user: user,
   )
 
-  Project.create!(
-    title: 'File Manager',
-    subtitle: 'A File manager (for CKEditor and TinyMCE) with multi-users support.',
-    description: 'A File manager (for CKEditor and TinyMCE) with multi-users support.',
-    repository_url: 'https://github.com/UniSharp/laravel-filemanager',
+  Repository.create!(
+    owner: 'UniSharp',
+    name: 'laravel-filemanager',
     user: user,
   )
 
-  Project.create!(
-    title: 'FlyMyShop',
-    subtitle: 'An e-commerce platform for online merchants.',
-    description: 'An e-commerce platform for online merchants.',
-    repository_url: 'https://github.com/aasisvinayak/flymyshop',
+  Repository.create!(
+    owner: 'aasisvinayak',
+    name: 'flymyshop',
     user: user,
   )
 
-  Project.create!(
-    title: 'Laravel GitScrum',
-    subtitle: 'GitScrum is a project to help developer team.',
-    description: 'GitScrum is a project to help developer team.',
-    repository_url: 'https://github.com/renatomarinho/laravel-gitscrum',
+  Repository.create!(
+    owner: 'renatomarinho',
+    name: 'laravel-gitscrum',
     user: user,
   )
 
-  Project.create!(
-    title: 'MIT-2014-2015-YEARBOOK',
-    subtitle: 'E-YearBook for 2014/2015 UNILAG MIT students',
-    description: 'E-YearBook for 2014/2015 UNILAG MIT students',
-    repository_url: 'https://github.com/iamraphson/MIT-2014-2015-YEARBOOK',
+  Repository.create!(
+    owner: 'iamraphson',
+    name: 'MIT-2014-2015-YEARBOOK',
     user: user,
   )
 
-  Project.create!(
-    title: "Despark's igniCMS",
-    subtitle: 'Easy to use featherlight CMS, which provides you with a shortcut to bootstrapping the backend of PHP (Laravel), MySQL based projects.',
-    description: 'Easy to use featherlight CMS, which provides you with a shortcut to bootstrapping the backend of PHP (Laravel), MySQL based projects.',
-    repository_url: 'https://github.com/despark/igni-core',
+  Repository.create!(
+    owner: 'despark',
+    name: 'igni-core',
     user: user,
   )
 
-  Project.create!(
-    title: 'Voten',
-    subtitle: 'Voten.co is a real-time social bookmarking platform for the 21st century',
-    description: 'Voten.co is a real-time social bookmarking platform for the 21st century',
-    repository_url: 'https://github.com/voten-co/voten',
+  Repository.create!(
+    owner: 'voten-co',
+    name: 'voten',
     user: user,
   )
 
-  Project.create!(
-    title: 'Handesk',
-    subtitle: 'A Powerful Laravel Help Desk and Lead Management App.',
-    description: 'A Powerful Laravel Help Desk and Lead Management App.',
-    repository_url: 'https://github.com/BadChoice/handesk',
+  Repository.create!(
+    owner: 'BadChoice',
+    name: 'handesk',
     user: user,
   )
 
-  Project.create!(
-    title: 'Multitrust',
-    subtitle: 'Latest roles and permission for multi-auth or single-auth.',
-    description: 'Latest roles and permission for multi-auth or single-auth.',
-    repository_url: 'https://github.com/code4mk/multitrust',
+  Repository.create!(
+    owner: 'code4mk',
+    name: 'multitrust',
     user: user,
   )
 
-  Project.create!(
-    title: 'VotePen',
-    subtitle: 'Online Bookmarking System, Best Alternative to Reddit.',
-    description: 'Online Bookmarking System, Best Alternative to Reddit.',
-    repository_url: 'https://github.com/VotePen/VotePen',
+  Repository.create!(
+    owner: 'VotePen',
+    name: 'VotePen',
     user: user,
   )
 
-  Project.create!(
-    title: 'Helpy',
-    subtitle: 'Mobile First Helpdesk Application',
-    description: 'Mobile First Helpdesk Application',
-    repository_url: 'https://github.com/helpyio/helpy',
+  Repository.create!(
+    owner: 'helpyio',
+    name: 'helpy',
     user: user,
   )
 
-  Project.create!(
-    title: 'Coderwall',
-    subtitle: 'Professional network for Software',
-    description: 'Professional network for Software',
-    repository_url: 'https://github.com/coderwall/coderwall-legacy',
+  Repository.create!(
+    owner: 'coderwall',
+    name: 'coderwall-legacy',
     user: user,
   )
 
-  Project.create!(
-    title: 'Spina',
-    subtitle: 'A beautiful CMS for Rails Developers',
-    description: 'A beautiful CMS for Rails Developers',
-    repository_url: 'https://github.com/denkGroot/Spina',
+  Repository.create!(
+    owner: 'denkGroot',
+    name: 'Spina',
     user: user,
   )
 
-  Project.create!(
-    title: 'Help',
-    subtitle: 'Small help request system',
-    description: 'Small help request system',
-    repository_url: 'https://github.com/netguru/help',
+  Repository.create!(
+    owner: 'netguru',
+    name: 'help',
     user: user,
   )
 
-  Project.create!(
-    title: 'OpenSourceBilling',
-    subtitle: 'Beautiful Simple Billing Software',
-    description: 'Beautiful Simple Billing Software',
-    repository_url: 'https://github.com/vteams/open-source-billing',
+  Repository.create!(
+    owner: 'vteams',
+    name: 'open-source-billing',
     user: user,
   )
 
-  Project.create!(
-    title: 'Huginn',
-    subtitle: 'Agent system that perform tasks online for you',
-    description: 'Agent system that perform tasks online for you',
-    repository_url: 'https://github.com/cantino/huginn',
+  Repository.create!(
+    owner: 'cantino',
+    name: 'huginn',
     user: user,
   )
 
-  Project.create!(
-    title: 'Squash',
-    subtitle: 'Collection of tools that helps developers find and kill bugs',
-    description: 'Collection of tools that helps developers find and kill bugs',
-    repository_url: 'https://github.com/SquareSquash/web',
+  Repository.create!(
+    owner: 'SquareSquash',
+    name: 'web',
     user: user,
   )
 
-  Project.create!(
-    title: 'Eventx',
-    subtitle: 'Event Management System without Hassle',
-    description: 'Event Management System without Hassle',
-    repository_url: 'https://github.com/andela/eventx',
+  Repository.create!(
+    owner: 'andela',
+    name: 'eventx',
     user: user,
   )
 
-  Project.create!(
-    title: 'Fulcrum',
-    subtitle: 'Agile Project Management Tool',
-    description: 'Agile Project Management Tool',
-    repository_url: 'https://github.com/fulcrum-agile/fulcrum',
+  Repository.create!(
+    owner: 'fulcrum-agile',
+    name: 'fulcrum',
     user: user,
   )
 
-  Project.create!(
-    title: 'SprintApp',
-    subtitle: 'Time tracking and Project Management App',
-    description: 'Time tracking and Project Management App',
-    repository_url: 'https://github.com/macfanatic/SprintApp',
+  Repository.create!(
+    owner: 'macfanatic',
+    name: 'SprintApp',
     user: user,
   )
 
-  Project.create!(
-    title: 'Copycopter',
-    subtitle: 'A service for editing the copy text of a Rails application.',
-    description: 'A service for editing the copy text of a Rails application.',
-    repository_url: 'https://github.com/copycopter/copycopter-server',
+  Repository.create!(
+    owner: 'copycopter',
+    name: 'copycopter-server',
     user: user,
   )
 
-  Project.create!(
-    title: 'Shoop',
-    subtitle: 'E-commerce Platform',
-    description: 'E-commerce Platform',
-    repository_url: 'https://github.com/shoopio/shoop',
+  Repository.create!(
+    owner: 'shoopio',
+    name: 'shoop',
     user: user,
   )
 
-  Project.create!(
-    title: 'Codango',
-    subtitle: 'Social Network for Coders',
-    description: 'Social Network for Coders',
-    repository_url: 'https://github.com/andela/codango',
+  Repository.create!(
+    owner: 'andela',
+    name: 'codango',
     user: user,
   )
 
-  Project.create!(
-    title: 'Django-CMS',
-    subtitle: 'Easy to use and developer friendly CMS',
-    description: 'Easy to use and developer friendly CMS',
-    repository_url: 'https://github.com/divio/django-cms',
+  Repository.create!(
+    owner: 'divio',
+    name: 'django-cms',
     user: user,
   )
 
-  Project.create!(
-    title: 'Django-fiber',
-    subtitle: "A simple', user-friendly CMS for all your Django projects",
-    description: "A simple', user-friendly CMS for all your Django projects",
-    repository_url: 'https://github.com/ridethepony/django-fiber',
+  Repository.create!(
+    owner: 'ridethepony',
+    name: 'django-fiber',
     user: user,
   )
 
-  Project.create!(
-    title: 'Feincms',
-    subtitle: 'A Django-based CMS with a focus on extensibility and concise code',
-    description: 'A Django-based CMS with a focus on extensibility and concise code',
-    repository_url: 'https://github.com/feincms/feincms',
+  Repository.create!(
+    owner: 'feincms',
+    name: 'feincms',
     user: user,
   )
 
-  Project.create!(
-    title: 'Mezzanine',
-    subtitle: 'CMS framework for Django',
-    description: 'CMS framework for Django',
-    repository_url: 'https://github.com/stephenmcd/mezzanine',
+  Repository.create!(
+    owner: 'stephenmcd',
+    name: 'mezzanine',
     user: user,
   )
 
-  Project.create!(
-    title: 'Wagtail',
-    subtitle: 'A Django content management system focused on flexibility and user experience',
-    description: 'A Django content management system focused on flexibility and user experience',
-    repository_url: 'https://github.com/torchbox/wagtail',
+  Repository.create!(
+    owner: 'torchbox',
+    name: 'wagtail',
     user: user,
   )
 
-  Project.create!(
-    title: 'Django-leonardo',
-    subtitle: 'CMS for everyone, easy to deploy and scale, robust modular system with many packages',
-    description: 'CMS for everyone, easy to deploy and scale, robust modular system with many packages',
-    repository_url: 'https://github.com/django-leonardo/django-leonardo',
+  Repository.create!(
+    owner: 'django-leonardo',
+    name: 'django-leonardo',
     user: user,
   )
 
-  Project.create!(
-    title: 'Plaid',
-    subtitle: 'An app that showcases Material Design',
-    description: 'An app that showcases Material Design',
-    repository_url: 'https://github.com/nickbutcher/plaid',
+  Repository.create!(
+    owner: 'nickbutcher',
+    name: 'plaid',
     user: user,
   )
 
-  Project.create!(
-    title: 'Google I/O Scheduler',
-    subtitle: 'Offcial Android app for Google I/O',
-    description: 'Offcial Android app for Google I/O',
-    repository_url: 'https://github.com/google/iosched',
+  Repository.create!(
+    owner: 'google',
+    name: 'iosched',
     user: user,
   )
 
-  Project.create!(
-    title: 'Project Frisbee',
-    subtitle: 'All GDG content in one place',
-    description: 'All GDG content in one place',
-    repository_url: 'https://github.com/gdg-x/frisbee',
+  Repository.create!(
+    owner: 'gdg-x',
+    name: 'frisbee',
     user: user,
   )
 
-  Project.create!(
-    title: 'Wallsplash',
-    subtitle: 'Wallsplash is the cutting edge wallpaper app for your device!',
-    description: 'Wallsplash is the cutting edge wallpaper app for your device!',
-    repository_url: 'https://github.com/mikepenz/wallsplash-android',
+  Repository.create!(
+    owner: 'mikepenz',
+    name: 'wallsplash-android',
     user: user,
   )
 
-  Project.create!(
-    title: 'Easy Diary',
-    subtitle: 'This is a diary application optimized to user experience.',
-    description: 'This is a diary application optimized to user experience.',
-    repository_url: 'https://github.com/hanjoongcho/aaf-easydiary',
+  Repository.create!(
+    owner: 'hanjoongcho',
+    name: 'aaf-easydiary',
     user: user,
   )
 
-  Project.create!(
-    title: 'Easy Photo Map',
-    subtitle: 'Easy Photo Map is a photomap application that displays the location of the photo on the map using the location information included in the photo.',
-    description: 'Easy Photo Map is a photomap application that displays the location of the photo on the map using the location information included in the photo.',
-    repository_url: 'https://github.com/hanjoongcho/aaf-easyphotomap',
+  Repository.create!(
+    owner: 'hanjoongcho',
+    name: 'aaf-easyphotomap',
     user: user,
   )
 
-  Project.create!(
-    title: 'Easy Password',
-    subtitle: 'A password manager using a single lock pattern for various type passwords management.',
-    description: 'A password manager using a single lock pattern for various type passwords management.',
-    repository_url: 'https://github.com/hanjoongcho/aaf-easypassword',
+  Repository.create!(
+    owner: 'hanjoongcho',
+    name: 'aaf-easypassword',
     user: user,
   )
 
-  Project.create!(
-    title: 'Rocket.Chat',
-    subtitle: 'A web chat platform',
-    description: 'A web chat platform',
-    repository_url: 'https://github.com/RocketChat/Rocket.Chat',
+  Repository.create!(
+    owner: 'RocketChat',
+    name: 'Rocket.Chat',
     user: user,
   )
 
-  Project.create!(
-    title: 'ColourCode',
-    subtitle: 'An online colour code app',
-    description: 'An online colour code app',
-    repository_url: 'https://github.com/tamino-martinius/colourco.de',
+  Repository.create!(
+    owner: 'tamino-martinius',
+    name: 'colourco.de',
     user: user,
   )
 
-  Project.create!(
-    title: 'ReactionCommerce',
-    subtitle: 'A JavaScript Ecommerce App',
-    description: 'A JavaScript Ecommerce App',
-    repository_url: 'https://github.com/reactioncommerce/reaction',
+  Repository.create!(
+    owner: 'reactioncommerce',
+    name: 'reaction',
     user: user,
   )
 
-  Project.create!(
-    title: 'CoderMania',
-    subtitle: 'An E-Learning Platform',
-    description: 'An E-Learning Platform',
-    repository_url: 'https://github.com/Elfoslav/codermania',
+  Repository.create!(
+    owner: 'Elfoslav',
+    name: 'codermania',
     user: user,
   )
 
-  Project.create!(
-    title: 'Telescope',
-    subtitle: 'Lauch Sites Easily',
-    description: 'Lauch Sites Easily',
-    repository_url: 'https://github.com/TelescopeJS/Telescope',
+  Repository.create!(
+    owner: 'TelescopeJS',
+    name: 'Telescope',
     user: user,
   )
 
-  Project.create!(
-    title: 'Loop Pulse',
-    subtitle: 'Data Analysis Platform',
-    description: 'Data Analysis Platform',
-    repository_url: 'https://github.com/clionelabs/looppulse.web.manage',
+  Repository.create!(
+    owner: 'clionelabs',
+    name: 'looppulse.web.manage',
     user: user,
   )
 
-  Project.create!(
-    title: 'Wekan',
-    subtitle: 'The open-source Trello-like kanban',
-    description: 'The open-source Trello-like kanban',
-    repository_url: 'https://github.com/wekan/wekan',
+  Repository.create!(
+    owner: 'wekan',
+    name: 'wekan',
     user: user,
   )
 
-  Project.create!(
-    title: 'microapps-donation',
-    subtitle: 'A single page application that allows people to donate money',
-    description: 'A single page application that allows people to donate money',
-    repository_url: 'https://github.com/iamraphson/microapps-donation',
+  Repository.create!(
+    owner: 'iamraphson',
+    name: 'microapps-donation',
     user: user,
   )
 
-  Project.create!(
-    title: 'docue',
-    subtitle: 'Document Management System With React Frontend',
-    description: 'Document Management System With React Frontend',
-    repository_url: 'https://github.com/kevgathuku/docue',
+  Repository.create!(
+    owner: 'kevgathuku',
+    name: 'docue',
     user: user,
   )
 
-  Project.create!(
-    title: 'MERNMAP',
-    subtitle: 'An interactive map for MERN(MongoDB, ExpressJS, ReactJS, NodeJS) Stack Developers',
-    description: 'An interactive map for MERN(MongoDB, ExpressJS, ReactJS, NodeJS) Stack Developers',
-    repository_url: 'https://github.com/iamraphson/mernmap',
+  Repository.create!(
+    owner: 'iamraphson',
+    name: 'mernmap',
     user: user,
   )
 
-  Project.create!(
-    title: 'Cerebro',
-    subtitle: 'One-input productivity booster',
-    description: 'One-input productivity booster',
-    repository_url: 'https://github.com/KELiON/cerebro',
+  Repository.create!(
+    owner: 'KELiON',
+    name: 'cerebro',
     user: user,
   )
 
-  Project.create!(
-    title: 'Itsquiz-wall',
-    subtitle: 'Isomorphic "Quiz Wall" for itsquiz.com',
-    description: 'Isomorphic "Quiz Wall" for itsquiz.com',
-    repository_url: 'https://github.com/WebbyLab/itsquiz-wall',
+  Repository.create!(
+    owner: 'WebbyLab',
+    name: 'itsquiz-wall',
     user: user,
   )
 
-  Project.create!(
-    title: 'SoundRedux - SoundCloud Client',
-    subtitle: 'Isomorphic "Quiz Wall" for itsquiz.com',
-    description: 'Isomorphic "Quiz Wall" for itsquiz.com',
-    repository_url: 'https://github.com/andrewngu/sound-redux',
+  Repository.create!(
+    owner: 'andrewngu',
+    name: 'sound-redux',
     user: user,
   )
 
-  Project.create!(
-    title: 'React-Powered Hacker News Client',
-    subtitle: 'React-Powered Hacker News Client',
-    description: 'React-Powered Hacker News Client',
-    repository_url: 'https://github.com/insin/react-hn',
+  Repository.create!(
+    owner: 'insin',
+    name: 'react-hn',
     user: user,
   )
 
-  Project.create!(
-    title: 'Calypso',
-    subtitle: 'The new JavaScript- and API-powered WordPress.com',
-    description: 'The new JavaScript- and API-powered WordPress.com',
-    repository_url: 'https://github.com/Automattic/wp-calypso',
+  Repository.create!(
+    owner: 'Automattic',
+    name: 'wp-calypso',
     user: user,
   )
 
-  Project.create!(
-    title: 'Trello tribute',
-    subtitle: 'A clone of Trello with React and Phoenix',
-    description: 'A clone of Trello with React and Phoenix',
-    repository_url: 'https://github.com/bigardone/phoenix-trello',
+  Repository.create!(
+    owner: 'bigardone',
+    name: 'phoenix-trello',
     user: user,
   )
 
-  Project.create!(
-    title: 'In-Browser Playground',
-    subtitle: 'A playground for in-browser interpreters. Built with React/Redux.',
-    description: 'A playground for in-browser interpreters. Built with React/Redux.',
-    repository_url: 'https://github.com/fatiherikli/fil',
+  Repository.create!(
+    owner: 'fatiherikli',
+    name: 'fil',
     user: user,
   )
 
-  Project.create!(
-    title: 'Spectacle',
-    subtitle: 'A React library for Deck/Slide Presentations.',
-    description: 'A React library for Deck/Slide Presentations.',
-    repository_url: 'https://github.com/FormidableLabs/spectacle',
+  Repository.create!(
+    owner: 'FormidableLabs',
+    name: 'spectacle',
     user: user,
   )
 
-  Project.create!(
-    title: 'Google Map Clustering',
-    subtitle: 'A Google Map Clustering Example',
-    description: 'A Google Map Clustering Example',
-    repository_url: 'https://github.com/istarkov/google-map-clustering-example',
+  Repository.create!(
+    owner: 'istarkov',
+    name: 'google-map-clustering-example',
     user: user,
   )
 
-  Project.create!(
-    title: 'Kinematic',
-    subtitle: 'Visual Docker Container Management on Mac & Windows',
-    description: 'Visual Docker Container Management on Mac & Windows',
-    repository_url: 'https://github.com/docker/kitematic',
+  Repository.create!(
+    owner: 'docker',
+    name: 'kitematic',
     user: user,
   )
 
-  Project.create!(
-    title: 'Perseus',
-    subtitle: "Perseus is Khan Academy's new exercise question editor and renderer",
-    description: "Perseus is Khan Academy's new exercise question editor and renderer",
-    repository_url: 'https://github.com/Khan/perseus',
+  Repository.create!(
+    owner: 'Khan',
+    name: 'perseus',
     user: user,
   )
 
-  Project.create!(
-    title: 'Favesound-redux',
-    subtitle: 'The SoundCloud Client in React + Redux made with passion!',
-    description: 'The SoundCloud Client in React + Redux made with passion!',
-    repository_url: 'https://github.com/rwieruch/favesound-redux',
+  Repository.create!(
+    owner: 'rwieruch',
+    name: 'favesound-redux',
     user: user,
   )
 
-  Project.create!(
-    title: 'How to GraphQL',
-    subtitle: 'The Fullstack Tutorial for GraphQL',
-    description: 'The Fullstack Tutorial for GraphQL',
-    repository_url: 'https://github.com/howtographql/howtographql',
+  Repository.create!(
+    owner: 'howtographql',
+    name: 'howtographql',
     user: user,
   )
 
-  Project.create!(
-    title: 'Picatic - Ticketing Selling',
-    subtitle: 'Ticketing widget built with create-react-app',
-    description: 'Ticketing widget built with create-react-app',
-    repository_url: 'https://github.com/picatic/picatic-examples/tree/master/react-checkout',
+  Repository.create!(
+    owner: 'picatic',
+    name: 'picatic-examples',
     user: user,
   )
 
-  Project.create!(
-    title: 'Github Desktop',
-    subtitle: 'Git client on Mac & Windows',
-    description: 'Git client on Mac & Windows',
-    repository_url: 'https://github.com/desktop/desktop',
+  Repository.create!(
+    owner: 'desktop',
+    name: 'desktop',
     user: user,
   )
 
-  Project.create!(
-    title: 'Yahoo Finance',
-    subtitle: "iOS's Stocks App clone written in React Native for demo purpose (available both iOS and Android). Data is pulled from Yahoo Finance.",
-    description: "iOS's Stocks App clone written in React Native for demo purpose (available both iOS and Android). Data is pulled from Yahoo Finance.",
-    repository_url: 'https://github.com/7kfpun/FinanceReactNative',
+  Repository.create!(
+    owner: '7kfpun',
+    name: 'FinanceReactNative',
     user: user,
   )
 
-  Project.create!(
-    title: 'Pokemon Go Clone',
-    subtitle: 'Pokemon Go in React Native.',
-    description: 'Pokemon Go in React Native.',
-    repository_url: 'https://github.com/VctrySam/Pokemon',
+  Repository.create!(
+    owner: 'VctrySam',
+    name: 'Pokemon',
     user: user,
   )
 
-  Project.create!(
-    title: 'BBC News',
-    subtitle: 'An unofficial basic implementation of the BBC News app built using React Native.',
-    description: 'An unofficial basic implementation of the BBC News app built using React Native.',
-    repository_url: 'https://github.com/joeltrew/BBCNews-React-Native',
+  Repository.create!(
+    owner: 'joeltrew',
+    name: 'BBCNews-React-Native',
     user: user,
   )
 
-  Project.create!(
-    title: 'FC Barca App',
-    subtitle: 'FC Barcelona in React Native.',
-    description: 'FC Barcelona in React Native.',
-    repository_url: 'https://github.com/VctrySam/FCBarca',
+  Repository.create!(
+    owner: 'VctrySam',
+    name: 'FCBarca',
     user: user,
   )
 
-  Project.create!(
-    title: 'AirBnb Clone',
-    subtitle: 'An Airbnb Clone in React Native.',
-    description: 'An Airbnb Clone in React Native.',
-    repository_url: 'https://github.com/VctrySam/AirBnb',
+  Repository.create!(
+    owner: 'VctrySam',
+    name: 'AirBnb',
     user: user,
   )
 
-  Project.create!(
-    title: 'Assemblies',
-    subtitle: 'A developer-focused Meetup clone built with React Native.',
-    description: 'A developer-focused Meetup clone built with React Native.',
-    repository_url: 'https://github.com/buildreactnative/assemblies',
+  Repository.create!(
+    owner: 'buildreactnative',
+    name: 'assemblies',
     user: user,
   )
 
-  Project.create!(
-    title: '21mobile',
-    subtitle: 'Cinema 21 movie schedule app built with react native, graphql, redux',
-    description: 'Cinema 21 movie schedule app built with react native, graphql, redux',
-    repository_url: 'https://github.com/sonnylazuardi/21mobile',
+  Repository.create!(
+    owner: 'sonnylazuardi',
+    name: '21mobile',
     user: user,
   )
 
-  Project.create!(
-    title: 'Dribbble',
-    subtitle: 'Dribbble app built with React Native',
-    description: 'Dribbble app built with React Native',
-    repository_url: 'https://github.com/catalinmiron/react-native-dribbble-app',
+  Repository.create!(
+    owner: 'catalinmiron',
+    name: 'react-native-dribbble-app',
     user: user,
   )
 
-  Project.create!(
-    title: 'Whatsapp Clone',
-    subtitle: 'Whatsapp Clone app built with React Native',
-    description: 'Whatsapp Clone app built with React Native',
-    repository_url: 'https://github.com/VctrySam/whatsapp',
+  Repository.create!(
+    owner: 'VctrySam',
+    name: 'whatsapp',
     user: user,
   )
 
-  Project.create!(
-    title: 'London React',
-    subtitle: 'React Native app for the London React Meetup',
-    description: 'React Native app for the London React Meetup',
-    repository_url: 'https://github.com/JoeStanton/london-react',
+  Repository.create!(
+    owner: 'JoeStanton',
+    name: 'london-react',
     user: user,
   )
 
-  Project.create!(
-    title: 'Snapchat Clone',
-    subtitle: 'SnapChat clone written with React Native',
-    description: 'SnapChat clone written with React Native',
-    repository_url: 'https://github.com/VctrySam/SnapChat',
+  Repository.create!(
+    owner: 'VctrySam',
+    name: 'SnapChat',
     user: user,
   )
 
-  Project.create!(
-    title: 'Civis Face',
-    subtitle: 'An app for exploring facial recognition using react-native, AWS Rekognition, and AWS Polly.',
-    description: 'An app for exploring facial recognition using react-native, AWS Rekognition, and AWS Polly.',
-    repository_url: 'https://github.com/civisanalytics/CivisFace',
+  Repository.create!(
+    owner: 'civisanalytics',
+    name: 'CivisFace',
     user: user,
   )
 
-  Project.create!(
-    title: 'Standard Notes',
-    subtitle: 'A simple and private notes app',
-    description: 'A simple and private notes app',
-    repository_url: 'https://github.com/standardnotes/mobile',
+  Repository.create!(
+    owner: 'standardnotes',
+    name: 'mobile',
     user: user,
   )
 
-  Project.create!(
-    title: 'Attendant',
-    subtitle: 'Laravel Valet GUI - An app to monitor your sites running on Valet. Packaged with Electron',
-    description: 'Laravel Valet GUI - An app to monitor your sites running on Valet. Packaged with Electron',
-    repository_url: 'https://github.com/phppirate/attendant',
+  Repository.create!(
+    owner: 'phppirate',
+    name: 'attendant',
     user: user,
   )
 
-  Project.create!(
-    title: 'Friendlychat',
-    subtitle: 'Firebase codelab for building a cross-platform chat app',
-    description: 'Firebase codelab for building a cross-platform chat app',
-    repository_url: 'https://github.com/firebase/friendlychat',
+  Repository.create!(
+    owner: 'firebase',
+    name: 'friendlychat',
     user: user,
   )
 
-  Project.create!(
-    title: 'Friendlypix',
-    subtitle: 'FriendlyPix is a cross-platform Firebase example app',
-    description: 'FriendlyPix is a cross-platform Firebase example app',
-    repository_url: 'https://github.com/firebase/friendlypix',
+  Repository.create!(
+    owner: 'firebase',
+    name: 'friendlypix',
     user: user,
   )
 
-  Project.create!(
-    title: 'Firefeed',
-    subtitle: 'Firefeed is a web app that lets users post small messages called sparks to their feed.',
-    description: 'Firefeed is a web app that lets users post small messages called sparks to their feed.',
-    repository_url: 'https://github.com/firebase/firefeed',
+  Repository.create!(
+    owner: 'firebase',
+    name: 'firefeed',
     user: user,
   )
 
-  Project.create!(
-    title: 'Fun Retro',
-    subtitle: 'Fun Retro is a distributed retrospective app that is easy and simple to use.',
-    description: 'Fun Retro is a distributed retrospective app that is easy and simple to use.',
-    repository_url: 'https://github.com/funretro/distributed',
+  Repository.create!(
+    owner: 'funretro',
+    name: 'distributed',
     user: user,
   )
 
-  Project.create!(
-    title: 'Crystal ANN',
-    subtitle: 'Web site to announce new Crystal projects, blog posts, updates and other work activities',
-    description: 'Web site to announce new Crystal projects, blog posts, updates and other work activities',
-    repository_url: 'https://github.com/crystal-community/crystal-ann',
+  Repository.create!(
+    owner: 'crystal-community',
+    name: 'crystal-ann',
     user: user,
   )
 
-  Project.create!(
-    title: 'MySQL Database Library',
-    subtitle: 'C# tool for seamless MySQL connection and CRUD operations',
-    description: 'C# tool for seamless MySQL connection and CRUD operations',
-    repository_url: 'https://github.com/Ezeji/MySQL-Database-Library',
+  Repository.create!(
+    owner: 'Ezeji',
+    name: 'MySQL-Database-Library',
     user: user,
   )
 end

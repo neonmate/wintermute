@@ -1,7 +1,7 @@
 class Power
 
   include Consul::Power
-  include DoesProjects
+  include DoesRepositories
 
   attr_reader :user
 

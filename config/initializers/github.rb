@@ -3,7 +3,7 @@ require 'graphql/client/http'
 
 module Github
 
-  SCHEMA_PATH = File.join(Rails.root, 'config', 'github_graphql_schema.json').freeze
+  SCHEMA_PATH = File.join(Rails.root, 'config', 'graphql', 'github_schema.json').freeze
 
   HTTP = GraphQL::Client::HTTP.new('https://api.github.com/graphql') do
     def headers(_context)

@@ -10,6 +10,13 @@ module ApplicationHelper
     '–'
   end
 
+  def format_date(time_or_date)
+    return ndash if time_or_date.blank?
+
+    date = time_or_date.to_date if time_or_date.respond_to?(:to_date)
+    l(date)
+  end
+
   def format_string(string)
     string.presence || ndash
   end

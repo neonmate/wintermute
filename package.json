@@ -5,6 +5,7 @@
     "@rails/webpacker": "4.0.2",
     "autosize": "*",
     "bootstrap": "4.x",
+    "chart.js": "2.x",
     "dom4": "*",
     "rails-ujs": "5.2.2",
     "unpoly": "0.60.0"

@@ -50,6 +50,8 @@ Feature: Repositories CRUD
 
         Hunter
         thomas
+
+        Recent changes
         """
 
     When I follow "Edit"

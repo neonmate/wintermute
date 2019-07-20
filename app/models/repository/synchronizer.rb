@@ -23,7 +23,7 @@ class Repository::Synchronizer
         ref(qualifiedName: "master") {
           target {
             ... on Commit {
-              history(first: 25) {
+              history(first: 100) {
                 edges {
                   node {
                     committedDate

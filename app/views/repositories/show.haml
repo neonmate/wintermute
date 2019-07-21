@@ -42,4 +42,5 @@
       %dd= link_to @repository.user.nickname, "https://github.com/#{@repository.user.nickname}", target: '_blank', rel: 'noopener'
 
       %dt Recent changes
-      %dd= commits_line_chart(@repository.last_commits_at)
+      %dd
+        %canvas{chart: 'true', 'up-data' => Repository::CommitsLineChart.new(@repository.last_commits_at).build.to_json}

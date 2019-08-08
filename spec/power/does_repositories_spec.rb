@@ -5,7 +5,6 @@ describe Power do
   let!(:own_repository) { create(:repository, user: user) }
   let!(:foreign_repository) { create(:repository, user: other_user) }
 
-
   describe 'repositories' do
     it 'allows access to all repositories' do
       power = described_class.new(user)

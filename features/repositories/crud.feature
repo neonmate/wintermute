@@ -2,12 +2,11 @@ Feature: Repositories CRUD
 
 
   Scenario: CRUD a repository
-    When I go to the list of repositories
-    Then I should see "We do not have any repositories yet."
-      And I should not see a button with the label "New Repository"
-
     When I am signed in as "thomas"
-      And I follow "New Repository"
+      And I go to the list of repositories
+    Then I should see "We do not have any repositories yet."
+
+    When I follow "New Repository"
     Then I should be on the repository form
 
     When I press "Save"

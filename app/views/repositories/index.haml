@@ -15,7 +15,7 @@
         .card-body
           = format_string(repository.description)
 
-    = render 'shared/pagination', record: @repositories
+    = render 'shared/pagination', collection: @repositories
   - else
     = no_records_available do
       %span.text-muted We do not have any repositories yet. You can

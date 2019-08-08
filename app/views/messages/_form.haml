@@ -1,0 +1,16 @@
+= simple_form_for(@message) do |form|
+  .card
+    - if @message.new_record?
+      .card-header
+        New #{@message.model_name.human}
+    .card-body
+      = form.input :conversation_id, as: :hidden
+      = form.input :body
+
+    .card-footer
+      .d-flex
+        .mr-auto
+          - if @message.persisted?
+            = content_link_to 'Delete', message_path(@message), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-danger'
+        = content_link_to 'Cancel', cancel_path(@message.conversation), class: 'btn btn-light', 'up-close': ''
+        = form.submit 'Save', class: 'btn btn-primary ml-1'

@@ -1,0 +1,21 @@
+.d-flex
+  .flex-grow-1
+    = render 'shared/filter'
+  - if current_user.present?
+    = modal_link_to "New #{Conversation.model_name.human}", new_conversation_path, class: 'btn btn-primary ml-2'
+
+.results
+  - if @conversations.present?
+    - @conversations.each do |conversation|
+      .card.mt-3
+        .card-header
+          = content_link_to(conversation.title, conversation)
+        .card-body
+          = format_string(conversation.body)
+
+    = render 'shared/pagination', collection: @conversations
+  - else
+    = no_records_available do
+      %span.text-muted We do not have any conversations yet. You can
+      %span.font-weight-bold= link_to('start a conversation', new_conversation_path)
+      %span.text-muted at any time.

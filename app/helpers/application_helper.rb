@@ -2,7 +2,13 @@ module ApplicationHelper
 
   def no_records_available(&block)
     content_tag(:div, class: 'card mt-5') do
-      content_tag(:div, class: 'card-body', &block)
+      if params[:query].present?
+        content_tag(:div, class: 'card-body') do
+          content_tag(:span, "No matching results for \"#{params[:query]}\"", class: 'text-muted')
+        end
+      else
+        content_tag(:div, class: 'card-body', &block)
+      end
     end
   end
 

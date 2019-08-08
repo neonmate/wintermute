@@ -2,6 +2,12 @@
 
 en:
   models: &models
+    conversation:
+      one: Conversation
+      other: Conversations
+    message:
+      one: Message
+      other: Messages
     repository:
       one: Repository
       other: Repositories
@@ -10,6 +16,14 @@ en:
     created_at: Created at
     updated_at: Updated at
 
+    conversation:
+      title: Title
+      body: Message
+      user: Author
+    message:
+      body: Message
+      user: Author
+      conversation: Conversation
     repository:
       title: Title
       owner: Owner

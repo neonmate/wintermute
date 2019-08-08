@@ -1,10 +1,19 @@
-.navbar.fixed-top.navbar-light.bg-light
-  .container.d-flex.justify-content-between
+.navbar.fixed-top.navbar-light.bg-light.navbar-expand-lg
+  .container
     = content_link_to root_path, class: 'navbar-brand' do
       = image_pack_tag 'media/images/wintermute-transparent.png', alt: 'Wintermute Logo', height: 30, class: 'mr-1'
       Wintermute
-    %span.text-muted Collaborative open-source web applications
-    - if signed_in?
-      = link_to 'Sign out', sign_out_path, method: :delete, class: 'btn btn-light'
-    - else
-      = link_to 'Sign in', sign_in_path, class: 'btn btn-light'
+    %button.navbar-toggler(aria-controls='collapsable_navigation' aria-expanded='false' aria-label='Toggle navigation' type='button' data-collapsable-navigation up-data='{"target": "collapsable_navigation"}')
+      %span.navbar-toggler-icon
+    #collapsable_navigation.collapse.navbar-collapse
+      %ul.navbar-nav(up-nav)
+        %li.nav-item
+          = content_link_to 'Evaluate ideas', conversations_path, class: 'nav-link', :'up-alias' => "#{root_path} #{conversations_path}/*"
+        %li.nav-item
+          = content_link_to 'Explore existing', repositories_path, class: 'nav-link', :'up-alias' => repositories_path.concat('/*')
+      %ul.navbar-nav.ml-auto
+        %li.nav-item
+          - if signed_in?
+            = link_to 'Sign out', sign_out_path, method: :delete, class: 'nav-link'
+          - else
+            = link_to 'Sign in', sign_in_path, class: 'nav-link'

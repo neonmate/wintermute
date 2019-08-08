@@ -3,6 +3,8 @@ language: ruby
 rvm:
   - 2.6.1
 
+dist: trusty
+
 addons:
   chrome: stable
   postgresql: "10"

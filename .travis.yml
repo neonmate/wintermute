@@ -7,7 +7,7 @@ dist: trusty
 
 addons:
   chrome: stable
-  postgresql: "10"
+  postgresql: '10'
   apt:
     packages:
       - postgresql-10
@@ -28,13 +28,12 @@ before_install:
   - sudo /etc/init.d/postgresql restart
 install:
   - bundle install
-  - nvm install 8.9.1
+  - nvm install --lts=carbon
   - node -v
   - npm i -g yarn
   - yarn
 before_script:
-  - bundle exec rake db:create --all
-  - bundle exec rake db:migrate
+  - bundle exec bin/setup
 script:
   - bundle exec rspec
   - bundle exec cucumber

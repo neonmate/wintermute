@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo_path| "https://github.com/#{repo_path}.git" }
 
 # https://devcenter.heroku.com/articles/getting-started-with-rails5#specify-ruby-version-in-app
 ruby '2.6.1'
@@ -20,7 +19,7 @@ gem 'modularity'
 gem 'omniauth-github'
 gem 'pg'
 gem 'puma'
-gem 'rails'
+gem 'rails', git: 'https://github.com/rails/rails', tag: 'v6.0.0'
 gem 'simple_form'
 gem 'unpoly-rails'
 gem 'vcr'

@@ -11,7 +11,7 @@
         .card-header
           = content_link_to(conversation.title, conversation)
         .card-body
-          = format_string(conversation.body)
+          = format_markdown(conversation.body)
 
     = render 'shared/pagination', collection: @conversations
   - else

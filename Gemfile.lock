@@ -218,6 +218,7 @@ GEM
     json-schema (2.8.1)
       addressable (>= 2.4)
     jwt (2.1.0)
+    kramdown (2.1.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -255,6 +256,8 @@ GEM
     nio4r (2.4.0)
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
+    nokogumbo (2.0.1)
+      nokogiri (~> 1.8, >= 1.8.4)
     oauth2 (1.4.1)
       faraday (>= 0.8, < 0.16.0)
       jwt (>= 1.0, < 3.0)
@@ -328,6 +331,10 @@ GEM
       sexp_processor (~> 4.9)
     rubyzip (1.2.2)
     safe_yaml (1.0.5)
+    sanitize (5.0.0)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.8.0)
+      nokogumbo (~> 2.0)
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -416,6 +423,7 @@ DEPENDENCIES
   haml-rails
   has_defaults
   json-schema
+  kramdown
   launchy
   listen
   makandra-rubocop
@@ -428,6 +436,7 @@ DEPENDENCIES
   rails!
   rspec
   rspec-rails!
+  sanitize
   selenium-webdriver
   shoulda-matchers
   simple_form

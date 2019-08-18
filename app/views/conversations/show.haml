@@ -8,13 +8,12 @@
       - if current_power.include_record?(:updatable, @conversation)
         = modal_link_to "Edit #{Conversation.model_name.human}", edit_conversation_path(@conversation), class: 'btn btn-primary'
   %ul.list-group.list-group-flush
-    %li.list-group-item= format_text(@conversation.body)
+    %li.list-group-item= format_markdown(@conversation.body)
     - @conversation.messages.each do |message|
-      %li.list-group-item.d-flex
-        = format_text(message.body)
-        .ml-auto
-          - if current_power.include_record?(:updatable, message)
-            = modal_link_to "Edit #{Message.model_name.human}", edit_message_path(message), class: 'btn btn-primary'
+      %li.list-group-item
+        = format_markdown(message.body)
+        - if current_power.include_record?(:updatable, message)
+          = modal_link_to "Edit #{Message.model_name.human}", edit_message_path(message), class: 'btn btn-primary'
 
 .d-flex
   .mr-auto

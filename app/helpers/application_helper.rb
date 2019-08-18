@@ -40,4 +40,10 @@ module ApplicationHelper
     html
   end
 
+  def format_markdown(text)
+    return ndash if text.blank?
+
+    Markdown.new(text).to_html
+  end
+
 end

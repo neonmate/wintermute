@@ -21,7 +21,7 @@ git push heroku
 heroku run rails db:migrate
 ```
 
-You need to set the master encryption key before the first deployment:
+You need to set the master encryption key before a first deployment:
 
 ```
 heroku config:set RAILS_MASTER_KEY=secure-master-key
@@ -29,13 +29,9 @@ heroku config:set RAILS_MASTER_KEY=secure-master-key
 
 ## Credentials
 
-We use encrypted credentials for each env.
-
-* Use `bin/rails credentials:edit --environment default` to add and read the current placeholder values. Do not add any
-  sensitive data here.
-* With `bin/setup` the default values are duplicated for each env. Afterwards it is possible to add sensitive data in
-there to get a full working setup for test and development.
-* Within the project credentials can be used with `Rails.application.credentials.some_key`
+We use encrypted credentials for production and staging. And we use unencrypted credentials for development and test.
+Run `bin/setup` to create an initial `config/secrets.yml`. You can both access secrets and credentials via
+`Rails.application.credentials.some_key`.
 
 ## Tests
 

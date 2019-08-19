@@ -25,11 +25,10 @@ FileUtils.chdir APP_ROOT do
     FileUtils.cp 'config/database.sample.yml', 'config/database.yml'
   end
 
-  puts "\n== Creating placeholder credentials for test and development =="
+  puts "\n== Creating placeholder secrets.yml for test and development =="
 
-  unless File.exist?('config/credentials/development.yml.enc')
-    FileUtils.cp 'config/credentials/default.key', 'config/credentials/development.key'
-    FileUtils.cp 'config/credentials/default.yml.enc', 'config/credentials/development.yml.enc'
+  unless File.exist?('config/secrets.yml')
+    FileUtils.cp 'config/secrets.sample.yml', 'config/secrets.yml'
   end
 
   unless File.exist?('config/credentials/test.yml.enc')

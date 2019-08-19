@@ -41,6 +41,10 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
+  # Disable encrypted credentials
+  config.read_encrypted_secrets = false
+  config.require_master_key = false
+
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
 end

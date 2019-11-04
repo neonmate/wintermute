@@ -17,4 +17,5 @@
 
 .d-flex
   .mr-auto
-  = modal_link_to 'Reply', new_message_path(message: {conversation_id: @conversation}), class: 'btn btn-primary mt-3'
+  - if current_user.present?
+    = modal_link_to 'Reply', new_message_path(message: {conversation_id: @conversation}), class: 'btn btn-primary mt-3'

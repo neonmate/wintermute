@@ -1,5 +1,4 @@
 class Markdown
-
   # This is a reduced set of Sanitize::Config::RELAXED:
   # * In general we are not sure what Kramdown returns, so we allow as many elements as possible
   # * For the attributes and protocols we are as restrictive as possible

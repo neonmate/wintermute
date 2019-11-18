@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # https://devcenter.heroku.com/articles/getting-started-with-rails5#specify-ruby-version-in-app
-ruby '2.6.1'
+ruby '2.6.5'
 
 gem 'active_type'
 gem 'assignable_values'

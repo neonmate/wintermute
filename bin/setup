@@ -31,11 +31,6 @@ FileUtils.chdir APP_ROOT do
     FileUtils.cp 'config/secrets.sample.yml', 'config/secrets.yml'
   end
 
-  unless File.exist?('config/credentials/test.yml.enc')
-    FileUtils.cp 'config/credentials/default.key', 'config/credentials/test.key'
-    FileUtils.cp 'config/credentials/default.yml.enc', 'config/credentials/test.yml.enc'
-  end
-
   puts "\n== Preparing database =="
   system! 'bin/rails db:create --all'
   system! 'bin/rails db:migrate'

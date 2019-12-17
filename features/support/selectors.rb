@@ -13,6 +13,9 @@ module HtmlSelectorsHelpers
     when /^the "(.*?)" section$/
       %(section[aria-label="#{Regexp.last_match(1)}"])
 
+    when /^the modal$/
+      '.up-modal'
+
     # Auto-mapper for BEM classes
     #
     # Usage examples:

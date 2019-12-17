@@ -25,7 +25,7 @@ Feature: Conversations CRUD
         Some message
         """
 
-    When I follow "Edit Conversation"
+    When I follow "Edit"
     Then I should be on the form for the conversation above
 
     When I fill in "Title" with "Some other title"
@@ -44,7 +44,7 @@ Feature: Conversations CRUD
         """
 
     When I follow "Some other title"
-      And I follow "Edit Conversation"
+      And I follow "Edit"
       And I follow "Delete"
     Then I should see a success flash "Conversation deleted"
       And I should be on the list of conversations

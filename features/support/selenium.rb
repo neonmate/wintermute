@@ -7,6 +7,7 @@ Capybara.register_driver :selenium_chrome_headless do |app|
   options.add_argument('--disable-gpu')
   options.add_preference('credentials_enable_service', false)
   options.add_preference('profile.password_manager_enabled', false)
+  options.add_emulation(device_metrics: { width: 1440, height: 900, touch: false })
 
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end

@@ -3,9 +3,7 @@ Given('I am signed in on Github with the nickname {string} and the email {string
 end
 
 When(/^I am signed in(?: as "([^\"]*)")?$/) do |nickname|
-  if page.current_url.blank?
-    step(%(I go to the homepage))
-  end
+  step(%(I go to the homepage))
   step(%(I am signed in on Github with the nickname "#{nickname || 'thomas'}" and the email "thomas@example.com"))
   step(%(I follow "Sign in"))
 end

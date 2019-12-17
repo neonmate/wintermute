@@ -1,21 +1,31 @@
 = content_link_to '← Back to list', conversations_path, class: 'btn btn-outline-primary'
 
 .card.mt-3
-  .card-header
-    .d-flex
-      .mr-auto
-        %h3= @conversation.title
-      - if current_power.include_record?(:updatable, @conversation)
-        = modal_link_to "Edit #{Conversation.model_name.human}", edit_conversation_path(@conversation), class: 'btn btn-primary'
+  %h3.card-header= @conversation.title
   %ul.list-group.list-group-flush
-    %li.list-group-item= format_markdown(@conversation.body)
+    %li.list-group-item
+      .row
+        .col-10
+          %strong= @conversation.user.to_s
+          %small #{time_ago_in_words(@conversation.created_at)} ago
+          .mt-3= format_markdown(@conversation.body)
+        .col-2.d-flex
+          .mr-auto
+          %div
+            - if current_power.include_record?(:updatable, @conversation)
+              = modal_link_to 'Edit', edit_conversation_path(@conversation), class: 'btn btn-outline-secondary btn-sm'
     - @conversation.messages.each do |message|
-      %li.list-group-item
-        = format_markdown(message.body)
-        - if current_power.include_record?(:updatable, message)
-          = modal_link_to "Edit #{Message.model_name.human}", edit_message_path(message), class: 'btn btn-primary'
-
-.d-flex
-  .mr-auto
-  - if current_user.present?
-    = modal_link_to 'Reply', new_message_path(message: {conversation_id: @conversation}), class: 'btn btn-primary mt-3'
+      %li.list-group-item#messages
+        .row
+          .col-10
+            %strong= message.user.to_s
+            %small #{time_ago_in_words(message.created_at)} ago
+            .mt-3= format_markdown(message.body)
+          .col-2.d-flex
+            .mr-auto
+            %div
+              - if current_power.include_record?(:updatable, message)
+                = modal_link_to 'Edit', edit_message_path(message), class: 'btn btn-outline-secondary btn-sm'
+    %li.list-group-item
+      - if current_user.present?
+        = render 'messages/new', message: @conversation.messages.build, up_target: '#messages'

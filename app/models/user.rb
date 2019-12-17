@@ -7,4 +7,8 @@ class User < ApplicationRecord
   validates :uid, :email, :nickname, presence: true
   validates :uid, uniqueness: true
 
+  def to_s
+    nickname
+  end
+
 end

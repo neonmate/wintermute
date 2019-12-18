@@ -31,7 +31,7 @@
       %dt= Repository.human_attribute_name(:homepage_url)
       %dd
         - if @repository.homepage_url.present?
-          = link_to @repository.homepage_url, @repository.homepage_url, target: '_blank', 'data-confirm' => 'By following this link, you will be redirected to an unknown external site. This might be a security risk. Do you want to continue?'
+          = link_to @repository.homepage_url, @repository.homepage_url, target: '_blank', rel: 'noopener'
         - else
           = ndash
 

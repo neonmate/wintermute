@@ -51,6 +51,7 @@ Feature: Repositories CRUD
         thomas
 
         Recent changes
+        –
         """
 
     When I follow "Edit"
@@ -80,16 +81,18 @@ Feature: Repositories CRUD
 
 
   Scenario: Show a full filled repository
+    Given the date is 2018-01-01
     Given there is a repository with these attributes:
-      | description    | Some description           |
-      | owner          | github                     |
-      | name           | example                    |
-      | total_stars    | 20                         |
-      | total_watchers | 40                         |
-      | total_issues   | 60                         |
-      | languages      | ["HTML", "CSS" and "Ruby"] |
-      | homepage_url   | example.github.io          |
-      | licence        | MIT                        |
+      | description     | Some description                                         |
+      | owner           | github                                                   |
+      | name            | example                                                  |
+      | total_stars     | 20                                                       |
+      | total_watchers  | 40                                                       |
+      | total_issues    | 60                                                       |
+      | languages       | ["HTML", "CSS" and "Ruby"]                               |
+      | last_commits_at | ["2018-01-01", "2017-12-28", "2017-12-10", "2017-05-02"] |
+      | homepage_url    | example.github.io                                        |
+      | licence         | MIT                                                      |
 
     When I am signed in
       And I go to the page for the repository above
@@ -116,4 +119,10 @@ Feature: Repositories CRUD
 
       License
       MIT
+
+      Recent changes
+      1 commits within the last day.
+      2 commits within the last week.
+      3 commits within the last month.
+      More than 4 commits within the last year.
       """

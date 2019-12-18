@@ -6,7 +6,7 @@
       .mr-auto
         %h3= @repository.name
       - if current_power.include_record?(:updatable, @repository)
-        = modal_link_to "Edit #{Repository.model_name.human}", edit_repository_path(@repository), class: 'btn btn-primary'
+        = modal_link_to "Edit #{Repository.model_name.human}", edit_repository_path(@repository), class: 'btn btn-outline-secondary'
   .card-body
     %dl
       %dt= Repository.human_attribute_name(:description)
@@ -42,5 +42,10 @@
       %dd= link_to @repository.user.nickname, "https://github.com/#{@repository.user.nickname}", target: '_blank', rel: 'noopener'
 
       %dt Recent changes
-      %dd
-        %canvas{chart: 'true', 'up-data' => Repository::CommitsLineChart.new(@repository.last_commits_at).build.to_json}
+      - if @repository.last_commits_at.present?
+        %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_day
+        %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_week
+        %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_month
+        %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_year
+      - else
+        %dd= ndash

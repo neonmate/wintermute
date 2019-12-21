@@ -1,0 +1,18 @@
+= simple_form_for(@idea) do |form|
+  .card
+    .card-header
+      - if @idea.new_record?
+        New #{Idea.model_name.human}
+      - else
+        #{@idea.title}
+    .card-body
+      = form.input :title
+      = form.input :body
+
+    .card-footer
+      .d-flex
+        .mr-auto
+          - if @idea.persisted?
+            = content_link_to 'Delete', idea_path(@idea), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-danger'
+        = content_link_to 'Cancel', cancel_path(@idea), class: 'btn btn-light', 'up-close': ''
+        = form.submit 'Save', class: 'btn btn-primary ml-1'

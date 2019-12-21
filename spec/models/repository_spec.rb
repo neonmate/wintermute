@@ -26,4 +26,16 @@ describe Repository do
     end
   end
 
+  describe '#destroy' do
+    it 'destroys all dependent messages' do
+      repository = create(:repository)
+      message = create(:message, parent: repository)
+      other_message = create(:message)
+
+      expect { repository.destroy! }.to change { Message.count }.from(2).to(1)
+      expect(Message.exists?(message.id)).to be(false)
+      expect(Message.exists?(other_message.id)).to be(true)
+    end
+  end
+
 end

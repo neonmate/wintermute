@@ -1,6 +1,0 @@
-= simple_form_for(message, input_html: { 'up-target' => local_assigns[:up_target] }) do |form|
-  = form.input :conversation_id, as: :hidden
-  = form.input :body, spec_label: true
-  .d-flex
-    .mr-auto
-    = form.submit 'Reply', class: 'btn btn-outline-secondary'

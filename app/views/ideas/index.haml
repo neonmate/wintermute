@@ -1,0 +1,21 @@
+.d-flex
+  .flex-grow-1
+    = render 'shared/filter'
+  - if current_user.present?
+    = modal_link_to "New #{Idea.model_name.human}", new_idea_path, class: 'btn btn-primary ml-2'
+
+.results
+  - if @ideas.present?
+    - @ideas.each do |idea|
+      .card.mt-3
+        .card-header
+          = content_link_to(idea.title, idea)
+        .card-body
+          = format_markdown(idea.body)
+
+    = render 'shared/pagination', collection: @ideas
+  - else
+    = no_records_available do
+      %span.text-muted We do not have any ideas yet. You can
+      %span.font-weight-bold= link_to('start a idea', new_idea_path)
+      %span.text-muted at any time.

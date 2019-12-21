@@ -1,0 +1,2 @@
+- if current_user.present?
+  = render 'messages/form_for_new', message: record.messages.build, reveal: reveal

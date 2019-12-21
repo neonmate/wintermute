@@ -49,3 +49,21 @@
         %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_year
       - else
         %dd= ndash
+
+
+.card.mt-3
+  %h3.card-header Discussion
+  %ul.list-group.list-group-flush#list-items
+    - @repository.messages.each do |message|
+      %li.list-group-item
+        .row
+          .col-10
+            %strong= message.user.to_s
+            %small #{time_ago_in_words(message.created_at)} ago
+            .mt-3= format_markdown(message.body)
+          .col-2.d-flex
+            .mr-auto
+            %div
+              - if current_power.include_record?(:updatable, message)
+                = modal_link_to 'Edit', edit_message_path(message), class: 'btn btn-outline-secondary btn-sm'
+    %li.list-group-item= render 'shared/message', record: @repository, reveal: '#list-items:after'

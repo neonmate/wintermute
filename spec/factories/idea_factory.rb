@@ -1,6 +1,6 @@
 FactoryBot.define do
 
-  factory :conversation do
+  factory :idea do
     title { 'Some title' }
     body { 'Some body' }
 

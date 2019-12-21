@@ -1,7 +1,7 @@
 class Power
 
   include Consul::Power
-  include DoesConversations
+  include DoesIdeas
   include DoesMessages
   include DoesRepositories
 

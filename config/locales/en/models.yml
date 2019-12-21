@@ -2,9 +2,9 @@
 
 en:
   models: &models
-    conversation:
-      one: Conversation
-      other: Conversations
+    idea:
+      one: Idea
+      other: Ideas
     message:
       one: Message
       other: Messages
@@ -16,14 +16,14 @@ en:
     created_at: Created at
     updated_at: Updated at
 
-    conversation:
+    idea:
       title: Title
       body: Message
       user: Author
     message:
       body: Message
       user: Author
-      conversation: Conversation
+      idea: Idea
     repository:
       title: Title
       owner: Owner

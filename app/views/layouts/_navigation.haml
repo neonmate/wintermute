@@ -8,7 +8,7 @@
     #collapsable_navigation.collapse.navbar-collapse
       %ul.navbar-nav(up-nav)
         %li.nav-item
-          = content_link_to 'Evaluate ideas', conversations_path, class: 'nav-link', :'up-alias' => "#{root_path} #{conversations_path}/* #{conversations_path}?*"
+          = content_link_to 'Evaluate ideas', ideas_path, class: 'nav-link', :'up-alias' => "#{root_path} #{ideas_path}/* #{ideas_path}?*"
         %li.nav-item
           = content_link_to 'Explore existing', repositories_path, class: 'nav-link', :'up-alias' => "#{repositories_path}/* #{repositories_path}?*"
       %ul.navbar-nav.ml-auto

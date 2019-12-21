@@ -1,4 +1,4 @@
-class Conversation::TextFilter
+class Idea::TextFilter
 
   include Minidusen::Filter
 
@@ -6,7 +6,7 @@ class Conversation::TextFilter
     columns = [:title, :body]
     scope
       .where_like(columns => phrases)
-      .or(scope.where(id: Message.filtered(phrases.join(' ')).pluck(:conversation_id)))
+      .or(scope.where(id: Message.where(parent_type: 'Idea').filtered(phrases.join(' ')).pluck(:parent_id)))
   end
 
 end

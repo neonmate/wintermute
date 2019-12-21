@@ -26,7 +26,7 @@ class MessagesController < ApplicationController
     load_message
     @message.destroy!
     destroy_flash(@message)
-    redirect_to @message.conversation
+    redirect_to @message.parent
   end
 
   private
@@ -45,7 +45,7 @@ class MessagesController < ApplicationController
 
     if @message.save
       success_flash(@message)
-      redirect_to(@message.conversation)
+      redirect_to(@message.parent)
     else
       error_flash(@message)
       render(action, status: :unprocessable_entity)
@@ -56,7 +56,7 @@ class MessagesController < ApplicationController
     message_params = params[:message]
     return {} if message_params.blank?
 
-    message_params.permit(:body, :conversation_id)
+    message_params.permit(:body, :parent_id, :parent_type)
   end
 
 end

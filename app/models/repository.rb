@@ -10,6 +10,7 @@ class Repository < ApplicationRecord
 
   validates :owner, :name, presence: true
   validates :name, uniqueness: { scope: :owner }
+  has_many :messages, as: :parent, dependent: :destroy
 
   def repository_url_preview
     return if owner.blank? || name.blank?

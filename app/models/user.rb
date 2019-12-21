@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
   has_many :repositories
-  has_many :conversations
+  has_many :ideas
   has_many :messages
 
   validates :uid, :email, :nickname, presence: true

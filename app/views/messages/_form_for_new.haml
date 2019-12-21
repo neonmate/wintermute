@@ -1,0 +1,5 @@
+= simple_form_for(message, html: { 'up-reveal' => local_assigns[:reveal] }) do |form|
+  = render 'messages/form_fields', form: form
+  .d-flex
+    .mr-auto
+    = form.submit 'Reply', class: 'btn btn-outline-secondary'

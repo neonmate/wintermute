@@ -1,9 +1,9 @@
-class Conversation < ApplicationRecord
+class Idea < ApplicationRecord
 
   include DoesTextFilter[TextFilter]
 
   belongs_to :user
-  has_many :messages, dependent: :destroy
+  has_many :messages, as: :parent, dependent: :destroy
 
   scope :default_order, -> { order(created_at: :desc) }
 

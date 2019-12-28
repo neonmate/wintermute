@@ -5,11 +5,12 @@
     "@rails/webpacker": "4.0.2",
     "autosize": "*",
     "bootstrap": "4.x",
+    "core-js": "2.x",
     "dom4": "*",
-    "rails-ujs": "5.2.2",
-    "unpoly": "0.60.0"
+    "rails-ujs": "5.2.4",
+    "unpoly": "0.61.0"
   },
   "devDependencies": {
-    "webpack-dev-server": "3.2.1"
+    "webpack-dev-server": "3.10.1"
   }
 }

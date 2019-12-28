@@ -1,0 +1,8 @@
+%h1 Colors
+
+- ['gray', 'blue', 'indigo', 'purple', 'pink', 'red', 'orange', 'yellow', 'green', 'teal', 'cyan'].each do |color|
+  %h2.mt-5= "#{color.titlecase}"
+  .row.mb-3
+    - ['100', '200', '300', '400', '500', '600', '700', '800', '900'].each do |index|
+      .col-md-2{class: "bg-#{color}-#{index} p-5"}
+        = "#{color}-#{index}"

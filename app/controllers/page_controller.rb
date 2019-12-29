@@ -8,4 +8,7 @@ class PageController < ApplicationController
   def markdown_help
   end
 
+  def about
+  end
+
 end

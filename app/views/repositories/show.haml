@@ -18,7 +18,7 @@
       %dd= format_text(@repository.description)
 
       %dt= Repository.human_attribute_name(:repository_url)
-      %dd= link_to @repository.repository_url_preview, @repository.repository_url_preview, target: '_blank', rel: 'noopener'
+      %dd= external_link_to @repository.repository_url_preview, @repository.repository_url_preview
 
       %dt Popularity
       %dd
@@ -36,7 +36,7 @@
       %dt= Repository.human_attribute_name(:homepage_url)
       %dd
         - if @repository.homepage_url.present?
-          = link_to @repository.homepage_url, @repository.homepage_url, target: '_blank', rel: 'noopener'
+          = external_link_to @repository.homepage_url, @repository.homepage_url
         - else
           = ndash
 
@@ -44,7 +44,7 @@
       %dd= format_string(@repository.licence)
 
       %dt= Repository.human_attribute_name(:user)
-      %dd= link_to @repository.user.nickname, "https://github.com/#{@repository.user.nickname}", target: '_blank', rel: 'noopener'
+      %dd= external_link_to @repository.user.nickname, "https://github.com/#{@repository.user.nickname}"
 
       %dt Recent changes
       - if @repository.last_commits_at.present?

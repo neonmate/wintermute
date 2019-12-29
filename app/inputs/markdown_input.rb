@@ -4,7 +4,7 @@ class MarkdownInput < TextInput
 
     html << content_tag(
       :small,
-      template.link_to('Styling with Markdown is supported', template.markdown_help_path, target: '_blank', rel: 'noopener'),
+      template.external_link_to('Styling with Markdown is supported', template.markdown_help_path),
       class: 'markdown--help'
     )
     html << super

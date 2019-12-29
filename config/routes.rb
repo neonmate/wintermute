@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'ideas#index'
+  root 'page#about'
 
   get 'session/new', as: :sign_in
   delete 'session', action: :destroy, controller: 'session', as: :sign_out
@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'privacy', action: :privacy, controller: 'page'
   get 'markdown_help', action: :markdown_help, controller: 'page'
+  get 'about', action: :about, controller: 'page'
   resources :ideas
   resources :messages, only: [:new, :create, :edit, :update, :destroy]
   resources :repositories

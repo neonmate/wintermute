@@ -8,6 +8,11 @@
       - if current_power.include_record?(:updatable, @repository)
         = modal_link_to "Edit #{Repository.model_name.human}", edit_repository_path(@repository), class: 'btn btn-outline-secondary'
   .card-body
+    - if @repository.last_synchronized_at.blank?
+      .alert.alert-info{role: 'alert'}
+        %strong Notice:
+        This #{Repository.model_name.human} does not show all information from Github, but it will be updated within the
+        next few hours. Thanks for your patient!
     %dl
       %dt= Repository.human_attribute_name(:description)
       %dd= format_text(@repository.description)

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/auth/github/callback', action: :create, controller: 'session'
 
   get 'privacy', action: :privacy, controller: 'page'
+  get 'markdown_help', action: :markdown_help, controller: 'page'
   resources :ideas
   resources :messages, only: [:new, :create, :edit, :update, :destroy]
   resources :repositories

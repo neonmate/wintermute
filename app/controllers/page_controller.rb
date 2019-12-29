@@ -5,4 +5,7 @@ class PageController < ApplicationController
   def privacy
   end
 
+  def markdown_help
+  end
+
 end

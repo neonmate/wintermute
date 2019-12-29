@@ -1,0 +1,93 @@
+%h1 Markdown Help
+
+%p
+  #{link_to 'Markdown', 'https://daringfireball.net/projects/markdown/', target: '_blank', rel: 'nofollow'} is a text-to-HTML conversion tool for web writers.
+  Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid HTML.
+  Below you can find an extract of the most common syntax.
+
+%h2 Headers
+%pre.border
+  %code.m-2
+    \# This is an H1
+    \## This is an H2
+    \### This is an H3
+    \#### This is an H4
+    \##### This is an H5
+    \###### This is an H6
+
+%h2 Blockquotes
+%pre.border
+  %code.m-2
+    > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+    > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+    > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+%pre.border
+  %code.m-2
+    > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+    \
+    > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+    id sem consectetuer libero luctus adipiscing.
+%pre.border
+  %code.m-2
+    > This is the first level of quoting.
+    >
+    > > This is nested blockquote.
+    >
+    > Back to the first level.
+
+%h2 Phrase Emphasis
+%pre.border
+  %code.m-2
+    Some of these words *are emphasized*.
+%pre.border
+  %code.m-2
+    Use two asterisks for **strong emphasis**.
+
+%h2 Lists
+%pre.border
+  %code.m-2
+    *   Candy.
+    *   Gum.
+    *   Booze.
+%pre.border
+  %code.m-2
+    1.  Red
+    2.  Green
+    3.  Blue
+%pre.border
+  %code.m-2
+    *   A list item.
+    \
+    \    With multiple paragraphs.
+    \
+    *   Another item in the list.
+
+%h2 Links
+%pre.border
+  %code.m-2
+    This is an [example link](http://example.com/).
+    \
+    I get 10 times more traffic from [Google][1] than from
+    [Yahoo][2] or [MSN][3].
+    \
+    [1]: http://google.com/        "Google"
+    [2]: http://search.yahoo.com/  "Yahoo Search"
+    [3]: http://search.msn.com/    "MSN Search"
+
+%h2 Images
+%pre.border
+  %code.m-2
+    ![alt text](/path/to/img.jpg "Title")
+
+%h2 Code
+%pre.border
+  %code.m-2
+    I strongly recommend against using any `blink` tags.
+%pre.border
+  %code.m-2
+    ```
+    A multiline
+    block code
+    ```

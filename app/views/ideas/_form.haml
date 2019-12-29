@@ -7,7 +7,7 @@
         #{@idea.title}
     .card-body
       = form.input :title
-      = form.input :body
+      = form.input :body, as: :markdown
 
     .card-footer
       .d-flex

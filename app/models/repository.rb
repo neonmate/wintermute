@@ -12,6 +12,10 @@ class Repository < ApplicationRecord
   validates :name, uniqueness: { scope: :owner }
   has_many :messages, as: :parent, dependent: :destroy
 
+  def messages_with_default_order
+    messages.order([created_at: :asc], :id)
+  end
+
   def repository_url_preview
     return if owner.blank? || name.blank?
 

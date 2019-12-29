@@ -54,7 +54,7 @@
 .card.mt-3
   %h3.card-header Discussion
   %ul.list-group.list-group-flush#list-items
-    - @repository.messages.each do |message|
+    - @repository.messages_with_default_order.each do |message|
       %li.list-group-item
         .row
           .col-10

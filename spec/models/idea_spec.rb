@@ -35,4 +35,22 @@ describe Idea do
     end
   end
 
+  describe '#messages_with_default_order' do
+    it 'orders the messages by created at ascending' do
+      idea = create(:idea)
+
+      message_1 = create(:message, parent: idea, created_at: Time.now + 1.day)
+      message_2 = create(:message, parent: idea, created_at: Time.now - 1.day)
+      message_3 = create(:message, parent: idea, created_at: Time.now)
+
+      expect(idea.messages_with_default_order.pluck(:id)).to eq(
+        [
+          message_2.id,
+          message_3.id,
+          message_1.id
+        ]
+      )
+    end
+  end
+
 end

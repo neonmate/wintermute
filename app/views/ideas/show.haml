@@ -14,7 +14,7 @@
           %div
             - if current_power.include_record?(:updatable, @idea)
               = modal_link_to 'Edit', edit_idea_path(@idea), class: 'btn btn-outline-secondary btn-sm'
-    - @idea.messages.each do |message|
+    - @idea.messages_with_default_order.each do |message|
       %li.list-group-item
         .row
           .col-10

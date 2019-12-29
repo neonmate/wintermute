@@ -1,8 +1,8 @@
 class User < ApplicationRecord
 
-  has_many :repositories
-  has_many :ideas
-  has_many :messages
+  has_many :repositories, dependent: :restrict_with_exception
+  has_many :ideas, dependent: :restrict_with_exception
+  has_many :messages, dependent: :restrict_with_exception
 
   validates :uid, :email, :nickname, presence: true
   validates :uid, uniqueness: true

@@ -11,7 +11,7 @@
         .card-header
           = content_link_to(idea.title, idea)
         .card-body
-          = format_markdown(idea.body)
+          = idea.description
 
     = render 'shared/pagination', collection: @ideas
   - else

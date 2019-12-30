@@ -1,7 +1,9 @@
 = content_link_to '← Back to list', ideas_path, class: 'btn btn-outline-primary'
 
 .card.mt-3
-  %h3.card-header= @idea.title
+  %h3.card-header
+    = @idea.title
+    %small.d-block= @idea.description
   %ul.list-group.list-group-flush#list-items
     %li.list-group-item
       .row

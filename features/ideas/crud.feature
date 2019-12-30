@@ -12,9 +12,11 @@ Feature: Ideas CRUD
     When I press "Save"
     Then I should see an error flash "Idea could not be saved"
       And the "Title" field should have an error
+      And the "Description" field should have an error
       And the "Message" field should have an error
 
     When I fill in "Title" with "Some title"
+      And I fill in "Description" with "Some description"
       And I fill in "Message" with "Some message"
       And I press "Save"
     Then I should see a success flash "Idea successfully saved"
@@ -22,6 +24,7 @@ Feature: Ideas CRUD
       And I should see in this order:
         """
         Some title
+        Some description
         Some message
         """
 
@@ -40,7 +43,7 @@ Feature: Ideas CRUD
       And I should see in this order:
         """
         Some other title
-        Some message
+        Some description
         """
 
     When I follow "Some other title"

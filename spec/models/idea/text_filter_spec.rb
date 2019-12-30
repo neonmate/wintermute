@@ -12,6 +12,14 @@ describe Idea::TextFilter do
       expect(subject.filter(scope, 'AAA')).to contain_exactly(idea_1)
     end
 
+    it 'filters ideas by description' do
+      idea_1 = create(:idea, description: 'AAA')
+      idea_2 = create(:idea, description: 'BBB')
+
+      expect(subject.filter(scope, '')).to contain_exactly(idea_1, idea_2)
+      expect(subject.filter(scope, 'AAA')).to contain_exactly(idea_1)
+    end
+
     it 'filters ideas by body' do
       idea_1 = create(:idea, body: 'AAA')
       idea_2 = create(:idea, body: 'BBB')

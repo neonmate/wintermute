@@ -74,7 +74,7 @@ class IdeasController < ApplicationController
     idea_params = params[:idea]
     return {} if idea_params.blank?
 
-    idea_params.permit(:title, :body)
+    idea_params.permit(:title, :description, :body)
   end
 
 end

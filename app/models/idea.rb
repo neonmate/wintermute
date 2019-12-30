@@ -7,7 +7,7 @@ class Idea < ApplicationRecord
 
   scope :default_order, -> { order(created_at: :desc) }
 
-  validates :title, :body, presence: true
+  validates :title, :description, :body, presence: true
 
   def messages_with_default_order
     messages.order([created_at: :asc], :id)

@@ -18,7 +18,8 @@ en:
 
     idea:
       title: Title
-      body: Message
+      description: Description
+      body: Concept
       user: Author
     message:
       body: Message

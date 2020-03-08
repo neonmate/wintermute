@@ -1,46 +1,30 @@
-sudo: required
+dist: xenial
+
 language: ruby
 rvm:
   - 2.6.5
-
-dist: trusty
 
 addons:
   chrome: stable
   postgresql: '10'
   apt:
     packages:
-      - postgresql-10
-      - postgresql-client-10
-env:
-  global:
-    - PGPORT=5433
+      - chromium-chromedriver
 
 before_install:
-  - wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE
-  - wget https://chromedriver.storage.googleapis.com/$(cat LATEST_RELEASE)/chromedriver_linux64.zip
-  - unzip chromedriver_linux64.zip
-  - chmod +x chromedriver
-  - sudo mv chromedriver /usr/bin/
-  - gem update --system
+  - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
   - gem install bundler
-  - sudo cp /etc/postgresql/{9.6,10}/main/pg_hba.conf
-  - sudo /etc/init.d/postgresql restart
-install:
-  - bundle install
-  - nvm install --lts=carbon
-  - node -v
-  - npm i -g yarn
-  - yarn
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+
 before_script:
   - bundle exec bin/setup
+
 script:
-  - bundle exec rspec
-  - bundle exec cucumber
+  - bundle exec rake
+
 services:
   - postgresql
+
 cache:
   bundler: true
-  directories:
-    - node_modules
   yarn: true

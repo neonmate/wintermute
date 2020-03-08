@@ -7,10 +7,11 @@ Wintermute is a platform to pitch and find open-source web applications.
 
 ## Setup
 
-- Install [ruby 2.5.3](https://github.com/rbenv/rbenv#installation)
+- Install Ruby e.g. `rbenv install 2.6.5`
+- Install [PostgreSQL 10](https://www.postgresql.org/download/)
 - Install [Node via NVM](https://github.com/nvm-sh/nvm#install--update-script) and run `nvm use` to use the projects Node version
 - Install [yarn](https://yarnpkg.com/lang/en/docs/install/)
-- Install bundler `gem install bundler`
+- Install bundler `gem install bundler -v '2.1.4'`
 - Run `bundle exec bin/setup`
 - Run server `bundle exec bin/rails s` and go to [http://wintermute.vcap.me:3000/](http://wintermute.vcap.me:3000/)
 
@@ -35,8 +36,10 @@ Run `bin/setup` to create an initial `config/secrets.yml`. You can both access s
 
 ## Tests
 
-- Install `chromedriver` and add it to path variables
-- Run unit tests with `bundle exec rspec`
-- Run integration tests with `bundle exec cucumber`
+Install `chromedriver` and add it to the path variables.
+
+- Run all tests with `bundle exec rake`
+  - Run unit tests with `bundle exec rspec`
+  - Run integration tests with `bundle exec cucumber`
 
 Debugging hint: You can disable headless mode for javascript tests with `CHROME_HEADLESS=false bundle exec cucumber`.

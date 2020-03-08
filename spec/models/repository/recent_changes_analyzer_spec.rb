@@ -1,5 +1,7 @@
 describe Repository::RecentChangesAnalyzer do
 
+  around { |example| Timecop.freeze(Time.parse('2020-01-01 12:00'), &example) }
+
   describe '#count_commits_for_the_last_day' do
     it 'returns the number of commits within the last day' do
       last_commits_at = [Time.now, Time.now - 1.hour, Time.now - 1.day]

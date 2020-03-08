@@ -46,7 +46,7 @@ end
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'pry-byebug'
-  gem 'rspec-rails', '~> 4.0.0.beta3'
+  gem 'rspec-rails'
 end
 
 group :test do

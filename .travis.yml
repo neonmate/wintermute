@@ -20,7 +20,8 @@ before_script:
   - bundle exec bin/setup
 
 script:
-  - bundle exec rake
+  - bundle exec rake spec
+  - bundle exec rake cucumber
 
 services:
   - postgresql

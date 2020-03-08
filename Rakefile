@@ -5,4 +5,7 @@ require_relative 'config/application'
 
 Rails.application.load_tasks
 
-task default: [:spec, :cucumber]
+# Remove RSpec as default task
+task(:default).clear
+
+task default: ['parallel:spec', 'parallel:features']

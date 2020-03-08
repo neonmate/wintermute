@@ -39,7 +39,7 @@ Run `bin/setup` to create an initial `config/secrets.yml`. You can both access s
 Install `chromedriver` and add it to the path variables.
 
 - Run all tests with `bundle exec rake`
-  - Run unit tests with `bundle exec rspec`
-  - Run integration tests with `bundle exec cucumber`
+  - Run unit tests with `bundle exec parallel:spec`
+  - Run integration tests with `bundle exec parallel:feature`
 
 Debugging hint: You can disable headless mode for javascript tests with `CHROME_HEADLESS=false bundle exec cucumber`.

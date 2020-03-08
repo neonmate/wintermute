@@ -232,6 +232,8 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
     parallel (1.19.1)
+    parallel_tests (2.31.0)
+      parallel
     parser (2.7.0.4)
       ast (~> 2.4.0)
     pg (1.2.2)
@@ -416,6 +418,7 @@ DEPENDENCIES
   minidusen
   modularity
   omniauth-github
+  parallel_tests
   pg
   pry-byebug
   puma

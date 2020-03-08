@@ -45,6 +45,7 @@ end
 
 group :development, :test do
   gem 'factory_bot_rails'
+  gem 'parallel_tests'
   gem 'pry-byebug'
   gem 'rspec-rails'
 end

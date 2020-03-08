@@ -32,6 +32,8 @@ FileUtils.chdir APP_ROOT do
   end
 
   puts "\n== Preparing database =="
-  system! 'bin/rails db:create --all'
-  system! 'bin/rails db:migrate'
+  system!('bin/rails db:create')
+  system!('bin/rails parallel:create')
+  system!('bin/rails db:migrate')
+  system!('bin/rails parallel:load_schema')
 end

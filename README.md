@@ -12,6 +12,7 @@ Wintermute is a platform to pitch and find open-source web applications.
 - Install [Node via NVM](https://github.com/nvm-sh/nvm#install--update-script) and run `nvm use` to use the projects Node version
 - Install [yarn](https://yarnpkg.com/lang/en/docs/install/)
 - Install bundler `gem install bundler -v '2.1.4'`
+- Add all environment variables from the `secrets.yml` to your `.bashrc` or `.zshrc`
 - Run `bundle exec bin/setup`
 - Run server `bundle exec bin/rails s` and go to [http://wintermute.vcap.me:3000/](http://wintermute.vcap.me:3000/)
 
@@ -22,17 +23,11 @@ git push heroku
 heroku run rails db:migrate
 ```
 
-You need to set the master encryption key before a first deployment:
+You need to set all environment variables from the `secrets.yml` before a first deployment:
 
 ```
-heroku config:set RAILS_MASTER_KEY=secure-master-key
+heroku config:set SOME_KEY=some_value
 ```
-
-## Credentials
-
-We use encrypted credentials for production and staging. And we use unencrypted credentials for development and test.
-Run `bin/setup` to create an initial `config/secrets.yml`. You can both access secrets and credentials via
-`Rails.application.credentials.some_key`.
 
 ## Tests
 

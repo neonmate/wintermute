@@ -44,6 +44,10 @@ module Wintermute
     # Allow subfolders for i18n (We use a folder for each locale)
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
 
+    # Disable encrypted credentials
+    config.read_encrypted_secrets = false
+    config.require_master_key = false
+
     # Adjust generator like described in http://guides.rubyonrails.org/generators.html
     config.generators do |g|
       g.test_framework :rspec

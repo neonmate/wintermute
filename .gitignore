@@ -1,9 +1,6 @@
 # See https://git-scm.com/docs/gitignore#_pattern_format
 
 config/database.yml
-config/secrets.yml
-config/credentials/staging.key
-config/credentials/production.key
 db/schema.rb
 db/structure.sql
 /log/*

@@ -25,12 +25,6 @@ FileUtils.chdir APP_ROOT do
     FileUtils.cp 'config/database.sample.yml', 'config/database.yml'
   end
 
-  puts "\n== Creating placeholder secrets.yml for test and development =="
-
-  unless File.exist?('config/secrets.yml')
-    FileUtils.cp 'config/secrets.sample.yml', 'config/secrets.yml'
-  end
-
   puts "\n== Preparing database =="
   system!('bin/rails db:create')
   system!('bin/rails parallel:create')

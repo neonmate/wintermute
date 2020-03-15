@@ -11,6 +11,7 @@ class Repository < ApplicationRecord
   validates :owner, :name, presence: true
   validates :name, uniqueness: { scope: :owner }
   has_many :messages, as: :parent, dependent: :destroy
+  has_many :user_subscriptions, as: :subscribable
 
   def messages_with_default_order
     messages.order([created_at: :asc], :id)

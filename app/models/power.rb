@@ -4,6 +4,7 @@ class Power
   include DoesIdeas
   include DoesMessages
   include DoesRepositories
+  include DoesUserSubscriptions
 
   attr_reader :user
 

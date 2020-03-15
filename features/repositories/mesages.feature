@@ -32,6 +32,7 @@ Feature: Repository messages
 
     When I follow "Edit"
       And I follow "Delete"
+      And I confirm the browser dialog
     Then I should see a success flash "Message deleted"
       And I should be on the page for the repository above
       And I should not see "Some other message"

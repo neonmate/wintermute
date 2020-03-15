@@ -13,6 +13,6 @@
       .d-flex
         .mr-auto
           - if @repository.persisted?
-            = content_link_to 'Delete', repository_path(@repository), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-outline-danger'
+            = content_link_to 'Delete', repository_path(@repository), {method: :delete, 'up-confirm': 'Are you sure?', class: 'btn btn-outline-danger'}
         = content_link_to 'Cancel', cancel_path(@repository), class: 'btn btn-light', 'up-close': ''
         = form.submit 'Save', class: 'btn btn-primary ml-1'

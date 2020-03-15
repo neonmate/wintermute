@@ -4,6 +4,7 @@ class Idea < ApplicationRecord
 
   belongs_to :user
   has_many :messages, as: :parent, dependent: :destroy
+  has_many :user_subscriptions, as: :subscribable
 
   scope :default_order, -> { order(created_at: :desc) }
 

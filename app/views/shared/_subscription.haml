@@ -1,0 +1,9 @@
+- if signed_in?
+  - subscription = User::Subscription.find_or_initialize_by(user: current_user, subscribable: record)
+  - if subscription.new_record?
+    = simple_form_for(subscription, html: {class: 'd-inline'}) do |form|
+      = form.input :subscribable_id, wrapper_html: {class: 'mb-0'}, as: :hidden
+      = form.input :subscribable_type, wrapper_html: {class: 'mb-0'}, as: :hidden
+      = form.submit 'Subscribe', class: 'btn btn-outline-secondary'
+  - else
+    = content_link_to 'Unsubscribe', user_subscription_path(subscription), method: :delete, 'up-confirm': 'Are you sure?', class: 'btn btn-outline-secondary'

@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   resources :messages, only: [:new, :create, :edit, :update, :destroy]
   resources :repositories
 
+  namespace :user do
+    resources :subscriptions, only: [:create, :destroy]
+  end
+
   if Rails.env.test? || Rails.env.development?
     get :test_flash, controller: 'tests'
     get :colors, controller: 'tests'

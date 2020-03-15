@@ -5,6 +5,7 @@
     .d-flex
       %h3.mr-auto= @repository.name
       .align-self-center
+        = render 'shared/subscription', record: @repository
         - if current_power.include_record?(:updatable, @repository)
           = modal_link_to 'Edit', edit_repository_path(@repository), class: 'btn btn-outline-secondary'
     %small

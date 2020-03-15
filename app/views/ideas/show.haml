@@ -5,6 +5,7 @@
     .d-flex
       %h3.mr-auto= @idea.title
       .align-self-center
+        = render 'shared/subscription', record: @idea
         - if current_power.include_record?(:updatable, @idea)
           = modal_link_to 'Edit', edit_idea_path(@idea), class: 'btn btn-outline-secondary'
     %small

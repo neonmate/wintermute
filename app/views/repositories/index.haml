@@ -8,12 +8,13 @@
   - if @repositories.present?
     - @repositories.each do |repository|
       .card.mt-3
-        .card-header
-          = content_link_to(repository.name, repository)
-          - if repository.first_commit_at.present? && repository.last_commit_at.present?
-            %small #{format_date(repository.first_commit_at)} - #{format_date(repository.last_commit_at)}
+        .card-header.d-flex
+          = content_link_to(repository.name, repository, class: 'text-reset text-decoration-none stretched-link mr-auto')
+          .align-self-center
+            - if repository.first_commit_at.present? && repository.last_commit_at.present?
+              %small #{format_date(repository.first_commit_at)} - #{format_date(repository.last_commit_at)}
         .card-body
-          = format_string(repository.description)
+          %p.card-text= format_string(repository.description)
 
     = render 'shared/pagination', collection: @repositories
   - else

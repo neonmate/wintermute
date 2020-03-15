@@ -1,27 +1,30 @@
 = content_link_to '← Back to list', ideas_path, class: 'btn btn-outline-primary'
 
 .card.mt-3
-  %h3.card-header
-    = @idea.title
-    %small.d-block= @idea.description
+  .card-header
+    .d-flex
+      %h3.mr-auto= @idea.title
+      .align-self-center
+        - if current_power.include_record?(:updatable, @idea)
+          = modal_link_to 'Edit', edit_idea_path(@idea), class: 'btn btn-outline-secondary'
+    %small
+      Created by
+      %strong= @idea.user.to_s
+      #{time_ago_in_words(@idea.created_at)} ago
   %ul.list-group.list-group-flush#list-items
     %li.list-group-item
-      .row
-        .col-10
-          %strong= @idea.user.to_s
-          %small #{time_ago_in_words(@idea.created_at)} ago
-          .mt-3= format_markdown(@idea.body)
-        .col-2.d-flex
-          .mr-auto
-          %div
-            - if current_power.include_record?(:updatable, @idea)
-              = modal_link_to 'Edit', edit_idea_path(@idea), class: 'btn btn-outline-secondary btn-sm'
+      = @idea.description
+      %hr
+      .mt-3= format_markdown(@idea.body)
+
     - @idea.messages_with_default_order.each do |message|
       %li.list-group-item
         .row
           .col-10
-            %strong= message.user.to_s
-            %small #{time_ago_in_words(message.created_at)} ago
+            %small
+              %strong= message.user.to_s
+              replied
+              #{time_ago_in_words(message.created_at)} ago
             .mt-3= format_markdown(message.body)
           .col-2.d-flex
             .mr-auto

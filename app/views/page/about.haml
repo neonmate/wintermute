@@ -1,21 +1,35 @@
 %p
-  Wintermute should help programmers to create new web applications that can become more than just a side project. And
-  help to explore already existing projects.
+  %strong Wintermute
+  should help programmers to create web applications that are more than just a side project.
 
-%p
-  %br
-  Check out the #{link_to('"Evaluate ideas"', ideas_path)} section where programmers can evaluate their ideas and find contributors before writing the first line of code.
-  %br
-  In the #{link_to('"Explore existing"', repositories_path)} section you can find already existing open source web applications on Github.
+  Only
+  %strong open source
+  projects are supported to enforce a community driven decision process.
 
-%strong Guideline
+%h2.about--header Guideline
 
 %ul
-  %li Submit your idea like an Internet-Draft (Example: #{external_link_to('HTTP/2 draft', 'https://http2.github.io/http2-spec/index.html')}).
-  %li Create a repository on Github and link it to Wintermute if the idea was good.
-  %li Every idea should become an open source web application.
-  %li Every repository should be an open source web application.
-  %li There is no restriction about monetization, as long as all code is open source.
+  %li Submit your idea in the #{link_to('"Evaluate ideas"', ideas_path)} section like an Internet-Draft (Example: #{external_link_to('HTTP/2 draft', 'https://http2.github.io/http2-spec/index.html')}).
+  %li Get feedback from the community and decide whether to start or cancel the idea.
+  %li Implemented ideas will be listed in the hall of fame, the #{link_to('"Explore existing"', repositories_path)} section.
   %li Be kind.
 
-Feel free to use the comment section of the ideas and repositories for discussions, up voting or linking.
+%h2.about--header FAQ
+
+%dl.about--faq
+  %dt Are other open source applications than web applications allowed, too?
+  %dd No, Wintermute is for open source web applications only right now. If the community grows there might be a support for other platforms.
+
+  %dt Can I add an existing project from other hosters than Github?
+  %dd Right now only Github is supported. If the community grows there might be a support for other hosters like Gitlab or Bitbucket.
+
+  %dt Is there any restriction about monetization?
+  %dd No, as long as your web application is open source everything is fine.
+
+  %dt What happens if I decide at some point of time to make the repository closed source?
+  %dd We will remove it from the list of projects and try to find people who fork it. Then we will add the fork as new project.
+
+  %dt What makes an idea successful?
+  %dd
+    Try to find as many interested people as possible. Maybe you can add them to a newsletter list or already find out if they are willy to pay for this service.
+    It is also legit to find co-workers that want to support you with implementation of the idea.

@@ -9,9 +9,10 @@
     - @ideas.each do |idea|
       .card.mt-3
         .card-header
-          = content_link_to(idea.title, idea)
+          = content_link_to(idea.title, idea, class: 'text-reset text-decoration-none stretched-link')
+
         .card-body
-          = idea.description
+          %p.card-text= idea.description
 
     = render 'shared/pagination', collection: @ideas
   - else

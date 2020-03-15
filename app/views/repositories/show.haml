@@ -3,68 +3,72 @@
 .card.mt-3
   .card-header
     .d-flex
-      .mr-auto
-        %h3= @repository.name
-      - if current_power.include_record?(:updatable, @repository)
-        = modal_link_to "Edit #{Repository.model_name.human}", edit_repository_path(@repository), class: 'btn btn-outline-secondary'
-  .card-body
-    - if @repository.last_synchronized_at.blank?
-      .alert.alert-info{role: 'alert'}
-        %strong Notice:
-        This #{Repository.model_name.human} does not show all information from Github, but it will be updated within the
-        next few hours. Thanks for your patient!
-    %dl
-      %dt= Repository.human_attribute_name(:description)
-      %dd= format_text(@repository.description)
+      %h3.mr-auto= @repository.name
+      .align-self-center
+        - if current_power.include_record?(:updatable, @repository)
+          = modal_link_to 'Edit', edit_repository_path(@repository), class: 'btn btn-outline-secondary'
+    %small
+      Added by
+      %strong= @repository.user.to_s
+      #{time_ago_in_words(@repository.created_at)} ago
 
-      %dt= Repository.human_attribute_name(:repository_url)
-      %dd= external_link_to @repository.repository_url_preview, @repository.repository_url_preview
-
-      %dt Popularity
-      %dd
-        .row
-          .col
-            #{Repository.human_attribute_name(:total_stars)}: #{format_string(@repository.total_stars)}
-          .col
-            #{Repository.human_attribute_name(:total_watchers)}: #{format_string(@repository.total_watchers)}
-          .col
-            #{Repository.human_attribute_name(:total_issues)}: #{format_string(@repository.total_issues)}
-
-      %dt= Repository.human_attribute_name(:languages)
-      %dd= @repository.languages.join(', ').presence || ndash
-
-      %dt= Repository.human_attribute_name(:homepage_url)
-      %dd
-        - if @repository.homepage_url.present?
-          = external_link_to @repository.homepage_url, @repository.homepage_url
-        - else
-          = ndash
-
-      %dt= Repository.human_attribute_name(:licence)
-      %dd= format_string(@repository.licence)
-
-      %dt= Repository.human_attribute_name(:user)
-      %dd= external_link_to @repository.user.nickname, "https://github.com/#{@repository.user.nickname}"
-
-      %dt Recent changes
-      - if @repository.last_commits_at.present?
-        %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_day
-        %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_week
-        %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_month
-        %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_year
-      - else
-        %dd= ndash
-
-
-.card.mt-3
-  %h3.card-header Discussion
   %ul.list-group.list-group-flush#list-items
+    %li.list-group-item
+      - if @repository.last_synchronized_at.blank?
+        .alert.alert-info{role: 'alert'}
+          %strong Notice:
+          This #{Repository.model_name.human} does not show all information from Github, but it will be updated within the
+          next few hours. Thanks for your patient!
+      %dl
+        %dt= Repository.human_attribute_name(:description)
+        %dd= format_text(@repository.description)
+
+        %dt= Repository.human_attribute_name(:repository_url)
+        %dd= external_link_to @repository.repository_url_preview, @repository.repository_url_preview
+
+        %dt Popularity
+        %dd
+          .row
+            .col
+              #{Repository.human_attribute_name(:total_stars)}: #{format_string(@repository.total_stars)}
+            .col
+              #{Repository.human_attribute_name(:total_watchers)}: #{format_string(@repository.total_watchers)}
+            .col
+              #{Repository.human_attribute_name(:total_issues)}: #{format_string(@repository.total_issues)}
+
+        %dt= Repository.human_attribute_name(:languages)
+        %dd= @repository.languages.join(', ').presence || ndash
+
+        %dt= Repository.human_attribute_name(:homepage_url)
+        %dd
+          - if @repository.homepage_url.present?
+            = external_link_to @repository.homepage_url, @repository.homepage_url
+          - else
+            = ndash
+
+        %dt= Repository.human_attribute_name(:licence)
+        %dd= format_string(@repository.licence)
+
+        %dt= Repository.human_attribute_name(:user)
+        %dd= external_link_to @repository.user.nickname, "https://github.com/#{@repository.user.nickname}"
+
+        %dt Recent changes
+        - if @repository.last_commits_at.present?
+          %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_day
+          %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_week
+          %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_month
+          %dd= Repository::RecentChangesAnalyzer.new(@repository).count_commits_for_the_last_year
+        - else
+          %dd= ndash
+
     - @repository.messages_with_default_order.each do |message|
       %li.list-group-item
         .row
           .col-10
-            %strong= message.user.to_s
-            %small #{time_ago_in_words(message.created_at)} ago
+            %small
+              %strong= message.user.to_s
+              replied
+              #{time_ago_in_words(message.created_at)} ago
             .mt-3= format_markdown(message.body)
           .col-2.d-flex
             .mr-auto

@@ -3,7 +3,7 @@ Feature: Page
 
   Scenario: Visit the about page that serves as root
     When I go to the homepage
-    Then I should see "Wintermute should help programmers to create new web applications"
+    Then I should see "Wintermute should help programmers to create web applications that are more than just a side project."
       And "About" should link to "/about"
 
 

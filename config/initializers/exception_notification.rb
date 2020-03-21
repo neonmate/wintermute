@@ -4,7 +4,7 @@ ExceptionNotification.configure do |config|
 
   config.add_notifier :email, {
     email_prefix: '[wintermute] ',
-    exception_recipients: %w[neonmate@users.noreply.github.com],
+    exception_recipients: %w[info@wintermute.app],
     sender_address: Rails.configuration.system_email,
     sections: %w[request data backtrace],
     background_sections: %w[data backtrace],

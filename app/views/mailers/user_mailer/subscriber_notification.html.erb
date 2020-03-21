@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+    </head>
+  <body>
+    <p><%= @message.user.nickname %> left a reply to <%= @topic %>:</p>
+    <p>
+      """
+      <br>
+      <%= @message.body %>
+      <br>
+      """
+    </p>
+    <p>
+      More details:
+      <a href="<%= polymorphic_url(@message.parent) %>"><%= polymorphic_url(@message.parent) %></a>
+    </p>
+  </body>
+</html>

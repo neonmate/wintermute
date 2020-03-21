@@ -36,7 +36,7 @@ class MessagesController < ApplicationController
   end
 
   def build_message
-    @message ||= message_scope.new
+    @message ||= ActiveType.cast(message_scope, Message::Form).new
     @message.attributes = message_params
   end
 

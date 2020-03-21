@@ -32,7 +32,7 @@ module Wintermute
 
     config.eager_load_paths << "#{Rails.root}/app/models/shared"
 
-    config.system_email = 'neonmate@users.noreply.github.com'
+    config.system_email = 'info@wintermute.app'
 
     config.time_zone = 'Berlin'
     config.active_record.default_timezone = :local

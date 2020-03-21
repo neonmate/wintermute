@@ -29,6 +29,10 @@ You need to set all environment variables from the `secrets.yml` before a first 
 heroku config:set SOME_KEY=some_value
 ```
 
+# Mails
+
+Preview all emails at http://localhost:3000/rails/mailers .
+
 ## Tests
 
 Install `chromedriver` and add it to the path variables.

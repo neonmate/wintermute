@@ -1,7 +1,7 @@
 class UserMailer < ApplicationMailer
 
   def subscriber_notification(subscription, message)
-    @topic = %(#{subscription.subscribable.class.model_name.to_s.downcase} "#{subscription.subscribable.to_s}")
+    @topic = %(#{subscription.subscribable.class.model_name.to_s.downcase} "#{subscription.subscribable}")
     @message = message
 
     mail(

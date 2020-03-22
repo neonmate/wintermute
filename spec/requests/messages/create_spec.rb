@@ -13,11 +13,11 @@ describe '/messages', type: :request do
     idea.user_subscriptions.create!(user: user_1)
     idea.user_subscriptions.create!(user: user_3)
 
-    post '/messages', params: {message: {parent_id: idea.id, parent_type: 'Idea', body: 'New message'}}
+    post '/messages', params: { message: { parent_id: idea.id, parent_type: 'Idea', body: 'New message' } }
 
     expect(ActionMailer::Base.deliveries.count).to eq(2)
     expect(ActionMailer::Base.deliveries.flat_map(&:to)).to contain_exactly(user_1.email, user_3.email)
-    expect(ActionMailer::Base.deliveries.first.subject).to eq(%q(@thomas replied to the subscribed idea "Some title"))
+    expect(ActionMailer::Base.deliveries.first.subject).to eq('@thomas replied to the subscribed idea "Some title"')
   end
 
   it 'creates a notification email for all subscribers of a repository' do
@@ -29,11 +29,11 @@ describe '/messages', type: :request do
     repository.user_subscriptions.create!(user: user_1)
     repository.user_subscriptions.create!(user: user_3)
 
-    post '/messages', params: {message: {parent_id: repository.id, parent_type: 'Repository', body: 'New message'}}
+    post '/messages', params: { message: { parent_id: repository.id, parent_type: 'Repository', body: 'New message' } }
 
     expect(ActionMailer::Base.deliveries.count).to eq(2)
     expect(ActionMailer::Base.deliveries.flat_map(&:to)).to contain_exactly(user_1.email, user_3.email)
-    expect(ActionMailer::Base.deliveries.first.subject).to eq(%q(@thomas replied to the subscribed repository "ms/repo_1"))
+    expect(ActionMailer::Base.deliveries.first.subject).to eq('@thomas replied to the subscribed repository "ms/repo_1"')
   end
 
 end

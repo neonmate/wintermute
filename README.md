@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/neonmate/wintermute.svg?branch=master)](https://travis-ci.org/neonmate/wintermute)
 
 # Wintermute
-Wintermute is a platform to pitch and find open-source web applications.
+Wintermute should help programmers to create open source web applications that become an active side project.
 
 # Development
 

@@ -11,5 +11,5 @@ end
 
 OmniAuth.config do |config|
   # Disable the redirect to /auth/failure and always raise
-  config.failure_raise_out_environments = ['test', 'development', 'staging', 'production']
+  config.failure_raise_out_environments = ['test', 'development', 'production']
 end

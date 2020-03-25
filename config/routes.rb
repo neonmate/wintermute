@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :subscriptions, only: [:create, :destroy]
   end
 
+  resources :errors, only: :new
+
   if Rails.env.test? || Rails.env.development?
     get :test_flash, controller: 'tests'
     get :colors, controller: 'tests'

@@ -19,14 +19,7 @@ Wintermute should help programmers to create open source web applications that b
 ## Deployment
 
 ```
-git push heroku
-heroku run rails db:migrate
-```
-
-You need to set all environment variables from the `secrets.yml` before a first deployment:
-
-```
-heroku config:set SOME_KEY=some_value
+bundle exec cap production deploy
 ```
 
 # Mails

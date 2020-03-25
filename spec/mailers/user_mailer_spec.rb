@@ -24,7 +24,7 @@ describe UserMailer, type: :mailer do
       subscribable = create(:idea, id: 1, title: 'Some idea')
       mail = build_mail(subscribable)
 
-      expect(mail.from).to contain_exactly('info@wintermute.app')
+      expect(mail.from).to contain_exactly('no-reply@wintermute.app')
       expect(mail.to).to contain_exactly('subscriber@example.com')
       expect(mail.subject).to eq(%(@thomas replied to the subscribed idea "Some idea"))
 
@@ -70,7 +70,7 @@ describe UserMailer, type: :mailer do
       subscribable = create(:repository, id: 1, owner: 'ms', name: 'repo_1')
       mail = build_mail(subscribable)
 
-      expect(mail.from).to contain_exactly('info@wintermute.app')
+      expect(mail.from).to contain_exactly('no-reply@wintermute.app')
       expect(mail.to).to contain_exactly('subscriber@example.com')
       expect(mail.subject).to eq(%(@thomas replied to the subscribed repository "ms/repo_1"))
 

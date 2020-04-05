@@ -10,9 +10,11 @@
       .card.mt-3
         .card-header.d-flex
           = content_link_to(repository.name, repository, class: 'text-reset text-decoration-none stretched-link mr-auto')
-          .align-self-center
+          %small.align-self-center
             - if repository.first_commit_at.present? && repository.last_commit_at.present?
-              %small #{format_date(repository.first_commit_at)} - #{format_date(repository.last_commit_at)}
+              #{format_date(repository.first_commit_at)} - #{format_date(repository.last_commit_at)}
+              = bullet
+            #{repository.user_subscriptions.count} subscriptions
         .card-body
           %p.card-text= format_string(repository.description)
 

@@ -16,6 +16,10 @@ module ApplicationHelper
     '–'
   end
 
+  def bullet
+    ' • '
+  end
+
   def external_link_to(name, url, options = {})
     link_to(name, url, options.reverse_merge(target: '_blank', rel: 'noopener'))
   end

@@ -42,6 +42,7 @@ class IdeasController < ApplicationController
   def load_ideas
     @ideas = idea_scope
       .default_order
+      .includes(:user_subscriptions)
       .paginate(page: params[:page])
       .filtered(params[:query])
       .to_a

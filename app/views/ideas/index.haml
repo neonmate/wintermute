@@ -8,9 +8,10 @@
   - if @ideas.present?
     - @ideas.each do |idea|
       .card.mt-3
-        .card-header
-          = content_link_to(idea.title, idea, class: 'text-reset text-decoration-none stretched-link')
-
+        .card-header.d-flex
+          = content_link_to(idea.title, idea, class: 'text-reset text-decoration-none stretched-link mr-auto')
+          %small.align-self-center
+            #{idea.user_subscriptions.count} subscriptions
         .card-body
           %p.card-text= idea.description
 

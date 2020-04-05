@@ -42,6 +42,7 @@ class RepositoriesController < ApplicationController
   def load_repositories
     @repositories = repository_scope
       .default_order
+      .includes(:user_subscriptions)
       .paginate(page: params[:page])
       .filtered(params[:query])
       .to_a

@@ -12,6 +12,9 @@
       Created by
       %strong= @idea.user.to_s
       #{time_ago_in_words(@idea.created_at)} ago
+      = bullet
+      #{@idea.user_subscriptions.count} subscriptions
+
   %ul.list-group.list-group-flush#list-items
     %li.list-group-item
       = @idea.description

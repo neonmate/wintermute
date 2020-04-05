@@ -12,6 +12,8 @@
       Added by
       %strong= @repository.user.to_s
       #{time_ago_in_words(@repository.created_at)} ago
+      = bullet
+      #{@repository.user_subscriptions.count} subscriptions
 
   %ul.list-group.list-group-flush#list-items
     %li.list-group-item

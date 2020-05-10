@@ -12,6 +12,11 @@ addons:
       - chromium-chromedriver
 
 before_install:
+  # Install the required nodejs version specified in .nvmrc
+  - nvm install
+  # Install the latest yarn version
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
   - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
   - gem install bundler
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &

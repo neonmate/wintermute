@@ -206,9 +206,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    makandra-rubocop (4.3.0)
-      rubocop (~> 0.76.0)
-      rubocop-rails (~> 2.3.2)
+    makandra-rubocop (5.0.0)
+      rubocop (~> 0.81.0)
+      rubocop-rails (~> 2.5.1)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     memoized (1.0.2)
@@ -256,7 +256,7 @@ GEM
     parallel (1.19.1)
     parallel_tests (2.31.0)
       parallel
-    parser (2.7.0.4)
+    parser (2.7.1.2)
       ast (~> 2.4.0)
     pg (1.2.2)
     premailer (1.11.1)
@@ -312,6 +312,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.0)
+    rexml (3.2.4)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -333,14 +334,16 @@ GEM
       rspec-mocks (~> 3.9)
       rspec-support (~> 3.9)
     rspec-support (3.9.2)
-    rubocop (0.76.0)
+    rubocop (0.81.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
-      parser (>= 2.6)
+      parser (>= 2.7.0.1)
       rainbow (>= 2.2.2, < 4.0)
+      rexml
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 1.7)
-    rubocop-rails (2.3.2)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-rails (2.5.2)
+      activesupport
       rack (>= 1.1)
       rubocop (>= 0.72.0)
     ruby-progressbar (1.10.1)
@@ -390,7 +393,7 @@ GEM
     timecop (0.9.1)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
-    unicode-display_width (1.6.1)
+    unicode-display_width (1.7.0)
     unpoly-rails (0.61.0)
       rails (>= 3)
     vcr (5.1.0)
@@ -480,9 +483,6 @@ DEPENDENCIES
   whenever
   will_paginate
   will_paginate-bootstrap4
-
-RUBY VERSION
-   ruby 2.6.5p114
 
 BUNDLED WITH
    2.1.4

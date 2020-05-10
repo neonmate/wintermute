@@ -1,4 +1,3 @@
-import '@babel/polyfill'
 import 'dom4'
 import 'unpoly/dist/unpoly.js'
 import 'unpoly/dist/unpoly-bootstrap3.js'

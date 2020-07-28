@@ -1,4 +1,4 @@
-lock '~> 3.12.1'
+lock '~> 3.14.1'
 
 abort 'You must run this using "bundle exec ..."' unless ENV['BUNDLE_BIN_PATH'] || ENV['BUNDLE_GEMFILE']
 

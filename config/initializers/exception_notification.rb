@@ -4,13 +4,14 @@ ExceptionNotification.configure do |config|
 
   config.add_notifier :email, {
     email_prefix: '[wintermute] ',
-    exception_recipients: %w[dev@denzel.email],
+    # Simple email obfuscation to prevent spam
+    exception_recipients: [[100, 101, 118, 64, 100, 101, 110, 122, 101, 108, 46, 101, 109, 97, 105, 108].pack('c*')],
     sender_address: Rails.configuration.system_email,
-    sections: %w[request data backtrace],
-    background_sections: %w[data backtrace],
+    sections: ['request', 'data', 'backtrace'],
+    background_sections: ['data', 'backtrace'],
   }
 
   # Regularly occurs when users have multiple tabs open
-  config.ignored_exceptions += %w[ActionController::InvalidAuthenticityToken]
+  config.ignored_exceptions += [ActionController::InvalidAuthenticityToken]
 
 end

@@ -14,7 +14,6 @@
     %title
       Wintermute
 
-    = javascript_pack_tag 'application'
     = stylesheet_pack_tag 'application'
 
   %body{data: {env: Rails.env}, class: 'd-flex flex-column h-100'}
@@ -26,3 +25,5 @@
         .page-target
           .modal-target= yield
     = render 'layouts/footer'
+    // https://makandracards.com/makandra/17349-speed-up-your-websites-put-javascripts-at-bottom
+    = javascript_pack_tag 'application'

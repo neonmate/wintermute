@@ -74,13 +74,13 @@ class Repository::Synchronizer
 
   private
 
+  attr_accessor :repository
+
   def fetch_result
     Github::Client.query(
       REPOSITORY_META_QUERY,
       variables: { owner: repository.owner, name: repository.name }
     )
   end
-
-  attr_accessor :repository
 
 end

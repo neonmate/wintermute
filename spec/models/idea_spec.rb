@@ -8,7 +8,7 @@ describe Idea do
     it { is_expected.to belong_to(:user) }
   end
 
-  describe '#default_order' do
+  describe '.default_order' do
     it 'returns the ideas ordered by creation time descending' do
       idea_2 = Timecop.freeze(Time.now) { create(:idea) }
       idea_1 = Timecop.freeze(Time.now + 1.day) { create(:idea) }

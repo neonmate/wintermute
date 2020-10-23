@@ -8,7 +8,7 @@ describe Repository do
     it { is_expected.to belong_to(:user) }
   end
 
-  describe '#default_order' do
+  describe '.default_order' do
     it 'returns the repositories with the latest commits first' do
       repository_1 = create(:repository, last_commit_at: nil)
       repository_2 = create(:repository, last_commit_at: Time.now)

@@ -8,6 +8,8 @@ class User < ApplicationRecord
   validates :uid, :email, :nickname, presence: true
   validates :uid, uniqueness: true
 
+  has_defaults admin: false
+
   def to_s
     nickname
   end

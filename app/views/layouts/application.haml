@@ -20,10 +20,11 @@
     .flex-shrink-0
       .container.mb-5
         = render 'layouts/navigation'
-        = render 'layouts/flashes'
 
         .page-target
-          .modal-target= yield
+          .modal-target
+            = render 'layouts/flashes'
+            = yield
     = render 'layouts/footer'
     // https://makandracards.com/makandra/17349-speed-up-your-websites-put-javascripts-at-bottom
     = javascript_pack_tag 'application'

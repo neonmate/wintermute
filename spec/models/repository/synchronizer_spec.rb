@@ -5,11 +5,11 @@ describe Repository::Synchronizer do
   around { |example| Timecop.freeze(frozen_time, &example) }
 
   describe '.run' do
-    it 'synchronizes the repository stats for all repositorys', vcr: { cassette_name: 'graphql_client_and_rubocop_request' } do
+    it 'synchronizes the repository stats for all repositories', vcr: { cassette_name: 'repository_synchronizer/multiple_repositories' } do
       repository_1 = create(:repository, owner: 'github', name: 'graphql-client')
       repository_2 = create(:repository, owner: 'github', name: 'rubocop-github')
 
-      Repository::Synchronizer.run
+      described_class.run
 
       expect(repository_1.reload.total_stars).to eq(741)
       expect(repository_2.reload.total_stars).to eq(438)
@@ -17,10 +17,10 @@ describe Repository::Synchronizer do
   end
 
   describe '#synchronize_repository' do
-    it 'synchronizes the repository stats of a repository', vcr: { cassette_name: 'graphql_client_request' } do
+    it 'synchronizes the repository stats of a repository', vcr: { cassette_name: 'repository_synchronizer/single_repository' } do
       repository = create(:repository, owner: 'github', name: 'graphql-client')
 
-      Repository::Synchronizer.new(repository).synchronize_repository
+      described_class.new(repository).synchronize_repository
 
       expect(repository).to have_attributes(
         description: 'A Ruby library for declaring, composing and executing GraphQL queries',

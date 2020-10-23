@@ -11,6 +11,9 @@ en:
     repository:
       one: Repository
       other: Repositories
+    external_repository_review:
+      one: External Repository Review
+      other: External Repository Review
 
   attributes: &attributes
     created_at: Created at
@@ -42,6 +45,11 @@ en:
       last_synchronized_at: Last synchronize at
       user: Hunter
       repository_url: Repository URL
+    external_repository_review:
+      identifier: Identifier
+      project_url: Github URL
+      homepage_url: Website
+      state: State
 
   activerecord:
     models: *models

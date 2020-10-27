@@ -29,12 +29,12 @@ class ExternalRepositoryReview::Importer
     self.results = []
   end
 
-  def import_non_existing
+  def import_non_existing(query = SEARCH_QUERY)
     has_next_page = true
     after = nil
 
     while has_next_page
-      result = search(after)
+      result = search(query, after)
 
       result.data.search.edges.each do |repository|
         next if ExternalRepositoryReview.exists?(identifier: repository.node.name_with_owner)
@@ -55,10 +55,10 @@ class ExternalRepositoryReview::Importer
 
   private
 
-  def search(after)
+  def search(query, after)
     Github::Client.query(
       SEARCH_REPOSITORY_META_QUERY,
-      variables: { query: SEARCH_QUERY, limit: LIMIT, after: after }
+      variables: { query: query, limit: LIMIT, after: after }
     )
   end
 

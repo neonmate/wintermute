@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/neonmate/wintermute.svg?branch=master)](https://travis-ci.org/neonmate/wintermute)
-
-# Wintermute
+# Wintermute [![Tests](https://github.com/neonmate/wintermute/workflows/Tests/badge.svg)](https://github.com/neonmate/wintermute/actions)
 Wintermute should help programmers to create open source web applications that become an active side project.
 
 # Development
@@ -31,7 +29,7 @@ Preview all emails at http://localhost:3000/rails/mailers .
 Install `chromedriver` and add it to the path variables.
 
 - Run all tests with `bundle exec rake`
-  - Run unit tests with `bundle exec parallel:spec`
-  - Run integration tests with `bundle exec parallel:feature`
+- Run unit tests with `bundle exec parallel:spec`
+- Run integration tests with `bundle exec parallel:feature`
 
 Debugging hint: You can disable headless mode for javascript tests with `CHROME_HEADLESS=false bundle exec cucumber`.

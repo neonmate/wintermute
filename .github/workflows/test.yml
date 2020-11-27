@@ -1,0 +1,63 @@
+name: Running tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    services:
+      postgres:
+        image: postgres:13
+        # The postgres container requires the postgres user to be setup with a password in order to start it due to security
+        # reasons
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.6
+      - name: Install Bundler
+        run: gem install bundler:2.1.4
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.2.0
+      # https://github.com/actions/cache/blob/9c77c9dbfc97cd17e1add865174d4622362960f2/examples.md#ruby---bundler
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      # https://github.com/actions/cache/blob/9c77c9dbfc97cd17e1add865174d4622362960f2/examples.md#node---yarn-2
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Setup the Rails application
+        env:
+          RAILS_ENV: test
+        run: |
+          sudo apt-get -yqq install libpq-dev
+          bundle config path vendor/bundle
+          bundle install --no-deployment --jobs 4 --retry 3
+          cp config/database.github.yml config/database.yml
+          bundle exec rails db:create
+          bundle exec rails db:migrate
+          yarn --frozen-lockfile
+      - name: Run unit tests
+        run: bundle exec rspec
+      - name: Run integration tests
+        run: bundle exec cucumber

@@ -1,0 +1,453 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/maxitem.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '25467046'
+  recorded_at: Fri, 18 Dec 2020 13:53:28 GMT
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/item/1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '186'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"by":"pg","descendants":15,"id":1,"kids":[15,234509,487171,454426,454424,454410,82729],"score":57,"time":1160418111,"title":"Y
+        Combinator","type":"story","url":"http://ycombinator.com"}'
+  recorded_at: Fri, 18 Dec 2020 13:53:28 GMT
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/item/2.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '182'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"by":"phyllis","descendants":0,"id":2,"kids":[454411],"score":16,"time":1160418628,"title":"A
+        Student''s Guide to Startups","type":"story","url":"http://www.paulgraham.com/mit.html"}'
+  recorded_at: Fri, 18 Dec 2020 13:53:28 GMT
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/item/3.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '210'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"by":"phyllis","descendants":0,"id":3,"kids":[454412,531602],"score":7,"time":1160419233,"title":"Woz
+        Interview: the early days of Apple","type":"story","url":"http://www.foundersatwork.com/stevewozniak.html"}'
+  recorded_at: Fri, 18 Dec 2020 13:53:29 GMT
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/item/4.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '197'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"by":"onebeerdave","descendants":0,"id":4,"kids":[454413],"score":5,"time":1160419662,"title":"NYC
+        Developer Dilemma","type":"story","url":"http://avc.blogs.com/a_vc/2006/10/the_nyc_develop.html"}'
+  recorded_at: Fri, 18 Dec 2020 13:53:29 GMT
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/item/5.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '253'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"by":"perler","descendants":0,"id":5,"kids":[454414],"score":7,"time":1160419864,"title":"Google,
+        YouTube acquisition announcement could come tonight","type":"story","url":"http://www.techcrunch.com/2006/10/09/google-youtube-sign-more-separate-deals/"}'
+  recorded_at: Fri, 18 Dec 2020 13:53:29 GMT
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/item/6.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '260'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"by":"perler","descendants":0,"id":6,"kids":[454415],"score":4,"time":1160420200,"title":"Business
+        Intelligence the Inkling Way: cool prediction markets software","type":"story","url":"http://360techblog.com/2006/10/02/business-intelligence-the-inkling-way/"}'
+  recorded_at: Fri, 18 Dec 2020 13:53:29 GMT
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/item/8.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '210'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"by":"frobnicate","descendants":0,"id":8,"kids":[454417],"score":10,"time":1160421459,"title":"LikeBetter
+        featured by BBC","type":"story","url":"http://news.bbc.co.uk/2/hi/programmes/click_online/5412216.stm"}'
+  recorded_at: Fri, 18 Dec 2020 13:53:29 GMT
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/item/7.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '206'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"by":"phyllis","descendants":0,"id":7,"kids":[454416],"score":5,"time":1160420455,"title":"Sevin
+        Rosen Unfunds - why?","type":"story","url":"http://featured.gigaom.com/2006/10/09/sevin-rosen-unfunds-why/"}'
+  recorded_at: Fri, 18 Dec 2020 13:53:29 GMT
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/item/9.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '183'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"by":"askjigga","descendants":0,"id":9,"kids":[454418],"score":4,"time":1160421542,"title":"weekendr:
+        social network for the weekend","type":"story","url":"http://www.weekendr.com/"}'
+  recorded_at: Fri, 18 Dec 2020 13:53:29 GMT
+- request:
+    method: get
+    uri: https://hacker-news.firebaseio.com/v0/item/10.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 18 Dec 2020 13:53:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '227'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"by":"frobnicate","descendants":0,"id":10,"kids":[454419],"score":3,"time":1160421674,"title":"PhotoShow:
+        Broadcast Photos to Cable TV","type":"story","url":"http://www.techcrunch.com/2006/10/09/broadcast-photos-to-cable-tv/"}'
+  recorded_at: Fri, 18 Dec 2020 13:53:29 GMT
+recorded_with: VCR 6.0.0

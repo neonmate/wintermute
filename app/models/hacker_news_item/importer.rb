@@ -2,6 +2,7 @@ class HackerNewsItem
   class Importer
     DEFAULT_BULK_SIZE = 1_000
     DEFAULT_LIMIT = 1_000_000
+    NULLBYTE_SEQUENCE = "\u0000".freeze
 
     attr_accessor :base_url, :client
 
@@ -27,7 +28,7 @@ class HackerNewsItem
                   type: body.fetch('type'),
                   by: body.fetch('by', nil),
                   time: Time.at(body.fetch('time')),
-                  text: body.fetch('text', nil),
+                  text: sanitize_text(body.fetch('text', nil)),
                   dead: body.fetch('dead', false),
                   parent_id: body.fetch('parent', nil),
                   poll_id: body.fetch('poll', nil),
@@ -111,6 +112,12 @@ class HackerNewsItem
       end
 
       requests.map { |request| request.response.body }
+    end
+
+    def sanitize_text(text)
+      return if text.blank?
+
+      text.gsub(NULLBYTE_SEQUENCE, '')
     end
 
   end

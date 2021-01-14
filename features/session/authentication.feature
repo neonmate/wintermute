@@ -10,3 +10,9 @@ Feature: Session authentication
 
     When I follow "Sign out"
     Then I should see a success flash "Successfully signed out"
+
+
+  Scenario: Redirect to the homepage if a signed out user is not authenticated for a protected resource
+    When I go to the list of test unauthorized
+    Then I should see an error flash "You need to be signed in to access this page"
+      And I should be on the homepage

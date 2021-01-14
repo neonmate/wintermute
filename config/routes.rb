@@ -22,5 +22,6 @@ Rails.application.routes.draw do
   if Rails.env.test? || Rails.env.development?
     get :test_flash, controller: 'tests'
     get :colors, controller: 'tests'
+    get :test_unauthorized, controller: 'tests'
   end
 end

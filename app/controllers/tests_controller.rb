@@ -9,4 +9,8 @@ class TestsController < ApplicationController
   def colors
   end
 
+  def test_unauthorized
+    raise Consul::Powerless
+  end
+
 end

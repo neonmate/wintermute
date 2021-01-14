@@ -10,6 +10,14 @@ class ApplicationController < ActionController::Base
     Power.new(current_user)
   end
 
+  rescue_from Consul::Powerless do
+    if current_user.present?
+      raise # re-raise
+    else
+      redirect_to root_path, flash: { error: 'You need to be signed in to access this page' }
+    end
+  end
+
   def success_flash(record)
     flash[:success] = "#{record.model_name.human} successfully saved"
   end

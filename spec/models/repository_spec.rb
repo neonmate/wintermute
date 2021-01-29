@@ -56,4 +56,6 @@ describe Repository do
     end
   end
 
+  it_behaves_like :an_archivable_record
+
 end

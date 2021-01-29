@@ -41,7 +41,7 @@ class Repository::Synchronizer
   GRAPHQL
 
   def self.run
-    Repository.find_each do |repository|
+    Repository.active.find_each do |repository|
       new(repository).synchronize_repository
     end
   end

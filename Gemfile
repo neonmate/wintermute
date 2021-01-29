@@ -62,6 +62,7 @@ group :test do
   gem 'cucumber_factory'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'rails-controller-testing'
   gem 'rspec'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', require: false

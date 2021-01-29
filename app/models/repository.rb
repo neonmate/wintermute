@@ -1,6 +1,7 @@
 class Repository < ApplicationRecord
 
   include DoesTextFilter[TextFilter]
+  include DoesArchive
 
   belongs_to :user
 

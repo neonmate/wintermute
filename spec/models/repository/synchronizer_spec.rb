@@ -5,7 +5,7 @@ describe Repository::Synchronizer do
   around { |example| Timecop.freeze(frozen_time, &example) }
 
   describe '.run' do
-    it 'synchronizes the repository stats for all repositories', vcr: { cassette_name: 'repository_synchronizer/multiple_repositories' } do
+    it 'synchronizes the repository stats for all active repositories', vcr: { cassette_name: 'repository_synchronizer/multiple_repositories' } do
       repository_1 = create(:repository, owner: 'github', name: 'graphql-client')
       repository_2 = create(:repository, owner: 'github', name: 'rubocop-github')
 
@@ -13,6 +13,16 @@ describe Repository::Synchronizer do
 
       expect(repository_1.reload.total_stars).to eq(741)
       expect(repository_2.reload.total_stars).to eq(438)
+    end
+
+    it 'does not synchronize archived repositories', vcr: { cassette_name: 'repository_synchronizer/archived_repositories' } do
+      repository_1 = create(:repository, owner: 'github', name: 'graphql-client')
+      repository_2 = create(:repository, :archived, owner: 'github', name: 'rubocop-github')
+
+      described_class.run
+
+      expect(repository_1.reload.last_synchronized_at).to be_a(Time)
+      expect(repository_2.reload.last_synchronized_at).to eq(nil)
     end
   end
 

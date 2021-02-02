@@ -21,9 +21,13 @@ Bundler.require(*Rails.groups)
 
 module Wintermute
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 6.0
+
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
 
     config.autoload_paths << "#{Rails.root}/app/controllers/shared"
     config.autoload_paths << "#{Rails.root}/app/models/shared"
@@ -37,9 +41,6 @@ module Wintermute
     config.time_zone = 'Berlin'
     config.active_record.default_timezone = :local
     config.active_record.time_zone_aware_attributes = false
-
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
 
     # Allow subfolders for i18n (We use a folder for each locale)
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]

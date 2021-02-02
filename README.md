@@ -1,6 +1,8 @@
 # Wintermute [![Tests](https://github.com/neonmate/wintermute/workflows/Tests/badge.svg)](https://github.com/neonmate/wintermute/actions)
 Wintermute helps programmers to create open source web applications that become an active side project.
 
+![Screenshot of Wintermute in a browser](/docs/screenshot.png?raw=true)
+
 # Development
 
 ## Setup

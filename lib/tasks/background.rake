@@ -7,7 +7,7 @@ namespace :background do
 
   desc 'Import all HN items'
   task import_hn_items: :environment do
-    HackerNewsItem::Importer.new.import(limit: 50_000)
+    HackerNewsItem::Importer.new.import(limit: 200_000)
   end
 
 end

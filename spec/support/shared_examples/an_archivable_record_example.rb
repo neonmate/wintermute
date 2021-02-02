@@ -15,12 +15,12 @@ shared_examples :an_archivable_record do
     subject { create(described_class.name.underscore.to_sym) }
 
     it 'sets the current timestamp for archived_at' do
-      Timecop.freeze('2000-01-01 00:00') do
+      Timecop.freeze('2000-01-01 00:00 +0100') do
         expect(subject.archived_at).to eq(nil)
 
         subject.archive
 
-        expect(subject.archived_at).to eq(Time.parse('2000-01-01 00:00'))
+        expect(subject.archived_at).to eq(Time.parse('2000-01-01 00:00 +0100'))
       end
     end
 
@@ -39,12 +39,12 @@ shared_examples :an_archivable_record do
     subject { create(described_class.name.underscore.to_sym) }
 
     it 'sets the current timestamp for archived_at' do
-      Timecop.freeze('2000-01-01 00:00') do
+      Timecop.freeze('2000-01-01 00:00 +0100') do
         expect(subject.archived_at).to eq(nil)
 
         subject.archive!
 
-        expect(subject.archived_at).to eq(Time.parse('2000-01-01 00:00'))
+        expect(subject.archived_at).to eq(Time.parse('2000-01-01 00:00 +0100'))
       end
     end
 

@@ -14,4 +14,9 @@ install_plugin Capistrano::SCM::Git
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob('lib/capistrano/tasks/*.rake').each { |file| import file }
 
+# https://github.com/makandra/capistrano-opscomplete
+# See all commands from opscomplete with `bundle exec cap -T opscomplete`
 after 'deploy:updating', 'opscomplete:ruby:ensure'
+after 'deploy:updating', 'opscomplete:nodejs:ensure'
+after 'deploy:reverting', 'opscomplete:ruby:ensure'
+after 'deploy:reverting', 'opscomplete:nodejs:ensure'

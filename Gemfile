@@ -15,6 +15,8 @@ gem 'makandra-rubocop'
 gem 'minidusen'
 gem 'modularity'
 gem 'omniauth-github'
+# https://github.com/omniauth/omniauth/wiki/Resolving-CVE-2015-9284
+gem 'omniauth-rails_csrf_protection'
 gem 'pg'
 gem 'premailer-rails'
 gem 'puma'

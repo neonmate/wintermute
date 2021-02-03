@@ -12,7 +12,7 @@ module FormHelper
     if current_user.present?
       modal_link_to 'help us', path
     else
-      link_to 'sing in and help us', sign_in_path
+      sign_in_link('sing in and help us')
     end
   end
 

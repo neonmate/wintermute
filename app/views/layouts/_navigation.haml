@@ -19,4 +19,4 @@
           - if signed_in?
             = link_to 'Sign out', sign_out_path, method: :delete, class: 'nav-link'
           - else
-            = link_to 'Sign in', sign_in_path, class: 'nav-link'
+            = sign_in_link('Sign in', class: 'nav-link')

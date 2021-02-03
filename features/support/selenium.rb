@@ -13,3 +13,6 @@ Capybara.register_driver :selenium_chrome_headless do |app|
 end
 
 Capybara.javascript_driver = :selenium_chrome_headless
+
+# https://github.com/teamcapybara/capybara/blob/84acc29d5ff807507fe57aafcf7f9b2acdb89fe2/README.md#setup
+Capybara.server = :puma, { Silent: true }

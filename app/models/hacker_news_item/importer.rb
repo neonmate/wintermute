@@ -20,6 +20,7 @@ class HackerNewsItem
 
               raw_bodies.each do |raw_body|
                 body = JSON.parse(raw_body)
+                next if body.nil? # e.g. https://news.ycombinator.com/item?id=25369329
                 next if body['time'].nil? # e.g. https://news.ycombinator.com/item?id=78692
 
                 attributes = {

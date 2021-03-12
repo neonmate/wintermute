@@ -16,3 +16,8 @@ Capybara.javascript_driver = :selenium_chrome_headless
 
 # https://github.com/teamcapybara/capybara/blob/84acc29d5ff807507fe57aafcf7f9b2acdb89fe2/README.md#setup
 Capybara.server = :puma, { Silent: true }
+
+# https://github.com/makandra/spreewald/tree/c4c460d329c44f47b7cacc687bcba47768349533#recommended-capybara-defaults
+Capybara.default_normalize_ws = true
+Capybara.match = :prefer_exact
+Capybara.enable_aria_label = true

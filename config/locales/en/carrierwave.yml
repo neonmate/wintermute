@@ -1,0 +1,7 @@
+en:
+  errors:
+    messages:
+      # https://github.com/carrierwaveuploader/carrierwave/blob/13330a70323cde83b319520f5c1874227de79cdf/lib/carrierwave/locale/en.yml
+      # We do not want to include the backtrace since this might include sensible information
+      mini_magick_processing_error: Failed to manipulate with MiniMagick, maybe it is not an image?
+      vips_processing_error: Failed to manipulate with vips, maybe it is not an image?

@@ -75,7 +75,12 @@ class RepositoriesController < ApplicationController
     repository_params = params[:repository]
     return {} if repository_params.blank?
 
-    repository_params.permit(:repository_url)
+    repository_params.permit(
+      :repository_url,
+      :preview_image,
+      :preview_image_cache,
+      :remove_preview_image,
+    )
   end
 
 end

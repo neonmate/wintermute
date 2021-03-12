@@ -22,6 +22,8 @@
           %strong Notice:
           This #{Repository.model_name.human} does not show all information from Github, but it will be updated within the
           next few hours. Thanks for your patient!
+      - if @repository.preview_image.present?
+        = image_tag(@repository.preview_image.medium.url, class: 'img-thumbnail rounded mx-auto mb-4 mt-4 d-block', alt: repository_preview_image_alternative_text(@repository))
       %dl
         %dt= Repository.human_attribute_name(:description)
         %dd= format_text(@repository.description)

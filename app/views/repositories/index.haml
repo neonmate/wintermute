@@ -16,7 +16,12 @@
               = bullet
             #{repository.user_subscriptions.count} subscriptions
         .card-body
-          %p.card-text= format_string(repository.description)
+          .row
+            .col
+              - if repository.preview_image.present?
+                = image_tag(repository.preview_image.small.url, alt: repository_preview_image_alternative_text(repository))
+            .col
+              %p.card-text= format_string(repository.description)
 
     = render 'shared/pagination', collection: @repositories
   - else

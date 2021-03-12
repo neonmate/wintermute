@@ -13,13 +13,14 @@ Feature: Repositories CRUD
     Then I should see an error flash "Repository could not be saved"
       And the "Repository URL" field should have an error
 
-    When I fill in "Repository URL" with "https://example.com.com/github/example"
+    When I fill in "Repository URL" with "https://example.com/github/example"
       And I press "Save"
     Then I should see an error flash "Repository could not be saved"
       And the "Repository URL" field should have an error
       And I should see "Repository URL is invalid"
 
     When I fill in "Repository URL" with "https://github.com/github/example"
+      When I attach the file "spec/fixtures/files/image_1.jpg" to "Preview image"
       And I press "Save"
     Then I should see a success flash "Repository successfully saved"
       And I should be on the page for the repository above
@@ -53,9 +54,11 @@ Feature: Repositories CRUD
         Recent changes
         –
         """
+      And I should see the image "image_1.jpg" with the alternative text "Preview of the website for example"
 
     When I follow "Edit"
     Then I should be on the form for the repository above
+      And I should see the image "image_1.jpg" with the alternative text "Preview of the website for example"
 
     When I fill in "Repository URL" with "https://github.com/github/other_example"
       And I press "Save"

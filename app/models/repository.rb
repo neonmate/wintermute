@@ -3,6 +3,8 @@ class Repository < ApplicationRecord
   include DoesTextFilter[TextFilter]
   include DoesArchive
 
+  mount_uploader :preview_image, ImageUploader
+
   belongs_to :user
 
   scope :default_order, -> { order('last_commit_at DESC NULLS LAST', :id) }

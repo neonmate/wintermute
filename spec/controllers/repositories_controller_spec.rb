@@ -10,8 +10,8 @@ describe RepositoriesController do
     end
 
     it 'does not include archived repositories' do
-      repository = create(:repository)
-      create(:repository, :archived)
+      repository = create(:repository, :published)
+      create(:repository, :archived, :published)
 
       get :index
       expect(assigns(:repositories)).to contain_exactly(repository)

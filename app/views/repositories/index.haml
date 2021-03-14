@@ -21,7 +21,13 @@
               - if repository.preview_image.present?
                 = image_tag(repository.preview_image.small.url, alt: repository_preview_image_alternative_text(repository))
             .col
-              %p.card-text= format_string(repository.description)
+              %dl
+                %dt= Repository.human_attribute_name(:last_synchronized_at)
+                %dd= format_date(repository.last_synchronized_at)
+
+                %dt= Repository.human_attribute_name(:state)
+                %dd= humanized_state(repository.state)
+              %p= format_string(repository.description)
 
     = render 'shared/pagination', collection: @repositories
   - else

@@ -5,7 +5,7 @@ Feature: Idea messages
   Scenario: CRUD message
     Given there is a idea with the title "Some idea"
 
-    When I am signed in as "thomas"
+    When I am signed in with the nickname "thomas"
       And I go to the page for the idea above
       And I press "Reply"
     Then I should see an error flash "Message could not be saved"

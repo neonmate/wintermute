@@ -32,7 +32,7 @@ class RepositoriesController < ApplicationController
 
   def destroy
     load_repository
-    @repository.destroy!
+    @repository.archive!
     destroy_flash(@repository)
     redirect_to repositories_path
   end
@@ -79,7 +79,7 @@ class RepositoriesController < ApplicationController
       :repository_url,
       :preview_image,
       :preview_image_cache,
-      :remove_preview_image,
+      :state_event,
     )
   end
 

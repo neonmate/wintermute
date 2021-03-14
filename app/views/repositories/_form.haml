@@ -12,7 +12,6 @@
         %div= image_tag(form.object.preview_image.small.url, alt: repository_preview_image_alternative_text(form.object))
       = form.input :preview_image
       = form.input :preview_image_cache, as: :hidden
-      = form.input :remove_preview_image, as: :boolean
 
     .card-footer
       .d-flex
@@ -20,4 +19,8 @@
           - if @repository.persisted?
             = content_link_to 'Delete', repository_path(@repository), {method: :delete, 'up-confirm': 'Are you sure?', class: 'btn btn-outline-danger'}
         = content_link_to 'Cancel', cancel_path(@repository), class: 'btn btn-light', 'up-close': ''
+        - if form.object.may_reject?
+          = form.button :button, 'Reject', name: 'repository[state_event]', value: 'reject', class: 'btn btn-outline-primary ml-1'
+        - if form.object.may_publish?
+          = form.button :button, 'Publish', name: 'repository[state_event]', value: 'publish', class: 'btn btn-outline-primary ml-1'
         = form.submit 'Save', class: 'btn btn-primary ml-1'

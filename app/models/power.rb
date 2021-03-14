@@ -14,7 +14,7 @@ class Power
   end
 
   def admin?
-    user.admin?
+    user&.admin?
   end
 
 end

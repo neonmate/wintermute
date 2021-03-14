@@ -1,6 +1,7 @@
 describe Power do
 
   let(:user) { create(:user) }
+  let(:admin) { create(:user, :admin) }
   let(:other_user) { create(:user) }
   let!(:own_repository) { create(:repository, user: user) }
   let!(:foreign_repository) { create(:repository, user: other_user) }
@@ -14,10 +15,16 @@ describe Power do
   end
 
   describe 'updatable_repositories' do
-    it 'allows access to own repositories, but not to foreign repositories' do
+    it 'allows access to all repositories as admin' do
+      power = described_class.new(admin)
+
+      expect(power.updatable_repositories).to contain_exactly(own_repository, foreign_repository)
+    end
+
+    it 'restricts access to all users that are no admin' do
       power = described_class.new(user)
 
-      expect(power.updatable_repositories).to contain_exactly(own_repository)
+      expect(power.updatable_repositories).to eq(nil)
     end
 
     it 'restricts access to all users that are not signed in' do
@@ -42,10 +49,16 @@ describe Power do
   end
 
   describe 'destroyable_repositories' do
-    it 'allows access to own repositories, but not to foreign repositories' do
+    it 'allows access to all repositories as admin' do
+      power = described_class.new(admin)
+
+      expect(power.destroyable_repositories).to contain_exactly(own_repository, foreign_repository)
+    end
+
+    it 'restricts access to all users that are no admin' do
       power = described_class.new(user)
 
-      expect(power.destroyable_repositories).to contain_exactly(own_repository)
+      expect(power.destroyable_repositories).to eq(nil)
     end
 
     it 'restricts access to all users that are not signed in' do

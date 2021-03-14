@@ -54,4 +54,8 @@ module ApplicationHelper
     Markdown.new(text).to_html
   end
 
+  def humanized_state(state)
+    I18n.t(state, scope: 'assignable_values.state')
+  end
+
 end

@@ -5,7 +5,7 @@ Feature: Repository messages
   Scenario: CRUD message
     Given there is a repository with the name "Some repository"
 
-    When I am signed in as "thomas"
+    When I am signed in with the nickname "thomas"
       And I go to the page for the repository above
       And I press "Reply"
     Then I should see an error flash "Message could not be saved"

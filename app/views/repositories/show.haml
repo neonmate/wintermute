@@ -25,6 +25,9 @@
       - if @repository.preview_image.present?
         = image_tag(@repository.preview_image.medium.url, class: 'img-thumbnail rounded mx-auto mb-4 mt-4 d-block', alt: repository_preview_image_alternative_text(@repository))
       %dl
+        %dt= Repository.human_attribute_name(:state)
+        %dd= humanized_state(@repository.state)
+
         %dt= Repository.human_attribute_name(:description)
         %dd= format_text(@repository.description)
 

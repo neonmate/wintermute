@@ -2,7 +2,7 @@ Feature: Repositories CRUD
 
 
   Scenario: CRUD a repository
-    When I am signed in as "thomas"
+    When I am signed in as admin with the nickname "thomas"
       And I go to the list of repositories
     Then I should see "We do not have any repositories yet."
 
@@ -20,13 +20,16 @@ Feature: Repositories CRUD
       And I should see "Repository URL is invalid"
 
     When I fill in "Repository URL" with "https://github.com/github/example"
-      When I attach the file "spec/fixtures/files/image_1.jpg" to "Preview image"
+      And I attach the file "spec/fixtures/files/image_1.jpg" to "Preview image"
       And I press "Save"
     Then I should see a success flash "Repository successfully saved"
       And I should be on the page for the repository above
       And I should see in this order:
         """
         example
+
+        State
+        Draft
 
         Description
         –
@@ -61,7 +64,7 @@ Feature: Repositories CRUD
       And I should see the image "image_1.jpg" with the alternative text "Preview of the website for example"
 
     When I fill in "Repository URL" with "https://github.com/github/other_example"
-      And I press "Save"
+      And I press "Publish"
     Then I should see a success flash "Repository successfully saved"
       And I should be on the page for the repository above
       And I should see "other_example"
@@ -97,11 +100,14 @@ Feature: Repositories CRUD
       | homepage_url    | example.github.io                                        |
       | licence         | MIT                                                      |
 
-    When I am signed in
+    When I am signed in as admin
       And I go to the page for the repository above
     Then I should see in this order:
       """
       example
+
+      State
+      Published
 
       Description
       Some description

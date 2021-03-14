@@ -2,7 +2,7 @@ Feature: Ideas CRUD
 
 
   Scenario: CRUD a idea
-    When I am signed in as "thomas"
+    When I am signed in with the nickname "thomas"
       And I go to the list of ideas
     Then I should see "We do not have any ideas yet"
 

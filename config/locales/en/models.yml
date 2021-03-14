@@ -45,6 +45,8 @@ en:
       last_synchronized_at: Last synchronize at
       user: Hunter
       repository_url: Repository URL
+      preview_image: Preview image
+      state: State
     external_repository_review:
       identifier: Identifier
       project_url: Github URL
@@ -58,3 +60,9 @@ en:
   activemodel:
     models: *models
     attributes: *attributes
+
+  assignable_values:
+    state:
+      draft: Draft
+      published: Published
+      rejected: Rejected

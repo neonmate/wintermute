@@ -6,6 +6,30 @@ describe Repository do
     it { is_expected.to validate_uniqueness_of(:name).scoped_to(:owner) }
 
     it { is_expected.to belong_to(:user) }
+
+    context 'with state draft' do
+      it 'does not validate the preview image' do
+        repository = build(:repository, state: 'draft')
+
+        expect(repository).to_not validate_presence_of(:preview_image)
+      end
+    end
+
+    context 'with state published' do
+      it 'validates the preview image' do
+        repository = build(:repository, state: 'published')
+
+        expect(repository).to validate_presence_of(:preview_image)
+      end
+    end
+
+    context 'with state rejected' do
+      it 'does not validate the preview image' do
+        repository = build(:repository, state: 'rejected')
+
+        expect(repository).to_not validate_presence_of(:preview_image)
+      end
+    end
   end
 
   describe '.default_order' do

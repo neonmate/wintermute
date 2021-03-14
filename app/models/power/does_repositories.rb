@@ -6,15 +6,21 @@ module Power::DoesRepositories
     end
 
     power :updatable_repositories do
-      Repository.where(user: user) if user
+      if admin?
+        Repository.all
+      end
     end
 
     power :creatable_repositories do
-      Repository.where(user: user) if user
+      if user.present?
+        Repository.where(user: user)
+      end
     end
 
     power :destroyable_repositories do
-      Repository.where(user: user) if user
+      if admin?
+        Repository.all
+      end
     end
 
   end

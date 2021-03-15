@@ -78,6 +78,7 @@ describe Power do
         :preview_image_cache,
         :state_event,
         :delivery_model,
+        :categories,
       )
     end
 

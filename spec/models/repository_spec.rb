@@ -8,26 +8,31 @@ describe Repository do
     it { is_expected.to belong_to(:user) }
     it { is_expected.to allow_values('self_hosted', 'saas').for(:delivery_model) }
     it { is_expected.to_not allow_value('other').for(:delivery_model) }
+    it { is_expected.to allow_values('aaa', 'aaa, bbb', '', nil).for(:categories) }
+    it { is_expected.not_to allow_values(',', ',aaa', 'aaa,', 'aaa, ', 'aaa,bbb', 'aaa, bbb,', 'aaa, bbb ').for(:categories) }
 
     context 'with state draft' do
       subject { build(:repository, :draft) }
 
       it { is_expected.to_not validate_presence_of(:preview_image) }
       it { is_expected.to_not validate_presence_of(:delivery_model) }
+      it { is_expected.to_not validate_presence_of(:categories) }
     end
 
     context 'with state published' do
       subject { build(:repository, :published) }
 
       it { is_expected.to validate_presence_of(:preview_image) }
-      it { is_expected.to validate_presence_of(:delivery_model).with_message('is not included in the list') }
+      it { is_expected.to validate_presence_of(:delivery_model) }
+      it { is_expected.to validate_presence_of(:categories) }
     end
 
     context 'with state rejected' do
       subject { build(:repository, :rejected) }
 
       it { is_expected.to_not validate_presence_of(:preview_image) }
-      it { is_expected.to_not validate_presence_of(:delivery_model).with_message('is not included in the list') }
+      it { is_expected.to_not validate_presence_of(:delivery_model) }
+      it { is_expected.to_not validate_presence_of(:categories) }
     end
   end
 

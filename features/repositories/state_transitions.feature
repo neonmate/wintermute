@@ -18,8 +18,12 @@ Feature: Repositories state transitions
       And I press "Publish"
     Then the "Preview image" field should have an error
       And I should see "Preview image can't be blank"
+      And I should see "Delivery model can't be blank"
+      And I should see "Categories can't be blank"
 
     When I attach the file "spec/fixtures/files/image_1.jpg" to "Preview image"
+      And I select "SaaS" from "Delivery model"
+      And I fill in "Categories" with "service, managment"
       And I press "Publish"
     Then I should see a success flash "Repository successfully saved"
       And I should see "State Published"

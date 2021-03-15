@@ -48,6 +48,7 @@ en:
       preview_image: Preview image
       state: State
       delivery_model: Delivery model
+      categories: Categories
     external_repository_review:
       identifier: Identifier
       project_url: Github URL

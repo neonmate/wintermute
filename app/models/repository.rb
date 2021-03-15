@@ -16,11 +16,14 @@ class Repository < ApplicationRecord
   validates :owner, presence: true
   validates :name, presence: true, uniqueness: { scope: :owner }
   validates :preview_image, presence: true, if: :published?
+  validates :delivery_model, presence: true, if: :published?
+  validates :categories, presence: true, if: :published?
+  validates :categories, format: { with: /\A(?:\w+, )*\w+\z/, allow_blank: true }
 
   has_many :messages, as: :parent, dependent: :destroy
   has_many :user_subscriptions, class_name: 'User::Subscription', as: :subscribable
 
-  assignable_values_for :delivery_model, default: 'self_hosted', allow_blank: -> { !published? } do
+  assignable_values_for :delivery_model, allow_blank: true do
     ['self_hosted', 'saas']
   end
 

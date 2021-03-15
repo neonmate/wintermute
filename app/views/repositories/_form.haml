@@ -13,6 +13,7 @@
         = form.input :preview_image
         = form.input :preview_image_cache, as: :hidden
         = form.input :delivery_model, collection: form.object.humanized_assignable_delivery_models, value_method: :value, label_method: :humanized
+        = form.input :categories, hint: 'Enter a comma separated list with single words'
 
     .card-footer
       .d-flex

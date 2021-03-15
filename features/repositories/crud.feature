@@ -22,6 +22,7 @@ Feature: Repositories CRUD
     When I fill in "Repository URL" with "https://github.com/github/example"
       And I attach the file "spec/fixtures/files/image_1.jpg" to "Preview image"
       And I select "Self-hosted" from "Delivery model"
+      And I fill in "Categories" with "hosting, managment"
       And I press "Save"
     Then I should see a success flash "Repository successfully saved"
       And I should be on the page for the repository above
@@ -34,6 +35,9 @@ Feature: Repositories CRUD
 
         Delivery model
         Self-hosted
+
+        Categories
+        hosting, managment
 
         Description
         –
@@ -97,6 +101,7 @@ Feature: Repositories CRUD
       | owner           | github                                                   |
       | name            | example                                                  |
       | delivery model  | self_hosted                                              |
+      | categories      | hosting, managment                                       |
       | total_stars     | 20                                                       |
       | total_watchers  | 40                                                       |
       | total_issues    | 60                                                       |
@@ -116,6 +121,9 @@ Feature: Repositories CRUD
 
       Delivery model
       Self-hosted
+
+      Categories
+      hosting, managment
 
       Description
       Some description

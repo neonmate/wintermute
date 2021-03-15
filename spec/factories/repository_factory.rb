@@ -23,6 +23,7 @@ FactoryBot.define do
       with_preview_image
       state { 'published' }
       delivery_model { 'self_hosted' }
+      categories { 'hosting, managment' }
     end
 
     trait(:rejected) do

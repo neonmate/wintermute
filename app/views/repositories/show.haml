@@ -28,6 +28,9 @@
         %dt= Repository.human_attribute_name(:state)
         %dd= humanized_state(@repository.state)
 
+        %dt= Repository.human_attribute_name(:delivery_model)
+        %dd= @repository.humanized_delivery_model
+
         %dt= Repository.human_attribute_name(:description)
         %dd= format_text(@repository.description)
 

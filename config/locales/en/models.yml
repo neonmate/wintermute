@@ -47,6 +47,7 @@ en:
       repository_url: Repository URL
       preview_image: Preview image
       state: State
+      delivery_model: Delivery model
     external_repository_review:
       identifier: Identifier
       project_url: Github URL
@@ -66,3 +67,7 @@ en:
       draft: Draft
       published: Published
       rejected: Rejected
+    repository:
+      delivery_model:
+        saas: SaaS
+        self_hosted: Self-hosted

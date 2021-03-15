@@ -23,5 +23,22 @@ module Power::DoesRepositories
       end
     end
 
+    def permitted_repository_attributes
+      permitted_params = [
+        :repository_url,
+      ]
+
+      if updatable_repositories?
+        permitted_params += [
+          :preview_image,
+          :preview_image_cache,
+          :state_event,
+          :delivery_model,
+        ]
+      end
+
+      permitted_params
+    end
+
   end
 end

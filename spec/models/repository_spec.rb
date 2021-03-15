@@ -6,29 +6,28 @@ describe Repository do
     it { is_expected.to validate_uniqueness_of(:name).scoped_to(:owner) }
 
     it { is_expected.to belong_to(:user) }
+    it { is_expected.to allow_values('self_hosted', 'saas').for(:delivery_model) }
+    it { is_expected.to_not allow_value('other').for(:delivery_model) }
 
     context 'with state draft' do
-      it 'does not validate the preview image' do
-        repository = build(:repository, state: 'draft')
+      subject { build(:repository, :draft) }
 
-        expect(repository).to_not validate_presence_of(:preview_image)
-      end
+      it { is_expected.to_not validate_presence_of(:preview_image) }
+      it { is_expected.to_not validate_presence_of(:delivery_model) }
     end
 
     context 'with state published' do
-      it 'validates the preview image' do
-        repository = build(:repository, state: 'published')
+      subject { build(:repository, :published) }
 
-        expect(repository).to validate_presence_of(:preview_image)
-      end
+      it { is_expected.to validate_presence_of(:preview_image) }
+      it { is_expected.to validate_presence_of(:delivery_model).with_message('is not included in the list') }
     end
 
     context 'with state rejected' do
-      it 'does not validate the preview image' do
-        repository = build(:repository, state: 'rejected')
+      subject { build(:repository, :rejected) }
 
-        expect(repository).to_not validate_presence_of(:preview_image)
-      end
+      it { is_expected.to_not validate_presence_of(:preview_image) }
+      it { is_expected.to_not validate_presence_of(:delivery_model).with_message('is not included in the list') }
     end
   end
 

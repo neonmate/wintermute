@@ -20,6 +20,10 @@ class Repository < ApplicationRecord
   has_many :messages, as: :parent, dependent: :destroy
   has_many :user_subscriptions, class_name: 'User::Subscription', as: :subscribable
 
+  assignable_values_for :delivery_model, default: 'self_hosted', allow_blank: -> { !published? } do
+    ['self_hosted', 'saas']
+  end
+
   state_machine do
     state :draft, initial: true
     state :published

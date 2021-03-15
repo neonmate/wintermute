@@ -6,12 +6,13 @@
       - else
         #{@repository.name}
     .card-body
-      = form.input :repository_url,
-        hint: 'Enter the URL of the Github repository e.g. https://github.com/github/ruby'
-      - if form.object.preview_image.present?
-        %div= image_tag(form.object.preview_image.small.url, alt: repository_preview_image_alternative_text(form.object))
-      = form.input :preview_image
-      = form.input :preview_image_cache, as: :hidden
+      = form.input :repository_url, hint: 'Enter the URL of the Github repository e.g. https://github.com/github/ruby'
+      - if current_power.updatable_repositories?
+        - if form.object.preview_image.present?
+          %div= image_tag(form.object.preview_image.small.url, alt: repository_preview_image_alternative_text(form.object))
+        = form.input :preview_image
+        = form.input :preview_image_cache, as: :hidden
+        = form.input :delivery_model, collection: form.object.humanized_assignable_delivery_models, value_method: :value, label_method: :humanized
 
     .card-footer
       .d-flex

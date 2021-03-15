@@ -22,10 +22,10 @@ FactoryBot.define do
     trait(:published) do
       with_preview_image
       state { 'published' }
+      delivery_model { 'self_hosted' }
     end
 
     trait(:rejected) do
-      with_preview_image
       state { 'rejected' }
     end
   end

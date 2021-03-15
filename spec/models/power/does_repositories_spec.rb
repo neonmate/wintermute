@@ -68,4 +68,25 @@ describe Power do
     end
   end
 
+  describe '#permitted_repository_attributes' do
+    it 'allows all attributes as admin' do
+      power = described_class.new(admin)
+
+      expect(power.permitted_repository_attributes).to contain_exactly(
+        :repository_url,
+        :preview_image,
+        :preview_image_cache,
+        :state_event,
+        :delivery_model,
+      )
+    end
+
+    it 'allows only the repository url for users that are no admin' do
+      power = described_class.new(user)
+
+      expect(power.permitted_repository_attributes).to contain_exactly(:repository_url)
+    end
+
+  end
+
 end

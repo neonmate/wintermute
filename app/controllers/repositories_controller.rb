@@ -75,12 +75,7 @@ class RepositoriesController < ApplicationController
     repository_params = params[:repository]
     return {} if repository_params.blank?
 
-    repository_params.permit(
-      :repository_url,
-      :preview_image,
-      :preview_image_cache,
-      :state_event,
-    )
+    repository_params.permit(current_power.permitted_repository_attributes)
   end
 
 end

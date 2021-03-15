@@ -21,6 +21,7 @@ Feature: Repositories CRUD
 
     When I fill in "Repository URL" with "https://github.com/github/example"
       And I attach the file "spec/fixtures/files/image_1.jpg" to "Preview image"
+      And I select "Self-hosted" from "Delivery model"
       And I press "Save"
     Then I should see a success flash "Repository successfully saved"
       And I should be on the page for the repository above
@@ -30,6 +31,9 @@ Feature: Repositories CRUD
 
         State
         Draft
+
+        Delivery model
+        Self-hosted
 
         Description
         –
@@ -88,10 +92,11 @@ Feature: Repositories CRUD
 
   Scenario: Show a full filled repository
     Given the date is 2018-01-01
-    Given there is a repository with these attributes:
+    Given there is a repository (published) with these attributes:
       | description     | Some description                                         |
       | owner           | github                                                   |
       | name            | example                                                  |
+      | delivery model  | self_hosted                                              |
       | total_stars     | 20                                                       |
       | total_watchers  | 40                                                       |
       | total_issues    | 60                                                       |
@@ -108,6 +113,9 @@ Feature: Repositories CRUD
 
       State
       Published
+
+      Delivery model
+      Self-hosted
 
       Description
       Some description

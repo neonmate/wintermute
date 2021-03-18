@@ -2,6 +2,7 @@ inherit_gem:
   makandra-rubocop:
     - config/default.yml
     - config/ext/rails.yml
+    - config/ext/rspec.yml
 
 Bundler/OrderedGems:
   Enabled: true

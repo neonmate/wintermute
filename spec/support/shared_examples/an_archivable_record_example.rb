@@ -1,4 +1,4 @@
-shared_examples :an_archivable_record do
+shared_examples 'an archivable record' do
 
   describe '.active' do
 

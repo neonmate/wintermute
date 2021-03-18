@@ -2,7 +2,7 @@ describe HackerNewsItem::Importer do
 
   describe '#import' do
     it 'imports items from the Hackernews API', vcr: { cassette_name: 'hacker_news_item_importer/import' } do
-      expect { described_class.new.import(limit: 10, bulk_size: 2) }.to change { HackerNewsItem.count }.from(0).to(10)
+      expect { described_class.new.import(limit: 10, bulk_size: 2) }.to change(HackerNewsItem, :count).from(0).to(10)
       expect(HackerNewsItem.last).to have_attributes(
         identifier: 10,
         deleted: false,

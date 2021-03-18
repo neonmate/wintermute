@@ -30,7 +30,7 @@ describe Idea do
       message = create(:message, parent: idea)
       other_message = create(:message)
 
-      expect { idea.destroy! }.to change { Message.count }.from(2).to(1)
+      expect { idea.destroy! }.to change(Message, :count).from(2).to(1)
       expect(Message.exists?(message.id)).to be(false)
       expect(Message.exists?(other_message.id)).to be(true)
     end

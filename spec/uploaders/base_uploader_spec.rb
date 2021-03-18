@@ -33,7 +33,7 @@ describe BaseUploader do
       expect(example_record.attachment.url).to include('/000/000/001/')
     end
 
-    it 'pads the model IDs when the ID is smaller than 9 digits' do
+    it 'does not pad the model IDs when the ID is excact 9 digits' do
       example_record = ExampleRecord.create!(
         id: 123_456_789,
         attachment: file_fixture('example_1.txt').open

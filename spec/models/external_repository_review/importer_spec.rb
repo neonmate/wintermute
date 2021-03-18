@@ -2,10 +2,10 @@ describe ExternalRepositoryReview::Importer do
 
   describe '#import_non_existing' do
     it 'imports all non existing external repositories for reviewing', vcr: { cassette_name: 'external_repository_review_importer/paginated_request' } do
-      stub_const("#{ExternalRepositoryReview::Importer}::LIMIT", 2)
+      stub_const("#{described_class}::LIMIT", 2)
       # We filter the query with the term "thoughtbot" to have only a few pages
       stub_const(
-        "#{ExternalRepositoryReview::Importer}::SEARCH_QUERY",
+        "#{described_class}::SEARCH_QUERY",
         "#{ExternalRepositoryReview::Importer::SEARCH_QUERY} thoughtbot"
       )
       create(

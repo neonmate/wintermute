@@ -6,7 +6,7 @@ Then('I should see an error flash {string}') do |string|
   step %(I should see "#{string}" within the alert danger)
 end
 
-Then(/I should( not)? see a button with the label "([^\"]*)"$/) do |negate, label|
+Then(/I should( not)? see a button with the label "([^"]*)"$/) do |negate, label|
   patiently do
     expectation = negate ? :not_to : :to
     button = find_button(label)

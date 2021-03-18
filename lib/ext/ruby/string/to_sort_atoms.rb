@@ -8,7 +8,7 @@ class SmartSortAtom
 
   def self.parse(string)
     # Loosely based on http://stackoverflow.com/a/4079031
-    string.scan(/[^\d\.]+|[\d\.]+/).collect do |atom|
+    string.scan(/[^\d.]+|[\d.]+/).collect do |atom|
       atom = if /\d+(\.\d+)?/.match?(atom)
         atom.to_f
       else
@@ -20,15 +20,14 @@ class SmartSortAtom
 
   def self.normalize_string(string)
     string = ActiveSupport::Inflector.transliterate(string)
-    string = string.downcase
-    string
+    string.downcase
   end
 
   def <=>(other)
     other.is_a?(self.class) || raise('Can only smart compare with other SmartSortAtom')
     left_value = value
     right_value = other.value
-    if left_value.class == right_value.class
+    if left_value.instance_of?(right_value.class)
       left_value <=> right_value
     elsif left_value.is_a?(Float)
       -1

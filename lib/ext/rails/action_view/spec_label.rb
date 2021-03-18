@@ -23,8 +23,7 @@ ActionView::Helpers::FormTagHelper.class_eval do
     count = SpecLabelCounter.next(controller, text)
     label = (count == 1) ? text : "#{text} (#{count})"
     options.merge!(class: 'd-none') unless Rails.env.test?
-    html = label_tag(id, label, options)
-    html
+    label_tag(id, label, options)
   end
 
 end
@@ -38,7 +37,7 @@ class SpecLabelCounter
     end
 
     def counter(controller)
-      ivar = :"@_spec_label_counter"
+      ivar = :@_spec_label_counter
       controller.instance_variable_get(ivar) || controller.instance_variable_set(ivar, {})
     end
 

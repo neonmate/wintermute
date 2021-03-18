@@ -13,8 +13,8 @@ gem 'has_defaults'
 gem 'json-schema'
 gem 'kramdown'
 gem 'makandra-rubocop'
-gem 'mini_magick'
 gem 'minidusen'
+gem 'mini_magick'
 gem 'modularity'
 gem 'omniauth-github'
 # https://github.com/omniauth/omniauth/wiki/Resolving-CVE-2015-9284
@@ -62,8 +62,8 @@ group :test do
   gem 'capybara'
   gem 'capybara-screenshot'
   gem 'cucumber'
-  gem 'cucumber-rails', require: false
   gem 'cucumber_factory'
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'launchy'
   gem 'rails-controller-testing'

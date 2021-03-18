@@ -43,7 +43,7 @@ describe Repository do
       repository_3 = create(:repository, last_commit_at: Time.now + 1.day)
       repository_4 = create(:repository, last_commit_at: Time.now - 1.day)
 
-      expect(described_class.default_order.pluck(:id)).to eq(
+      expect(described_class.default_order.ids).to eq(
         [
           repository_3.id,
           repository_2.id,
@@ -74,7 +74,7 @@ describe Repository do
       message_2 = create(:message, parent: repository, created_at: Time.now - 1.day)
       message_3 = create(:message, parent: repository, created_at: Time.now)
 
-      expect(repository.messages_with_default_order.pluck(:id)).to eq(
+      expect(repository.messages_with_default_order.ids).to eq(
         [
           message_2.id,
           message_3.id,

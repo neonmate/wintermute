@@ -1,4 +1,4 @@
-describe Power do
+describe Power::DoesExternalRepositoryReviews do
 
   let!(:external_repository_review) { create(:external_repository_review) }
 
@@ -7,7 +7,7 @@ describe Power do
       let(:user) { create(:user, :admin) }
 
       it 'allows access to all external repository reviews' do
-        power = described_class.new(user)
+        power = Power.new(user)
 
         expect(power.external_repository_reviews).to contain_exactly(external_repository_review)
       end
@@ -17,7 +17,7 @@ describe Power do
       let(:user) { create(:user) }
 
       it 'restricts access to all external repository reviews' do
-        power = described_class.new(user)
+        power = Power.new(user)
 
         expect(power.external_repository_reviews).to eq(nil)
       end
@@ -29,7 +29,7 @@ describe Power do
       let(:user) { create(:user, :admin) }
 
       it 'allows access to all external repository reviews' do
-        power = described_class.new(user)
+        power = Power.new(user)
 
         expect(power.updatable_external_repository_reviews).to contain_exactly(external_repository_review)
       end
@@ -39,7 +39,7 @@ describe Power do
       let(:user) { create(:user) }
 
       it 'restricts access to all external repository reviews' do
-        power = described_class.new(user)
+        power = Power.new(user)
 
         expect(power.updatable_external_repository_reviews).to eq(nil)
       end

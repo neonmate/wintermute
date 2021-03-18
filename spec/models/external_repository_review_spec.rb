@@ -12,7 +12,7 @@ describe ExternalRepositoryReview do
       external_repository_review_2 = Timecop.travel(Time.now - 1.day) { create(:external_repository_review) }
       external_repository_review_3 = Timecop.travel(Time.now + 1.day) { create(:external_repository_review) }
 
-      expect(described_class.default_order.pluck(:id)).to eq(
+      expect(described_class.default_order.ids).to eq(
         [
           external_repository_review_3.id,
           external_repository_review_1.id,

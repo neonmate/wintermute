@@ -14,7 +14,7 @@ describe Idea do
       idea_1 = Timecop.freeze(Time.now + 1.day) { create(:idea) }
       idea_3 = Timecop.freeze(Time.now - 1.day) { create(:idea) }
 
-      expect(described_class.default_order.pluck(:id)).to eq(
+      expect(described_class.default_order.ids).to eq(
         [
           idea_1.id,
           idea_2.id,
@@ -44,7 +44,7 @@ describe Idea do
       message_2 = create(:message, parent: idea, created_at: Time.now - 1.day)
       message_3 = create(:message, parent: idea, created_at: Time.now)
 
-      expect(idea.messages_with_default_order.pluck(:id)).to eq(
+      expect(idea.messages_with_default_order.ids).to eq(
         [
           message_2.id,
           message_3.id,

@@ -1,4 +1,4 @@
-describe Power do
+describe Power::DoesUserSubscriptions do
 
   let(:user) { create(:user) }
   let(:other_user) { create(:user) }
@@ -7,7 +7,7 @@ describe Power do
 
   describe '#user_subscriptions' do
     it 'allows access to own subscriptions' do
-      power = described_class.new(user)
+      power = Power.new(user)
 
       expect(power.user_subscriptions).to contain_exactly(own_subscription)
     end

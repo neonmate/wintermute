@@ -18,7 +18,7 @@ describe BaseUploader do
         attachment: file_fixture('example_1.txt').open
       )
 
-      # Note: 'objects' is table name of the example record that does not have a database backend
+      # NOTE: 'objects' is table name of the example record that does not have a database backend
       expect(example_record.attachment.url).to eq(
         "/system/test#{ENV['TEST_ENV_NUMBER']}/objects/attachment/000/000/001/6cfde3a364432ed0eb2925b10fc5d3da58c78a40460806aa6ffec67a4a22fa8a/example_1.txt"
       )

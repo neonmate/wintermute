@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   resources :ideas
   resources :messages, only: [:new, :create, :edit, :update, :destroy]
   resources :repositories
-  resources :external_repository_reviews, only: [:index, :update]
 
   namespace :user do
     resources :subscriptions, only: [:create, :destroy]

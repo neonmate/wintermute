@@ -5,7 +5,6 @@ class Power
   include DoesMessages
   include DoesRepositories
   include DoesUserSubscriptions
-  include DoesExternalRepositoryReviews
 
   attr_reader :user
 

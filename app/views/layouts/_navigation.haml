@@ -8,12 +8,9 @@
     #collapsable_navigation.collapse.navbar-collapse
       %ul.navbar-nav(up-nav)
         %li.nav-item
-          = content_link_to 'Evaluate ideas', ideas_path, class: 'nav-link', :'up-alias' => "#{ideas_path}/* #{ideas_path}?*"
+          = content_link_to 'Evaluate', ideas_path, class: 'nav-link', :'up-alias' => "#{ideas_path}/* #{ideas_path}?*"
         %li.nav-item
-          = content_link_to 'Explore existing', repositories_path, class: 'nav-link', :'up-alias' => "#{repositories_path}/* #{repositories_path}?*"
-        - if signed_in? && current_power.external_repository_reviews?
-          %li.nav-item
-            = content_link_to 'Reviews', external_repository_reviews_path, class: 'nav-link', :'up-alias' => "#{external_repository_reviews_path}/* #{external_repository_reviews_path}?*"
+          = content_link_to 'Explore', repositories_path, class: 'nav-link', :'up-alias' => "#{repositories_path}/* #{repositories_path}?*"
       %ul.navbar-nav.ml-auto
         %li.nav-item
           - if signed_in?

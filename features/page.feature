@@ -3,7 +3,7 @@ Feature: Page
 
   Scenario: Visit the about page that serves as root
     When I go to the homepage
-    Then I should see "Wintermute helps programmers to create open source web applications that become an active side project."
+    Then I should see "Wintermute links to the most common open source web applications published on Github."
       And "About" should link to "/about"
 
 

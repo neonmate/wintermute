@@ -1,16 +1,12 @@
-.about--product-intro
-  %p Wintermute helps programmers to create open source web applications that become an active side project.
-.about--product-visualization
-  .about--product-visualization-outer.is-left
-    Open Source
-  = image_pack_tag 'media/images/wintermute-transparent.png', alt: 'Wintermute Logo', class: 'about--product-visualization-inner'
-  .about--product-visualization-outer.is-right
-    Web Application
+%h1 Wintermute
+%p.lead Wintermute links to the most common open source web applications published on Github. It should help you to find new and alternative web services that you can use in trust as a service or host in your own infrastructure.
 
-%h2.about--guidelines-header Guidelines
-
-%ul
-  %li Submit your idea in the #{link_to('"Evaluate ideas"', ideas_path)} section like an Internet-Draft (Example: #{external_link_to('HTTP/2 draft', 'https://http2.github.io/http2-spec/index.html')}).
-  %li Get feedback from the community and decide whether to start or cancel the idea.
-  %li Implemented ideas will be listed in the hall of fame, the #{link_to('"Explore existing"', repositories_path)} section.
-  %li Be kind.
+%figure.mt-5
+  = image_pack_tag('media/images/preview-explore.png', class: 'mx-auto d-block w-75 img-thumbnail', alt: 'Screenshot of the application where a user searches for a repository')
+  %figcaption.text-center Wintermute allows you to search for existing open source web applicatoins
+%figure.mt-5
+  = image_pack_tag('media/images/preview-contribute.png', class: 'mx-auto d-block w-75 img-thumbnail', alt: 'Screenshot of the application where a user adds a repository')
+  %figcaption.text-center Signed in users can contribute
+%figure.mt-5
+  = image_pack_tag('media/images/preview-subscribe.png', class: 'mx-auto d-block w-75 img-thumbnail', alt: 'Screenshot of the application where a user subscripes to an idea')
+  %figcaption.text-center You can subscribe to interesting discussion and get notified about updates per email

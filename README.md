@@ -1,5 +1,5 @@
 # Wintermute [![Tests](https://github.com/neonmate/wintermute/workflows/Tests/badge.svg)](https://github.com/neonmate/wintermute/actions)
-Wintermute helps programmers to create open source web applications that become an active side project.
+Wintermute links to the most common open source web applications published on Github. It should help you to find new and alternative web services that you can use in trust as a service or host in your own infrastructure.
 
 ![Screenshot of Wintermute in a browser](/docs/screenshot.png?raw=true)
 
@@ -22,9 +22,9 @@ Wintermute helps programmers to create open source web applications that become 
 bundle exec cap production deploy
 ```
 
-# Mails
+## Mail Previews
 
-Preview all emails at http://localhost:3000/rails/mailers .
+Preview all emails at http://localhost:3000/rails/mailers in development.
 
 ## Tests
 
